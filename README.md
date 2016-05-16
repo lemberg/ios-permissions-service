@@ -9,13 +9,11 @@
 # 2. Example to use:
 class ViewController: UIViewController {
 
-  @IBAction func onBuuton() {
-    GalleryPermission().preparePermission(self) { (granted) in
-      if granted {
-        self.performSegueWithIdentifier("showImageCollection", sender: self)        
-      }
+@IBAction func onButtonClick() {
+  GalleryPermission().preparePermission(self) { (granted) in
+    if granted {
+      self.performSegueWithIdentifier("showImageCollection", sender: self)
     }
   }
-
 }
 
