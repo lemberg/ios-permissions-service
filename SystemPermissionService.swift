@@ -8,29 +8,42 @@
 import Foundation
 import UIKit
 
-protocol PermissionAbstractMethods {
+enum Status: Int {
+  case NotDetermined
+  case Restricted
+  case Denied
+  case Authorized
+}
+
+protocol PermissonConfiguration {
+  init()
   func restrictedAlertMessage() -> String
   func deniedAlertMessage() -> String
-  func checkStatus() -> AbstractPermission.GenericStatus
+  func checkStatus() -> Status
   func requestStatus(requestGranted: (successRequestResult: Bool) -> Void)
 }
 
-class AbstractPermission: PermissionAbstractMethods {
-  
-  enum GenericStatus: Int {
-    case NotDetermined
-    case Restricted
-    case Denied
-    case Authorized
+extension PermissonConfiguration {
+  func deniedAlertMessage() -> String {
+    return "You can enable access in Privacy Settings"
   }
+}
 
+class Permission<T:PermissonConfiguration>{
+  
+  private var checker:T
+  
+  init() {
+    checker = T()
+  }
+  
   func preparePermission(sender: UIViewController, granted: (granted: Bool) -> Void) {
-    let status = self.checkStatus()
+    let status = checker.checkStatus()
     let alertController = UIAlertController(title: "Access Denied", message: nil, preferredStyle: .Alert)
     alertController.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default,handler: nil))
     switch status {
     case .NotDetermined:
-      self.requestStatus({ (successRequestResult) -> Void in
+      checker.requestStatus({ (successRequestResult) -> Void in
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
           granted(granted: successRequestResult)
         })
@@ -40,10 +53,10 @@ class AbstractPermission: PermissionAbstractMethods {
       granted(granted: true)
       return
     case .Restricted:
-      alertController.message = self.restrictedAlertMessage()
+      alertController.message = checker.restrictedAlertMessage()
       granted(granted: false)
     case .Denied:
-      alertController.message = self.deniedAlertMessage()
+      alertController.message = checker.deniedAlertMessage()
       let settingsAction = UIAlertAction(title: "Settings", style: .Default) { (_) -> Void in
         let settingsUrl = NSURL(string: UIApplicationOpenSettingsURLString)
         if let url = settingsUrl {
@@ -54,23 +67,5 @@ class AbstractPermission: PermissionAbstractMethods {
       granted(granted: false)
     }
     sender.presentViewController(alertController, animated: true, completion: nil)
-  }
-  
-  //MARK: - abstract methods
-  func checkStatus() -> GenericStatus {
-    assertionFailure("Abstract method shoud be overwriten")
-    return .NotDetermined
-  }
-  func restrictedAlertMessage() -> String {
-    assertionFailure("Abstract method shoud be overwriten")
-    return ""
-  }
-  func requestStatus(requestGranted: (successRequestResult: Bool) -> Void) {
-    assertionFailure("Abstract method shoud be overwriten")
-    requestGranted(successRequestResult: false)
-    return
-  }
-  func deniedAlertMessage() -> String {
-    return "You can enable access in Privacy Settings"
   }
 }
