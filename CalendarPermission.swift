@@ -14,9 +14,9 @@ final class CalendarPermission: PermissonConfiguration {
     return "This app does not have access to your calendar"
   }
   
-  func checkStatus() -> Status {
+  func checkStatus() -> PermissonStatus {
     let statusInt = EKEventStore.authorizationStatusForEntityType(EKEntityType.Event).rawValue
-    guard let status = Status(rawValue: statusInt) where (0...3) ~= statusInt else {
+    guard let status = PermissonStatus(rawValue: statusInt) where (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
       return .NotDetermined
     }

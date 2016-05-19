@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum Status: Int {
+enum PermissonStatus: Int {
   case NotDetermined
   case Restricted
   case Denied
@@ -19,7 +19,7 @@ protocol PermissonConfiguration {
   init()
   func restrictedAlertMessage() -> String
   func deniedAlertMessage() -> String
-  func checkStatus() -> Status
+  func checkStatus() -> PermissonStatus
   func requestStatus(requestGranted: (successRequestResult: Bool) -> Void)
 }
 

@@ -9,9 +9,9 @@ import Foundation
 import Photos
 
 final class GalleryPermission: PermissonConfiguration {
-  func checkStatus() -> Status {
+  func checkStatus() -> PermissonStatus {
     let statusInt = PHPhotoLibrary.authorizationStatus().rawValue
-    guard let status = Status(rawValue: statusInt) where (0...3) ~= statusInt else {
+    guard let status = PermissonStatus(rawValue: statusInt) where (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
       return .NotDetermined
     }
