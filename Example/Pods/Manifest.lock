@@ -1,0 +1,16 @@
+PODS:
+  - PermissionsService (0.1.0)
+
+DEPENDENCIES:
+  - PermissionsService (from `../`)
+
+EXTERNAL SOURCES:
+  PermissionsService:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PermissionsService: b895c309d7d042e696724551b3f4d277073d149a
+
+PODFILE CHECKSUM: 8bce6fe3881b7098062499b5f12282cf6f2396b7
+
+COCOAPODS: 1.0.1

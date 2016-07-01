@@ -1,0 +1,6 @@
+framework module PermissionsService {
+  umbrella header "PermissionsService-umbrella.h"
+
+  export *
+  module * { export * }
+}

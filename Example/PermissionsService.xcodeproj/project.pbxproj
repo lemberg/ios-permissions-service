@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C83BA779699714317129FCB9 /* Pods_PermissionsService_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59FADF8389DD5C55FB59402 /* Pods_PermissionsService_Tests.framework */; };
+		DBCE10171D26AE1800F97B8E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DBCE10161D26AE1800F97B8E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,9 +18,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7ADD5F211D4FBE2FE6881EFF /* PermissionsService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PermissionsService.podspec; path = ../PermissionsService.podspec; sourceTree = "<group>"; };
-		9020478426C959626FD1C10C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BA644CC018C9CCC2FA10C489 /* Pods-PermissionsService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PermissionsService_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PermissionsService_Tests/Pods-PermissionsService_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D59FADF8389DD5C55FB59402 /* Pods_PermissionsService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PermissionsService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCE10161D26AE1800F97B8E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E2020FAF9E463C2A412E99DA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				7ADD5F211D4FBE2FE6881EFF /* PermissionsService.podspec */,
-				9020478426C959626FD1C10C /* README.md */,
+				DBCE10161D26AE1800F97B8E /* README.md */,
 				E2020FAF9E463C2A412E99DA /* LICENSE */,
 			);
 			name = "Podspec Metadata";
@@ -218,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCE10171D26AE1800F97B8E /* README.md in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
