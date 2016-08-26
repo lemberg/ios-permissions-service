@@ -9,11 +9,11 @@ import Foundation
 import Photos
 
 public final class GalleryPermission: PermissonConfiguration {
-	
-	public init() {
-		
-	}
-	
+  
+  public init() {
+    
+  }
+  
   public func checkStatus() -> PermissonStatus {
     let statusInt = PHPhotoLibrary.authorizationStatus().rawValue
     guard let status = PermissonStatus(rawValue: statusInt) where (0...3) ~= statusInt else {

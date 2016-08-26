@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PermissionsService'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'It is wrap for base is permisions'
 
 # This description is used to generate tags and improve search results.
