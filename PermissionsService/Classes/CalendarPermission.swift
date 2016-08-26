@@ -10,10 +10,10 @@ import EventKit
 
 public final class CalendarPermission: PermissonConfiguration {
   
-	public init() {
-		
-	}
-	
+  public init() {
+    
+  }
+  
   public func restrictedAlertMessage() -> String {
     return "This app does not have access to your calendar"
   }

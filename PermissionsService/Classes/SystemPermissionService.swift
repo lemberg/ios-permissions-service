@@ -24,11 +24,11 @@ public protocol PermissonConfiguration {
 }
 
 extension PermissonConfiguration {
-
+  
   public func deniedAlertMessage() -> String {
     return "You can enable access in Privacy Settings"
   }
-
+  
 }
 
 public class Permission<T: PermissonConfiguration> {
