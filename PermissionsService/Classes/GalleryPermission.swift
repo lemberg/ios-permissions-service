@@ -30,7 +30,6 @@ public final class GalleryPermission: PermissonConfiguration {
     })
   }
   
-  public func restrictedAlertMessage() -> String {
-    return "This app does not have access to your photos and videos"
-  }
+	public var restrictedAlertMessage = "This app does not have access to your photos and videos"
+	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
 }

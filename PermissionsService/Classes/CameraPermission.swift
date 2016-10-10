@@ -29,11 +29,7 @@ public final class CameraPermissions: PermissonConfiguration {
     }
   }
   
-  public func restrictedAlertMessage() -> String {
-    return "This app does not have access to your Camera"
-  }
+  public var restrictedAlertMessage = "This app does not have access to your Camera"
   
-  public func deniedAlertMessage() -> String {
-    return "Hello baby"
-  }
+	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
 }

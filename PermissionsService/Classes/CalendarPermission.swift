@@ -14,9 +14,8 @@ public final class CalendarPermission: PermissonConfiguration {
     
   }
   
-  public func restrictedAlertMessage() -> String {
-    return "This app does not have access to your calendar"
-  }
+  public var restrictedAlertMessage = "This app does not have access to your calendar"
+	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
   
   public func checkStatus() -> PermissonStatus {
     let statusInt = EKEventStore.authorizationStatus(for: EKEntityType.event).rawValue
