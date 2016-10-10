@@ -14,9 +14,10 @@ public final class CalendarPermission: PermissonConfiguration {
     
   }
   
-  public func restrictedAlertMessage() -> String {
-    return "This app does not have access to your calendar"
-  }
+  public var restrictedAlertMessage = "This app does not have access to your calendar"
+	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
+	
+	public var entityType = EKEntityType.event
   
   public func checkStatus() -> PermissonStatus {
     let statusInt = EKEventStore.authorizationStatus(for: EKEntityType.event).rawValue
@@ -28,7 +29,7 @@ public final class CalendarPermission: PermissonConfiguration {
   }
   
   public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
-    EKEventStore().requestAccess(to: EKEntityType.event) {
+    EKEventStore().requestAccess(to: entityType) {
       (accessGranted: Bool, error: Error?) in
       requestGranted(accessGranted)
     }

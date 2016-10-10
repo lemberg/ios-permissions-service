@@ -9,6 +9,11 @@ import Foundation
 import Photos
 
 public final class CameraPermissions: PermissonConfiguration {
+	
+	public var restrictedAlertMessage = "This app does not have access to your Camera"
+	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
+	
+	public var mediaType = AVMediaTypeVideo
   
   public init() {
     
@@ -24,16 +29,9 @@ public final class CameraPermissions: PermissonConfiguration {
   }
   
   public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
-    AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { (granted) -> Void in
+    AVCaptureDevice.requestAccess(forMediaType: mediaType) { (granted) -> Void in
       requestGranted(granted)
     }
   }
   
-  public func restrictedAlertMessage() -> String {
-    return "This app does not have access to your Camera"
-  }
-  
-  public func deniedAlertMessage() -> String {
-    return "Hello baby"
-  }
 }

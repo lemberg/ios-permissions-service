@@ -15,20 +15,16 @@ public enum PermissonStatus: Int {
   case authorized
 }
 
-public protocol PermissonConfiguration {
-  init()
-  func restrictedAlertMessage() -> String
-  func deniedAlertMessage() -> String
-  func checkStatus() -> PermissonStatus
-  func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void)
+struct DefaultValues {
+	static let deniedAlertMessage = "You can enable access in Privacy Settings"
 }
 
-extension PermissonConfiguration {
-  
-  public func deniedAlertMessage() -> String {
-    return "You can enable access in Privacy Settings"
-  }
-  
+public protocol PermissonConfiguration {
+  init()
+	var restrictedAlertMessage: String {get set}
+	var deniedAlertMessage: String {get set}
+  func checkStatus() -> PermissonStatus
+  func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void)
 }
 
 open class Permission<T: PermissonConfiguration> {
@@ -56,10 +52,10 @@ open class Permission<T: PermissonConfiguration> {
       granted(true)
       return
     case .restricted:
-      alertController.message = checker.restrictedAlertMessage()
+      alertController.message = checker.restrictedAlertMessage
       granted(false)
     case .denied:
-      alertController.message = checker.deniedAlertMessage()
+      alertController.message = checker.deniedAlertMessage
       let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
         let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
         if let url = settingsUrl {
