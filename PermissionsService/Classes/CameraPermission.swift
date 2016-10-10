@@ -15,17 +15,17 @@ public final class CameraPermissions: PermissonConfiguration {
   }
   
   public func checkStatus() -> PermissonStatus {
-    let statusInt = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo).rawValue
-    guard let status = PermissonStatus(rawValue: statusInt) where (0...3) ~= statusInt else {
+    let statusInt = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo).rawValue
+    guard let status = PermissonStatus(rawValue: statusInt) , (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
-      return .NotDetermined
+      return .notDetermined
     }
     return status
   }
   
-  public func requestStatus(requestGranted: (successRequestResult: Bool) -> Void) {
-    AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo) { (granted) -> Void in
-      requestGranted(successRequestResult: granted)
+  public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
+    AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { (granted) -> Void in
+      requestGranted(granted)
     }
   }
   

@@ -19,18 +19,18 @@ public final class CalendarPermission: PermissonConfiguration {
   }
   
   public func checkStatus() -> PermissonStatus {
-    let statusInt = EKEventStore.authorizationStatusForEntityType(EKEntityType.Event).rawValue
-    guard let status = PermissonStatus(rawValue: statusInt) where (0...3) ~= statusInt else {
+    let statusInt = EKEventStore.authorizationStatus(for: EKEntityType.event).rawValue
+    guard let status = PermissonStatus(rawValue: statusInt), (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
-      return .NotDetermined
+      return .notDetermined
     }
     return status
   }
   
-  public func requestStatus(requestGranted: (successRequestResult: Bool) -> Void) {
-    EKEventStore().requestAccessToEntityType(EKEntityType.Event) {
-      (accessGranted: Bool, error: NSError?) in
-      requestGranted(successRequestResult: accessGranted)
+  public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
+    EKEventStore().requestAccess(to: EKEntityType.event) {
+      (accessGranted: Bool, error: Error?) in
+      requestGranted(accessGranted)
     }
   }
 }

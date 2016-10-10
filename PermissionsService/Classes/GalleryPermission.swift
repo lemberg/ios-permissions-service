@@ -16,17 +16,17 @@ public final class GalleryPermission: PermissonConfiguration {
   
   public func checkStatus() -> PermissonStatus {
     let statusInt = PHPhotoLibrary.authorizationStatus().rawValue
-    guard let status = PermissonStatus(rawValue: statusInt) where (0...3) ~= statusInt else {
+    guard let status = PermissonStatus(rawValue: statusInt) , (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
-      return .NotDetermined
+      return .notDetermined
     }
     return status
   }
   
-  public func requestStatus(requestGranted: (successRequestResult: Bool) -> Void) {
+  public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
     PHPhotoLibrary.requestAuthorization({ (newStatus) -> Void in
-      let success = newStatus == PHAuthorizationStatus.Authorized
-      requestGranted(successRequestResult: success)
+      let success = newStatus == PHAuthorizationStatus.authorized
+      requestGranted(success)
     })
   }
   
