@@ -13,9 +13,13 @@ class PermissionsController: UITableViewController {
 	
 	enum CellsIndexes: Int
 	{
-		case galery = 0
+		case gallery = 0
 		case calendar
 		case camera
+	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
 	}
 	
 	// MARK: - Table view data source
@@ -26,16 +30,34 @@ class PermissionsController: UITableViewController {
 			return
 		}
 		
-		let showSuccessFullAlert = { [unowned self] (instanceName: String) in
-			let alert = UIAlertController(title: "Success", message: "Permision for \(instanceName) is granded", preferredStyle: .alert)
-		}
+		var service: PermissonConfiguration!
+		let instanceName: String!
 		
 		switch cellIndex {
-		case .galery:
-			let service = GaleryPermission(
-		default:
-			<#code#>
+		case .gallery:
+			service = GalleryPermission()
+			instanceName = "gallery"
+		case .calendar:
+			service = CalendarPermission()
+			instanceName = "calendar"
+		case .camera:
+			service = CalendarPermission()
+			instanceName = "camera"
 		}
-	}
+		service.requestStatus { [unowned self] (granted) in
+			var title: String!
+			var message: String!
+			if granted {
+				title = "Success"
+				message = "Permision for \(instanceName!) is granded"
+			} else {
+				title = "Denied"
+				message = "Permision for \(instanceName!) is denied"
+			}
+			let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+			self.present(alert, animated: true, completion: nil)
+		}
+	}
 	
 }
