@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import PermissionsService
 
-
-
-class PrmissionsController: UITableViewController {
+class PermissionsController: UITableViewController {
 	
 	enum CellsIndexes: Int
 	{
@@ -27,16 +26,16 @@ class PrmissionsController: UITableViewController {
 			return
 		}
 		
-		let showSuccessFullAlert = { (String: instanceName) [unowned self] in
+		let showSuccessFullAlert = { [unowned self] (instanceName: String) in
 			let alert = UIAlertController(title: "Success", message: "Permision for \(instanceName) is granded", preferredStyle: .alert)
 		}
 		
 		switch cellIndex {
-		case <#pattern#>:
-			<#code#>
+		case .galery:
+			let service = GaleryPermission(
 		default:
 			<#code#>
 		}
-	}
+	}
 	
 }
