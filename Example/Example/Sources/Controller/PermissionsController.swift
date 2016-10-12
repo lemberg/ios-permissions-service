@@ -30,33 +30,36 @@ class PermissionsController: UITableViewController {
 			return
 		}
 		
-		var service: PermissonConfiguration!
-		let instanceName: String!
+		var instanceName = ""
 		
-		switch cellIndex {
-		case .gallery:
-			service = GalleryPermission()
-			instanceName = "gallery"
-		case .calendar:
-			service = CalendarPermission()
-			instanceName = "calendar"
-		case .camera:
-			service = CalendarPermission()
-			instanceName = "camera"
-		}
-		service.requestStatus { [unowned self] (granted) in
+		let block = { [unowned self] (granted: Bool) in
 			var title: String!
 			var message: String!
 			if granted {
 				title = "Success"
-				message = "Permision for \(instanceName!) is granded"
+				message = "Permision for \(instanceName) is granded"
 			} else {
 				title = "Denied"
-				message = "Permision for \(instanceName!) is denied"
+				message = "Permision for \(instanceName) is denied"
 			}
 			let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 			self.present(alert, animated: true, completion: nil)
+		}
+		
+		switch cellIndex {
+		case .gallery:
+			instanceName = "gallery"
+			let permission = Permission<GalleryPermission>()
+			permission.preparePermission(self, granted: block)
+		case .calendar:
+			instanceName = "calendar"
+			let permission = Permission<CalendarPermission>()
+			permission.preparePermission(self, granted: block)
+		case .camera:
+			instanceName = "camera"
+			let permission = Permission<CameraPermissions>()
+			permission.preparePermission(self, granted: block)
 		}
 	}
 	
