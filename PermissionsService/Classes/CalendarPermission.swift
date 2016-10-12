@@ -8,7 +8,7 @@
 import UIKit
 import EventKit
 
-public final class CalendarPermission: PermissonConfiguration {
+public final class CalendarPermission: PermissionConfiguration {
   
   public init() {
     
