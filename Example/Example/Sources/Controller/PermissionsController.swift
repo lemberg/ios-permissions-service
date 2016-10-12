@@ -40,7 +40,7 @@ class PermissionsController: UITableViewController {
 				message = "Permision for \(instanceName) is granded"
 			} else {
 				title = "Denied"
-				message = "Permision for \(instanceName) is denied"
+				message = "Permision for \(instanceName) isn't granded"
 			}
 			let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
