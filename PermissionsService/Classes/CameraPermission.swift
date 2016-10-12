@@ -8,7 +8,7 @@
 import Foundation
 import Photos
 
-public final class CameraPermissions: PermissonConfiguration {
+public final class CameraPermissions: PermissionConfiguration {
 	
 	public var restrictedAlertMessage = "This app does not have access to your Camera"
 	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
