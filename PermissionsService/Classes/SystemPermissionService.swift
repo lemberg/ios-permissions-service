@@ -19,7 +19,7 @@ struct DefaultValues {
 	static let deniedAlertMessage = "You can enable access in Privacy Settings"
 }
 
-public protocol PermissonConfiguration {
+public protocol PermissionConfiguration {
   init()
 	var restrictedAlertMessage: String {get set}
 	var deniedAlertMessage: String {get set}
@@ -27,7 +27,7 @@ public protocol PermissonConfiguration {
   func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void)
 }
 
-open class Permission<T: PermissonConfiguration> {
+open class Permission<T: PermissionConfiguration> {
   
   fileprivate var checker: T
   

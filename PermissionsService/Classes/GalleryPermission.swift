@@ -8,7 +8,7 @@
 import Foundation
 import Photos
 
-public final class GalleryPermission: PermissonConfiguration {
+public final class GalleryPermission: PermissionConfiguration {
 	
 	public var restrictedAlertMessage = "This app does not have access to your photos and videos"
 	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
