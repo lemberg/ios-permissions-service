@@ -1,6 +1,4 @@
 use_frameworks!
-target 'PermissionsService_Tests' do
+target 'Example' do
   pod 'PermissionsService', :path => '../'
-  
-  
 end
