@@ -7,18 +7,20 @@
 
 ## Example
 
-class ViewController: UIViewController {
-
-  @IBAction func onButtonClick() { 
-
-    let galleryPermissions = Permission<GalleryPermission>()  
-		galleryPermissions.preparePermission(self) { (granted) in  
-			if granted {    
-				self.performSegueWithIdentifier("showGallery", sender: self)  
-			}
-		}
-  }
-}
+```swift
+    class ViewController: UIViewController {
+        
+        @IBAction func onButtonClick() {
+            
+            let galleryPermissions = Permission<GalleryPermission>()
+            galleryPermissions.preparePermission(self) { (granted) in
+                if granted {
+                    self.performSegueWithIdentifier("showGallery", sender: self)
+                }
+            }
+        }
+    }
+```
 
 ## Installation
 
