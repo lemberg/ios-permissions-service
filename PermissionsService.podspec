@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PermissionsService'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'It is wrap for base is permisions'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ s.source           = { :git => 'https://github.com/lemberg/ios-permissions-servi
 s.ios.deployment_target = '8.0'
 
   s.source_files = 'PermissionsService/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'PermissionsService' => ['PermissionsService/Assets/*.png']
   # }
