@@ -10,6 +10,7 @@
 import Foundation
 import Contacts
 
+@available(iOS 9.0, *)
 public class ContactsPermission: PermissionConfiguration {
   
   public var restrictedAlertMessage = "This app does not have access to your Contacts"
