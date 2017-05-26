@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   PermissionsService:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   PermissionsService: 6943b0d72bc0b9cb7ec561ff556241bb357cddc4
 
 PODFILE CHECKSUM: 605f6f23b51dfda6c1f2f2f4de68315e4fcdcad9
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

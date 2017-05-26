@@ -12,7 +12,9 @@ public final class CameraPermissions: PermissionConfiguration {
 	
 	public var restrictedAlertMessage = "This app does not have access to your Camera"
 	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
-	
+  public var deniedTitle = "Can't access camera"
+  
+  
 	public var mediaType = AVMediaTypeVideo
   
   public init() {
