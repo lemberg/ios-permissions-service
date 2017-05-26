@@ -83,3 +83,58 @@ open class Permission<T: PermissionConfiguration> {
     sender.present(alertController, animated: true, completion: nil)
   }
 }
+
+protocol C {
+  
+  func checkStatus() -> PermissonStatus
+  func requestStatus(_ callback: @escaping (_ success: Bool) -> Void)
+}
+
+protocol M {
+  var restrictedMessage: String { get }
+  var deniedMessage: String { get }
+  var deniedTitle: String { get }
+}
+
+protocol R {
+  
+  func showAlert(vc: UIAlertController)
+}
+
+extension R where Self: UIViewController {
+  
+  func showAlert(vc: UIAlertController) {
+    self.present(vc, animated: true, completion: nil)
+  }
+}
+
+open class P {
+  
+  typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
+  
+  class func prep<T:C, U:M>(sender:R, s:T, m: U, callback: @escaping PermissionGranted) {
+    let status = s.checkStatus()
+    
+    switch status {
+    case .notDetermined:
+      s.requestStatus({ (success) in
+        DispatchQueue.main.async {
+          callback(success)
+        }
+      })
+      break
+    case .authorized:
+      break
+    case .restricted:
+      break
+    case .denied:
+      break
+    case .authorizedWhenInUse:
+      break
+    }
+  }
+  
+  private class func onNotDeterminated(){
+    
+  }
+}
