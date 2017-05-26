@@ -11,11 +11,9 @@
 		DBBDE1B41DACEB3F00E4151F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBDE1B21DACEB3F00E4151F /* Main.storyboard */; };
 		DBBDE1B91DACEB3F00E4151F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBBDE1B71DACEB3F00E4151F /* LaunchScreen.storyboard */; };
 		DBBDE1C11DACEC2000E4151F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBDE1BF1DACEC2000E4151F /* Assets.xcassets */; };
-		DBBDE1C21DACEC2000E4151F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBDE1C01DACEC2000E4151F /* Info.plist */; };
 		DBBDE1CF1DACF46E00E4151F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBDE1CD1DACF46E00E4151F /* AppDelegate.m */; };
 		DBBDE1D01DACF46E00E4151F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBDE1CE1DACF46E00E4151F /* main.m */; };
 		DBBDE1D31DACF50C00E4151F /* PermissionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBDE1D21DACF50C00E4151F /* PermissionsController.swift */; };
-		DBBDE1D81DAD046600E4151F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DBCE10161D26AE1800F97B8E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,7 +194,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					DBBDE1A61DACEB3F00E4151F = {
@@ -229,7 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBBDE1C21DACEC2000E4151F /* Info.plist in Resources */,
 				DBBDE1B91DACEB3F00E4151F /* LaunchScreen.storyboard in Resources */,
 				DBBDE1C11DACEC2000E4151F /* Assets.xcassets in Resources */,
 				DBBDE1B41DACEB3F00E4151F /* Main.storyboard in Resources */,
@@ -293,7 +290,6 @@
 			files = (
 				DBBDE1D31DACF50C00E4151F /* PermissionsController.swift in Sources */,
 				DBBDE1CF1DACF46E00E4151F /* AppDelegate.m in Sources */,
-				DBBDE1D81DAD046600E4151F /* README.md in Sources */,
 				DBBDE1D01DACF46E00E4151F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,8 +329,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -379,8 +377,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -399,6 +399,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -408,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1E7F4FA7E8AFE8CA9CBD36C /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -429,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED0308B2A9D83383EBEE8B2A /* Pods-Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;

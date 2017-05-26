@@ -22,6 +22,7 @@ struct DefaultValues {
 
 public protocol PermissionConfiguration {
   init()
+  
   var restrictedAlertMessage: String {get set}
   var deniedAlertMessage: String {get set}
   var deniedTitle: String {get set}
