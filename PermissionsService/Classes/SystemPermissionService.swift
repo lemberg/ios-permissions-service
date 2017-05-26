@@ -17,15 +17,15 @@ public enum PermissonStatus: Int {
 }
 
 struct DefaultValues {
-	static let deniedAlertMessage = "You can enable access in Privacy Settings"
+  static let deniedAlertMessage = "You can enable access in Privacy Settings"
 }
 
 public protocol PermissionConfiguration {
   init()
-	var restrictedAlertMessage: String {get set}
-	var deniedAlertMessage: String {get set}
+  var restrictedAlertMessage: String {get set}
+  var deniedAlertMessage: String {get set}
   var deniedTitle: String {get set}
-
+  
   func checkStatus() -> PermissonStatus
   func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void)
 }
