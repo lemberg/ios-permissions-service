@@ -7,18 +7,19 @@
 
 ## Example
 
+```swift
 class ViewController: UIViewController {
 
   @IBAction func onButtonClick() { 
 
-    let galleryPermissions = Permission<GalleryPermission>()  
-		galleryPermissions.preparePermission(self) { (granted) in  
-			if granted {    
-				self.performSegueWithIdentifier("showGallery", sender: self)  
-			}
-		}
+    Permission<GalleryPermission>.prepare(for: self, callback: { (granted) in
+      if granted {
+        self.performSegue(withIdentifier: "showGallery", sender: self)
+      }
+    })
   }
 }
+```
 
 ## Installation
 
@@ -31,7 +32,7 @@ pod "PermissionsService"
 
 ## Author
 
-Lemberg Inc
+Lemberg Solutions Inc
 
 ## License
 
