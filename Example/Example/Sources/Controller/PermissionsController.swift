@@ -51,14 +51,19 @@ class PermissionsController: UITableViewController {
 		
 		switch cellIndex {
 		case .gallery:
+      instanceName = "Gallery"
   		Permission<GalleryPermission>.prepare(for: self, callback: block)
 		case .calendar:
+      instanceName = "Calendat"
       Permission<CalendarPermission>.prepare(for: self, callback: block)
 		case .camera:
+      instanceName = "Camera"
       Permission<CameraPermissions>.prepare(for: self, callback: block)
     case .location:
+      instanceName = "Location"
       Permission<LocationPermission>.prepare(for: self, callback: block)
     case .contacts:
+      instanceName = "Contacts"
       Permission<ContactsPermission>.prepare(for: self, callback: block)
 		}
 	}
