@@ -18,6 +18,8 @@ class PermissionsController: UITableViewController {
 		case gallery = 0
 		case calendar
 		case camera
+    case location
+    case contacts
 	}
 	
 	override func viewDidLoad() {
@@ -27,6 +29,7 @@ class PermissionsController: UITableViewController {
 	// MARK: - Table view data source
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
 		guard let cellIndex = CellsIndexes(rawValue: indexPath.row) else {
 			assertionFailure("guarrd in \(#file) on \(#line) line")
 			return
@@ -40,27 +43,23 @@ class PermissionsController: UITableViewController {
 			if granted {
 				title = "Success"
 				message = "Permision for \(instanceName) is granded"
-			} else {
-				title = "Denied"
-				message = "Permision for \(instanceName) isn't granded"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
 			}
-			let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-			self.present(alert, animated: true, completion: nil)
 		}
 		
 		switch cellIndex {
 		case .gallery:
-			instanceName = "gallery"
   		Permission<GalleryPermission>.prepare(for: self, callback: block)
-		case .calendar: break
-//			instanceName = "calendar"
-//			let permission = Permission<CalendarPermission>()
-//			permission.preparePermission(self, granted: block)
-		case .camera: break
-//			instanceName = "camera"
-//			let permission = Permission<CameraPermissions>()
-//			permission.preparePermission(self, granted: block)
+		case .calendar:
+      Permission<CalendarPermission>.prepare(for: self, callback: block)
+		case .camera:
+      Permission<CameraPermissions>.prepare(for: self, callback: block)
+    case .location:
+      Permission<LocationPermission>.prepare(for: self, callback: block)
+    case .contacts:
+      Permission<ContactsPermission>.prepare(for: self, callback: block)
 		}
 	}
 	

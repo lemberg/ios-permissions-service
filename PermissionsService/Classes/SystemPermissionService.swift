@@ -5,7 +5,6 @@
 //  Copyright © 2016 LembergSolutions. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public enum PermissonStatus: Int {
