@@ -84,35 +84,53 @@ open class Permission<T: PermissionConfiguration> {
   }
 }
 
-protocol C {
+public protocol PermissionService {
   
+  init()
   func checkStatus() -> PermissonStatus
   func requestStatus(_ callback: @escaping (_ success: Bool) -> Void)
 }
 
-protocol M {
+public protocol ServiceMessages {
+  
   var restrictedMessage: String { get }
+  var restrictedTitle: String { get }
   var deniedMessage: String { get }
   var deniedTitle: String { get }
 }
 
-protocol R {
+public protocol ServiceDisplay {
   
   func showAlert(vc: UIAlertController)
 }
 
-extension R where Self: UIViewController {
+public extension ServiceDisplay where Self: UIViewController {
   
   func showAlert(vc: UIAlertController) {
     self.present(vc, animated: true, completion: nil)
   }
 }
 
-open class P {
+private struct DefaultMessages: ServiceMessages {
+  
+  let deniedTitle = "Access denied"
+  let deniedMessage = "Access to this component is denied"
+  let restrictedTitle = "Access restricted"
+  let restrictedMessage = "Access to this component is restricted"
+}
+
+
+
+open class P<T: PermissionService> {
   
   typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
   
-  class func prep<T:C, U:M>(sender:R, s:T, m: U, callback: @escaping PermissionGranted) {
+  public static var closeTitle:String = "Close"
+  public static var settingsTitle:String = "Settings"
+  
+  class func prep<U:ServiceMessages>(sender: ServiceDisplay, m: U, callback: @escaping PermissionGranted) {
+    
+    let s = T()
     let status = s.checkStatus()
     
     switch status {
@@ -138,3 +156,18 @@ open class P {
     
   }
 }
+
+class Using {
+  
+  func foo() {
+    let a = P.prep(sender: <#T##ServiceDisplay#>, m: DefaultMessages(), callback: <#T##P.PermissionGranted##P.PermissionGranted##(Bool) -> Void#>)
+  }
+}
+
+//private extension UIAlertController {
+//  
+//  class func createDeniedAlert<T:M>(with m:T) -> UIAlertController {
+//    let vc = UIAlertController()
+//    vc.title = m.deniedTitle
+//  }
+//}
