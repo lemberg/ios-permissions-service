@@ -120,15 +120,15 @@ private struct DefaultMessages: ServiceMessages {
 }
 
 
+public var closeTitle:String = "Close"
+public var settingsTitle:String = "Settings"
 
 open class P<T: PermissionService> {
   
   typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
   
-  public static var closeTitle:String = "Close"
-  public static var settingsTitle:String = "Settings"
   
-  class func prep<U:ServiceMessages>(sender: ServiceDisplay, m: U, callback: @escaping PermissionGranted) {
+  class func prep<U:ServiceMessages>(sender: ServiceDisplay, m: U , callback: @escaping PermissionGranted) {
     
     let s = T()
     let status = s.checkStatus()
@@ -157,10 +157,31 @@ open class P<T: PermissionService> {
   }
 }
 
-class Using {
+class ASD: PermissionService {
+  
+  required init() {
+  }
+  
+  func checkStatus() -> PermissonStatus {
+    return PermissonStatus(rawValue: 0)!
+  }
+  
+  func requestStatus(_ callback: @escaping (Bool) -> Void) {
+    
+  }
+}
+
+
+class Using: ServiceDisplay {
   
   func foo() {
-    let a = P.prep(sender: <#T##ServiceDisplay#>, m: DefaultMessages(), callback: <#T##P.PermissionGranted##P.PermissionGranted##(Bool) -> Void#>)
+    P<ASD>.prep(sender: self, m: DefaultMessages()) { (s) in
+      
+    }
+  }
+  
+  func showAlert(vc: UIAlertController) {
+    
   }
 }
 
