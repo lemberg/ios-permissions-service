@@ -8,14 +8,10 @@
 import Foundation
 import Photos
 
-public final class CameraPermissions: PermissionConfiguration {
-	
-	public var restrictedAlertMessage = "This app does not have access to your Camera"
-	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
-  public var deniedTitle = "Can't access camera"
+public final class CameraPermissions: PermissionService {
   
   
-	public var mediaType = AVMediaTypeVideo
+  public var mediaType = AVMediaTypeVideo
   
   public init() {
     

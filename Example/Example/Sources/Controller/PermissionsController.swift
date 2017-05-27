@@ -9,6 +9,8 @@
 import UIKit
 import PermissionsService
 
+extension PermissionsController: ServiceDisplay {}
+
 class PermissionsController: UITableViewController {
 	
 	enum CellsIndexes: Int
@@ -50,16 +52,15 @@ class PermissionsController: UITableViewController {
 		switch cellIndex {
 		case .gallery:
 			instanceName = "gallery"
-			let permission = Permission<GalleryPermission>()
-			permission.preparePermission(self, granted: block)
-		case .calendar:
-			instanceName = "calendar"
-			let permission = Permission<CalendarPermission>()
-			permission.preparePermission(self, granted: block)
-		case .camera:
-			instanceName = "camera"
-			let permission = Permission<CameraPermissions>()
-			permission.preparePermission(self, granted: block)
+  		Permission<GalleryPermission>.prepare(for: self, callback: block)
+		case .calendar: break
+//			instanceName = "calendar"
+//			let permission = Permission<CalendarPermission>()
+//			permission.preparePermission(self, granted: block)
+		case .camera: break
+//			instanceName = "camera"
+//			let permission = Permission<CameraPermissions>()
+//			permission.preparePermission(self, granted: block)
 		}
 	}
 	

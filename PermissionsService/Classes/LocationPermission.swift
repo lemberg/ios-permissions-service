@@ -9,13 +9,10 @@
 import Foundation
 import CoreLocation
 
-public final class LocationPermission: PermissionConfiguration {
+public final class LocationPermission: PermissionService {
+
   public init() {}
   
-  public var restrictedAlertMessage = "This app does not have access to your location"
-  public var deniedAlertMessage = DefaultValues.deniedAlertMessage
-  public var deniedTitle = ""
-
   public var entityType = CLAuthorizationStatus.authorizedWhenInUse
   
   public func checkStatus() -> PermissonStatus {

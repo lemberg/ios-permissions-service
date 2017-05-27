@@ -11,12 +11,8 @@ import Foundation
 import Contacts
 
 @available(iOS 9.0, *)
-public class ContactsPermission: PermissionConfiguration {
+public class ContactsPermission: PermissionService {
   
-  public var restrictedAlertMessage = "This app does not have access to your Contacts"
-  public var deniedAlertMessage = DefaultValues.deniedAlertMessage
-  public var deniedTitle = ""
-
   public required init() {
     
   }

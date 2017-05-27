@@ -8,15 +8,12 @@
 import UIKit
 import EventKit
 
-public final class CalendarPermission: PermissionConfiguration {
+public final class CalendarPermission: PermissionService {
     
   public init() {
     
   }
   
-  public var restrictedAlertMessage = "This app does not have access to your calendar"
-	public var deniedAlertMessage = DefaultValues.deniedAlertMessage
-  public var deniedTitle = ""
 	public var entityType = EKEntityType.event
   
   public func checkStatus() -> PermissonStatus {
