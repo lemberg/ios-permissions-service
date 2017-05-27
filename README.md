@@ -1,6 +1,6 @@
 # PermissionsService
 
-[![CI Status](http://img.shields.io/travis/OverSwift/ios-permissions-service.svg?style=flat)](https://travis-ci.org/OverSwift/ios-permissions-service.svg?branch=master)
+[![CI Status](http://img.shields.io/travis/lemberg/ios-permissions-service.svg?style=flat)](https://travis-ci.org/lemberg/ios-permissions-service.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
 [![License](https://img.shields.io/cocoapods/l/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
 [![Platform](https://img.shields.io/cocoapods/p/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
