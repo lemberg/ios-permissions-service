@@ -116,34 +116,6 @@ open class Permission<T: PermissionService> {
   
 }
 
-class Camera: PermissionService {
-  
-  required init() {
-  }
-  
-  func checkStatus() -> PermissonStatus {
-    return PermissonStatus(rawValue: 0)!
-  }
-  
-  func requestStatus(_ callback: @escaping (Bool) -> Void) {
-    
-  }
-}
-
-
-class Using: ServiceDisplay {
-  
-  func foo() {
-    Permission<Camera>.prepare(for: self) { (s) in
-      
-    }
-  }
-  
-  func showAlert(vc: UIAlertController) {
-    
-  }
-}
-
 private extension UIAlertController {
   
   class func openSettingsAction() -> UIAlertAction {
