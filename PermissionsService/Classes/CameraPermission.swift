@@ -10,7 +10,6 @@ import Photos
 
 public final class CameraPermissions: PermissionService {
   
-  
   public var mediaType = AVMediaTypeVideo
   
   public init() {

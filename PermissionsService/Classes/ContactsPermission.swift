@@ -31,4 +31,5 @@ public class ContactsPermission: PermissionService {
       requestGranted(grandted)
     }
   }
+    
 }

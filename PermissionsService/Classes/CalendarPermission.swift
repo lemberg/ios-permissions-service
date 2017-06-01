@@ -31,4 +31,5 @@ public final class CalendarPermission: PermissionService {
       requestGranted(accessGranted)
     }
   }
+  
 }

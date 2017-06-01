@@ -27,4 +27,5 @@ public final class LocationPermission: PermissionService {
   public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
     requestGranted (CLLocationManager.authorizationStatus() == entityType)
   }
+    
 }
