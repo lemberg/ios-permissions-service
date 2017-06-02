@@ -55,7 +55,7 @@ pod "PermissionsService"
 
 ```swift
 
-  Permission<GalleryPermission>.prepare(for: self, callback: { (granted) in
+  Permission<Gallery>.prepare(for: self, callback: { (granted) in
       if granted {
           //present library
       } else {
