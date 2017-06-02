@@ -49,13 +49,9 @@ pod "PermissionsService"
 
 ## How To Use
 
-1. Choose a type of permission and add special keys to your .plist file.  
+1. Configure your project in all ways needed for chosen permission type. For example, in a case of gallery, add specific key to your .plist file.  
 
-```swift
-  NSPhotoLibraryUsageDescription
-```
-
-2. Add `Permission<T: PermissionService>` object with a type you needed and use  `prepare(_:) ` method for request permission and presenting alert to the user. 
+1. Add `Permission<T: PermissionService>` object with a type you needed and use  `prepare(_:) ` method for request permission and presenting alert to the user. 
 
 ```swift
 
@@ -69,7 +65,7 @@ pod "PermissionsService"
 
 ```
 
-3. Enjoy!
+1. Enjoy!
 
 ## Requirements
 
@@ -79,10 +75,10 @@ pod "PermissionsService"
 
 ## Author
 
-### [Lemberg Solutions Inc](http://lemberg.co.uk) 
+### [Lemberg Solutions](http://lemberg.co.uk) 
 
 [![iOS Platform](http://lemberg.co.uk/sites/all/themes/lemberg/images/logo.png)](https://github.com/lemberg) 
 
 ## License
 
-ios-permissions-service is available under the BSD license. See the LICENSE file for more info.
+ios-permissions-service is available under the [BSD license](https://directory.fsf.org/wiki/License:BSD_4Clause). See the LICENSE file for more info.
