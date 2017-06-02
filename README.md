@@ -51,7 +51,7 @@ pod "PermissionsService"
 
 1. Configure your project in all ways needed for chosen permission type. For example, in a case of gallery, add specific key to your .plist file.  
 
-1. Add `Permission<T: PermissionService>` object with a type you needed and use  `prepare(_:) ` method for request permission and presenting alert to the user. 
+2. Add `Permission<T: PermissionService>` object with a type you needed and use  `prepare(_:) ` method for request permission and presenting alert to the user. 
 
 ```swift
 
@@ -65,7 +65,7 @@ pod "PermissionsService"
 
 ```
 
-1. Enjoy!
+3. Enjoy!
 
 ## Requirements
 
