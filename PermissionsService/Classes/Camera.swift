@@ -1,5 +1,5 @@
 //
-//  CameraPermission.swift
+//  Camera.swift
 //
 //  Created by Volodymyr Hyrka on 2/9/16.
 //  Copyright © 2016 LembergSolutions. All rights reserved.
@@ -8,17 +8,15 @@
 import Foundation
 import Photos
 
-public final class CameraPermissions: PermissionService {
+public final class Camera: PermissionService {
   
   public var mediaType = AVMediaTypeVideo
+
+  public init() {}
   
-  public init() {
-    
-  }
-  
-  public func checkStatus() -> PermissonStatus {
+  public func checkStatus() -> PermissionStatus {
     let statusInt = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo).rawValue
-    guard let status = PermissonStatus(rawValue: statusInt) , (0...3) ~= statusInt else {
+    guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
       return .notDetermined
     }

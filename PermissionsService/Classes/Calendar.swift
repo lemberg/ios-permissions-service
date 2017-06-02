@@ -1,5 +1,5 @@
 //
-//  CalendarPermission.swift
+//  Calendar.swift
 //
 //  Created by Les Melnychuk on 2/19/16.
 //  Copyright © 2016 LembergSolutions. All rights reserved.
@@ -8,17 +8,15 @@
 import UIKit
 import EventKit
 
-public final class CalendarPermission: PermissionService {
-    
-  public init() {
-    
-  }
+public final class Calendar: PermissionService {
   
-	public var entityType = EKEntityType.event
+  public var entityType = EKEntityType.event
+
+  public init() {}
   
-  public func checkStatus() -> PermissonStatus {
+  public func checkStatus() -> PermissionStatus {
     let statusInt = EKEventStore.authorizationStatus(for: EKEntityType.event).rawValue
-    guard let status = PermissonStatus(rawValue: statusInt), (0...3) ~= statusInt else {
+    guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
       return .notDetermined
     }
