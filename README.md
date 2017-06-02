@@ -23,7 +23,7 @@ Of cause, it is not a silver bullet, but a good tool for your project!
 * Calendar  
 * Camera    
 * Contacts  
-* Camera   
+* Callery  
 * Location  
 
 ## Installation with CocoaPods
