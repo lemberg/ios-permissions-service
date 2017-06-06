@@ -51,7 +51,9 @@ pod "PermissionsService"
 
 1. Configure your project in all ways needed for chosen permission type. For example, in a case of gallery, add specific key to your .plist file.  
 
-2. Add `Permission<T: PermissionService>` object with a type you needed and use  `prepare(_:) ` method for request permission and presenting alert to the user. 
+2. Implement  `ServiceDisplay ` protocol in your class. If it's not a `UIVIewController` class you should implement `showAlert(_:)` method, but if it is - there is a default implementation and you can leave it empty. 
+
+3. Add `Permission<T: PermissionService>` object with a type you needed and use  `prepare(_:) ` method for request permission and presenting alert to the user. 
 
 ```swift
 
@@ -65,7 +67,7 @@ pod "PermissionsService"
 
 ```
 
-3. Enjoy!
+4. Enjoy!
 
 ## Requirements
 
