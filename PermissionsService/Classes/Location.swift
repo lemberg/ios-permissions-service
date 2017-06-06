@@ -10,7 +10,7 @@ import CoreLocation
 
 public final class Location: PermissionService {
     
-  public var entityType = CLAuthorizationStatus.authorizedWhenInUse
+  let entityType = CLAuthorizationStatus.authorizedWhenInUse
     
   public init() {}
   
@@ -24,6 +24,7 @@ public final class Location: PermissionService {
   }
   
   public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
+//    CLLocationManager().requestWhenInUseAuthorization()
     requestGranted (CLLocationManager.authorizationStatus() == entityType)
   }
     
