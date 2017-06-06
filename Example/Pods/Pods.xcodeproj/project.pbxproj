@@ -19,7 +19,6 @@
 		90276FC63D072683EA6F5492FDE8E54E /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB18FBAC724F57490F80E6E0929B4D7 /* Contacts.swift */; };
 		9BA18D131EE6A84500240765 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA18D121EE6A84500240765 /* Reminder.swift */; };
 		9BA18D151EE6AF6100240765 /* Microphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA18D141EE6AF6100240765 /* Microphone.swift */; };
-		9BA18D171EE6B47600240765 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA18D161EE6B47600240765 /* Text.swift */; };
 		D91C04196EA2506A1F4D8FDF048D92D9 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2869A4F6060B6CDD2434822B27F1E47B /* Gallery.swift */; };
 		F883FD8F5ECAA77A7F05C1186CD5BFA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		93CDA4E922B9FBF76DF66C9D48B43E71 /* Camera.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; tabWidth = 2; };
 		9BA18D121EE6A84500240765 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		9BA18D141EE6AF6100240765 /* Microphone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Microphone.swift; sourceTree = "<group>"; };
-		9BA18D161EE6B47600240765 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B281E1483C65176C3BEC052AAFCE90C4 /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				9BA18D121EE6A84500240765 /* Reminder.swift */,
 				93CDA4E922B9FBF76DF66C9D48B43E71 /* Camera.swift */,
 				9BA18D141EE6AF6100240765 /* Microphone.swift */,
-				9BA18D161EE6B47600240765 /* Text.swift */,
 				7FB18FBAC724F57490F80E6E0929B4D7 /* Contacts.swift */,
 				2869A4F6060B6CDD2434822B27F1E47B /* Gallery.swift */,
 				B281E1483C65176C3BEC052AAFCE90C4 /* Location.swift */,
@@ -299,7 +296,6 @@
 				90276FC63D072683EA6F5492FDE8E54E /* Contacts.swift in Sources */,
 				D91C04196EA2506A1F4D8FDF048D92D9 /* Gallery.swift in Sources */,
 				76F0D20516B7DB4C265CBC3FBD6A27B4 /* Location.swift in Sources */,
-				9BA18D171EE6B47600240765 /* Text.swift in Sources */,
 				9BA18D151EE6AF6100240765 /* Microphone.swift in Sources */,
 				47F84B8B6AA693F5DC280BDE683A544F /* PermissionsService-dummy.m in Sources */,
 				7527B7A1CDCD7ECAAE00A9450A954DA4 /* SystemPermissionService.swift in Sources */,
