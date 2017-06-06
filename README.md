@@ -15,13 +15,14 @@ An easy way to do permissions requests & handling automatically.
 1. [Supported Permission Types](https://github.com/lemberg/ios-permissions-service/tree/hellen#supported-permission-types)
 1. [Installation with CocoaPods](https://github.com/lemberg/ios-permissions-service/tree/hellen#installation-with-cocoapods)
 1. [How To Use](https://github.com/lemberg/ios-permissions-service/tree/hellen#how-to-use)
+1. [Customizing](https://github.com/lemberg/ios-permissions-service/tree/hellen#customizing) 
 1. [Requirements](https://github.com/lemberg/ios-permissions-service/tree/hellen#requirements)
 1. [Author](https://github.com/lemberg/ios-permissions-service/tree/hellen#author)
 1. [License](https://github.com/lemberg/ios-permissions-service/tree/hellen#license)
 
 ## Why do you need it?
 
-This library is an easy way to handle `notDetermined` `authorized` `restricted` `denied` cases without doing it by yourself. No more need to do error handling for `restricted` and `denied` cases, create and present to user specific alerts. 
+This library is an easy way to handle `notDetermined`, `authorized`, `restricted` and `denied` cases without doing it by yourself. No more need to do error handling for `restricted` and `denied` cases, create and present to user specific alerts. 
 Of cause, it is not a silver bullet, but a good tool for your project!
 
 ## Features
@@ -36,7 +37,9 @@ Of cause, it is not a silver bullet, but a good tool for your project!
 * Camera    
 * Contacts  
 * Gallery  
-* Location  
+* Location 
+* Microphone 
+* Reminder
 
 ## Installation with CocoaPods
 
@@ -68,6 +71,37 @@ pod "PermissionsService"
 ```
 
 4. Enjoy!
+
+## Customizing
+
+You can add custom alerts messages for `denied` and `restricted` cases by creating new `struct` which conform to `ServiceMessages` protocol.
+
+```swift
+
+struct CameraMessages: ServiceMessages {
+    
+    let deniedTitle = "Access denied"
+    let deniedMessage = "You can enable access to camera in Privacy Settings"
+    let restrictedTitle = "Access restricted"
+    let restrictedMessage = "Access to camera is restricted"
+    
+}
+```
+
+ To use your custom messages put them in  `prepare(_:) ` method, like this:
+ 
+ ```swift
+ 
+   Permission<Camera>.prepare(for: self, with: CameraMessages()) { (granted) in
+      if granted {
+          print("Granted")
+      } else {
+          print("Error")
+      }
+
+  }
+
+ ```
 
 ## Requirements
 
