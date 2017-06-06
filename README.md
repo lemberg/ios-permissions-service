@@ -92,7 +92,7 @@ struct CameraMessages: ServiceMessages {
  
  ```swift
  
-   Permission<Gallery>.prepare(for: self, with: CameraMessages()) { (granted) in
+   Permission<Camera>.prepare(for: self, with: CameraMessages()) { (granted) in
       if granted {
           print("Granted")
       } else {
