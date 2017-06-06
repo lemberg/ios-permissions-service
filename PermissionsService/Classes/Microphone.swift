@@ -9,7 +9,7 @@
 import Foundation
 import Photos
 
-public final class CameraAudio: PermissionService {
+public final class Microphone: PermissionService {
     
     public var mediaType = AVMediaTypeAudio
     
