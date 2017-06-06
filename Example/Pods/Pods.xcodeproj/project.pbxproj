@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3AB488C6A0D477F6E2059FB6DD79BD97 /* CameraVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CDA4E922B9FBF76DF66C9D48B43E71 /* CameraVideo.swift */; };
-		3E814B4F3AE93F7FFEA0CEF5AEED9412 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4676F90253FA34B3E30696016E78E1C4 /* Calendar.swift */; };
+		3E814B4F3AE93F7FFEA0CEF5AEED9412 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4676F90253FA34B3E30696016E78E1C4 /* CalendarEvent.swift */; };
 		47F84B8B6AA693F5DC280BDE683A544F /* PermissionsService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D641D3D3FD422ABF5B44A83EF90BF /* PermissionsService-dummy.m */; };
 		55C9CB927BE156B7167C839FB5E89348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		65D82F4B97983BAC923BEE13AD644C4C /* PermissionsService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1A3484DDCBA846ACD19BA820F7831BF /* PermissionsService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,7 +43,7 @@
 		2E633F0B224559BF587862558DD34437 /* PermissionsService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PermissionsService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3508BAA3D48436240F693D56B6E49AF8 /* PermissionsService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PermissionsService-prefix.pch"; sourceTree = "<group>"; };
 		379D641D3D3FD422ABF5B44A83EF90BF /* PermissionsService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PermissionsService-dummy.m"; sourceTree = "<group>"; };
-		4676F90253FA34B3E30696016E78E1C4 /* Calendar.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; tabWidth = 2; };
+		4676F90253FA34B3E30696016E78E1C4 /* CalendarEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; tabWidth = 2; };
 		552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		712D16A86AC3E0DFDCFF77B3E84D4AEF /* PermissionsService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PermissionsService.xcconfig; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		73F8A7F51F4692AB8EEF59041920B262 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4676F90253FA34B3E30696016E78E1C4 /* Calendar.swift */,
+				4676F90253FA34B3E30696016E78E1C4 /* CalendarEvent.swift */,
 				9BA18D121EE6A84500240765 /* Reminder.swift */,
 				93CDA4E922B9FBF76DF66C9D48B43E71 /* CameraVideo.swift */,
 				9BA18D141EE6AF6100240765 /* CameraAudio.swift */,
@@ -290,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E814B4F3AE93F7FFEA0CEF5AEED9412 /* Calendar.swift in Sources */,
+				3E814B4F3AE93F7FFEA0CEF5AEED9412 /* CalendarEvent.swift in Sources */,
 				9BA18D131EE6A84500240765 /* Reminder.swift in Sources */,
 				3AB488C6A0D477F6E2059FB6DD79BD97 /* CameraVideo.swift in Sources */,
 				90276FC63D072683EA6F5492FDE8E54E /* Contacts.swift in Sources */,

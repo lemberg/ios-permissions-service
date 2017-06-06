@@ -1,5 +1,5 @@
 //
-//  Calendar.swift
+//  CalendarEvent.swift
 //
 //  Created by Les Melnychuk on 2/19/16.
 //  Copyright © 2016 LembergSolutions. All rights reserved.
@@ -8,7 +8,7 @@
 import UIKit
 import EventKit
 
-public final class Calendar: PermissionService {
+public final class CalendarEvent: PermissionService {
   
   let entityType = EKEntityType.event
 
