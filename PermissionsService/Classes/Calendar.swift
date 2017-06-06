@@ -1,21 +1,21 @@
 //
-//  Camera.swift
+//  Calendar.swift
 //
-//  Created by Volodymyr Hyrka on 2/9/16.
+//  Created by Les Melnychuk on 2/19/16.
 //  Copyright © 2016 LembergSolutions. All rights reserved.
 //
 
-import Foundation
-import Photos
+import UIKit
+import EventKit
 
-public final class Camera: PermissionService {
+public final class Calendar: PermissionService {
   
-  public var mediaType = AVMediaTypeVideo
+  let entityType = EKEntityType.event
 
   public init() {}
   
   public func checkStatus() -> PermissionStatus {
-    let statusInt = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo).rawValue
+    let statusInt = EKEventStore.authorizationStatus(for: entityType).rawValue
     guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
       return .notDetermined
@@ -24,8 +24,9 @@ public final class Camera: PermissionService {
   }
   
   public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
-    AVCaptureDevice.requestAccess(forMediaType: mediaType) { (granted) -> Void in
-      requestGranted(granted)
+    EKEventStore().requestAccess(to: entityType) {
+      (accessGranted: Bool, error: Error?) in
+      requestGranted(accessGranted)
     }
   }
   

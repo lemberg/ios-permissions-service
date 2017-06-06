@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AB488C6A0D477F6E2059FB6DD79BD97 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CDA4E922B9FBF76DF66C9D48B43E71 /* Camera.swift */; };
-		3E814B4F3AE93F7FFEA0CEF5AEED9412 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4676F90253FA34B3E30696016E78E1C4 /* CalendarEvent.swift */; };
+		3AB488C6A0D477F6E2059FB6DD79BD97 /* CameraVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CDA4E922B9FBF76DF66C9D48B43E71 /* CameraVideo.swift */; };
+		3E814B4F3AE93F7FFEA0CEF5AEED9412 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4676F90253FA34B3E30696016E78E1C4 /* Calendar.swift */; };
 		47F84B8B6AA693F5DC280BDE683A544F /* PermissionsService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D641D3D3FD422ABF5B44A83EF90BF /* PermissionsService-dummy.m */; };
 		55C9CB927BE156B7167C839FB5E89348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		65D82F4B97983BAC923BEE13AD644C4C /* PermissionsService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1A3484DDCBA846ACD19BA820F7831BF /* PermissionsService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,7 +17,8 @@
 		76F0D20516B7DB4C265CBC3FBD6A27B4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B281E1483C65176C3BEC052AAFCE90C4 /* Location.swift */; };
 		7C867FB8F5137339D121CB62D3EB1080 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */; };
 		90276FC63D072683EA6F5492FDE8E54E /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB18FBAC724F57490F80E6E0929B4D7 /* Contacts.swift */; };
-		9BA18D131EE6A84500240765 /* CalendarReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA18D121EE6A84500240765 /* CalendarReminder.swift */; };
+		9BA18D131EE6A84500240765 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA18D121EE6A84500240765 /* Reminder.swift */; };
+		9BA18D151EE6AF6100240765 /* CameraAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA18D141EE6AF6100240765 /* CameraAudio.swift */; };
 		D91C04196EA2506A1F4D8FDF048D92D9 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2869A4F6060B6CDD2434822B27F1E47B /* Gallery.swift */; };
 		F883FD8F5ECAA77A7F05C1186CD5BFA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +43,7 @@
 		2E633F0B224559BF587862558DD34437 /* PermissionsService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PermissionsService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3508BAA3D48436240F693D56B6E49AF8 /* PermissionsService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PermissionsService-prefix.pch"; sourceTree = "<group>"; };
 		379D641D3D3FD422ABF5B44A83EF90BF /* PermissionsService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PermissionsService-dummy.m"; sourceTree = "<group>"; };
-		4676F90253FA34B3E30696016E78E1C4 /* CalendarEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; tabWidth = 2; };
+		4676F90253FA34B3E30696016E78E1C4 /* Calendar.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; tabWidth = 2; };
 		552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		712D16A86AC3E0DFDCFF77B3E84D4AEF /* PermissionsService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PermissionsService.xcconfig; sourceTree = "<group>"; };
@@ -51,8 +52,9 @@
 		7FB18FBAC724F57490F80E6E0929B4D7 /* Contacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		8FD57FDDA4FCC3A528512C13C955B1BB /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93CDA4E922B9FBF76DF66C9D48B43E71 /* Camera.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; tabWidth = 2; };
-		9BA18D121EE6A84500240765 /* CalendarReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarReminder.swift; sourceTree = "<group>"; };
+		93CDA4E922B9FBF76DF66C9D48B43E71 /* CameraVideo.swift */ = {isa = PBXFileReference; includeInIndex = 1; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = CameraVideo.swift; sourceTree = "<group>"; tabWidth = 2; };
+		9BA18D121EE6A84500240765 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		9BA18D141EE6AF6100240765 /* CameraAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraAudio.swift; sourceTree = "<group>"; };
 		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B281E1483C65176C3BEC052AAFCE90C4 /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
@@ -132,9 +134,10 @@
 		73F8A7F51F4692AB8EEF59041920B262 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4676F90253FA34B3E30696016E78E1C4 /* CalendarEvent.swift */,
-				9BA18D121EE6A84500240765 /* CalendarReminder.swift */,
-				93CDA4E922B9FBF76DF66C9D48B43E71 /* Camera.swift */,
+				4676F90253FA34B3E30696016E78E1C4 /* Calendar.swift */,
+				9BA18D121EE6A84500240765 /* Reminder.swift */,
+				93CDA4E922B9FBF76DF66C9D48B43E71 /* CameraVideo.swift */,
+				9BA18D141EE6AF6100240765 /* CameraAudio.swift */,
 				7FB18FBAC724F57490F80E6E0929B4D7 /* Contacts.swift */,
 				2869A4F6060B6CDD2434822B27F1E47B /* Gallery.swift */,
 				B281E1483C65176C3BEC052AAFCE90C4 /* Location.swift */,
@@ -287,12 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E814B4F3AE93F7FFEA0CEF5AEED9412 /* CalendarEvent.swift in Sources */,
-				9BA18D131EE6A84500240765 /* CalendarReminder.swift in Sources */,
-				3AB488C6A0D477F6E2059FB6DD79BD97 /* Camera.swift in Sources */,
+				3E814B4F3AE93F7FFEA0CEF5AEED9412 /* Calendar.swift in Sources */,
+				9BA18D131EE6A84500240765 /* Reminder.swift in Sources */,
+				3AB488C6A0D477F6E2059FB6DD79BD97 /* CameraVideo.swift in Sources */,
 				90276FC63D072683EA6F5492FDE8E54E /* Contacts.swift in Sources */,
 				D91C04196EA2506A1F4D8FDF048D92D9 /* Gallery.swift in Sources */,
 				76F0D20516B7DB4C265CBC3FBD6A27B4 /* Location.swift in Sources */,
+				9BA18D151EE6AF6100240765 /* CameraAudio.swift in Sources */,
 				47F84B8B6AA693F5DC280BDE683A544F /* PermissionsService-dummy.m in Sources */,
 				7527B7A1CDCD7ECAAE00A9450A954DA4 /* SystemPermissionService.swift in Sources */,
 			);

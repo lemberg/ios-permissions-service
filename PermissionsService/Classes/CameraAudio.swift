@@ -1,21 +1,22 @@
 //
-//  CalendarReminder.swift
+//  CameraAudio.swift
+//  Pods
 //
 //  Created by Hellen Soloviy on 6/6/17.
-//  Copyright © 2016 LembergSolutions. All rights reserved.
+//
 //
 
-import UIKit
-import EventKit
+import Foundation
+import Photos
 
-public final class CalendarReminder: PermissionService {
+public final class CameraAudio: PermissionService {
     
-    let entityType = EKEntityType.reminder
+    public var mediaType = AVMediaTypeAudio
     
     public init() {}
     
     public func checkStatus() -> PermissionStatus {
-        let statusInt = EKEventStore.authorizationStatus(for: EKEntityType.event).rawValue
+        let statusInt = AVCaptureDevice.authorizationStatus(forMediaType: mediaType).rawValue
         guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
             assertionFailure("Impossible status")
             return .notDetermined
@@ -24,11 +25,9 @@ public final class CalendarReminder: PermissionService {
     }
     
     public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
-        EKEventStore().requestAccess(to: entityType) {
-            (accessGranted: Bool, error: Error?) in
-            requestGranted(accessGranted)
+        AVCaptureDevice.requestAccess(forMediaType: mediaType) { (granted) -> Void in
+            requestGranted(granted)
         }
     }
     
 }
-
