@@ -1,7 +1,5 @@
-
 //
-//  ContactsPermission.swift
-//  StylesCloud
+//  Contacts.swift
 //
 //  Created by Sergiy Loza on 05.12.16.
 //  Copyright © 2016 Lemberg Solution. All rights reserved.
@@ -11,15 +9,13 @@ import Foundation
 import Contacts
 
 @available(iOS 9.0, *)
-public class ContactsPermission: PermissionService {
+public final class Contacts: PermissionService {
   
-  public required init() {
-    
-  }
+  public init() {}
   
-  public func checkStatus() -> PermissonStatus {
+  public func checkStatus() -> PermissionStatus {
     let statusInt = CNContactStore.authorizationStatus(for: .contacts).rawValue
-    guard let status = PermissonStatus(rawValue: statusInt) , (0...3) ~= statusInt else {
+    guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
       assertionFailure("Impossible status")
       return .notDetermined
     }

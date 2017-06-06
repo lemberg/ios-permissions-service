@@ -11,6 +11,15 @@ import PermissionsService
 
 extension PermissionsController: ServiceDisplay {}
 
+struct CameraMessages: ServiceMessages {
+  
+  let deniedTitle = "Access denied"
+  let deniedMessage = "You can enable access to camera in Privacy Settings"
+  let restrictedTitle = "Access restricted"
+  let restrictedMessage = "Access to camera is restricted"
+  
+}
+
 class PermissionsController: UITableViewController {
 	
 	enum CellsIndexes: Int
@@ -20,6 +29,9 @@ class PermissionsController: UITableViewController {
 		case camera
     case location
     case contacts
+    case microphone
+    case reminder
+
 	}
 	
 	override func viewDidLoad() {
@@ -31,7 +43,7 @@ class PermissionsController: UITableViewController {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
 		guard let cellIndex = CellsIndexes(rawValue: indexPath.row) else {
-			assertionFailure("guarrd in \(#file) on \(#line) line")
+			assertionFailure("guard in \(#file) on \(#line) line")
 			return
 		}
 		
@@ -52,19 +64,25 @@ class PermissionsController: UITableViewController {
 		switch cellIndex {
 		case .gallery:
       instanceName = "Gallery"
-  		Permission<GalleryPermission>.prepare(for: self, callback: block)
+  		Permission<Gallery>.prepare(for: self, callback: block)
 		case .calendar:
-      instanceName = "Calendat"
-      Permission<CalendarPermission>.prepare(for: self, callback: block)
+      instanceName = "CalendarEvent"
+      Permission<CalendarEvent>.prepare(for: self, callback: block)
 		case .camera:
       instanceName = "Camera"
-      Permission<CameraPermissions>.prepare(for: self, callback: block)
+      Permission<Camera>.prepare(for: self, with: CameraMessages(), callback: block)
     case .location:
       instanceName = "Location"
-      Permission<LocationPermission>.prepare(for: self, callback: block)
+      Permission<Location>.prepare(for: self, callback: block)
     case .contacts:
       instanceName = "Contacts"
-      Permission<ContactsPermission>.prepare(for: self, callback: block)
+      Permission<Contacts>.prepare(for: self, callback: block)
+    case .microphone:
+      instanceName = "Microphone"
+      Permission<Microphone>.prepare(for: self, callback: block)
+    case .reminder:
+      instanceName = "Reminder"
+      Permission<Reminder>.prepare(for: self, callback: block)
 		}
 	}
 	

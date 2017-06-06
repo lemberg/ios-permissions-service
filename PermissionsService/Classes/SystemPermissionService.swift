@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum PermissonStatus: Int {
+public enum PermissionStatus: Int {
   case notDetermined
   case restricted
   case denied
@@ -18,7 +18,7 @@ public enum PermissonStatus: Int {
 public protocol PermissionService {
   
   init()
-  func checkStatus() -> PermissonStatus
+  func checkStatus() -> PermissionStatus
   func requestStatus(_ callback: @escaping (_ success: Bool) -> Void)
 }
 
@@ -50,15 +50,14 @@ private struct DefaultMessages: ServiceMessages {
   let restrictedMessage = "Access to this component is restricted"
 }
 
-
-public var closeTitle:String = "Close"
-public var settingsTitle:String = "Settings"
+public var closeTitle: String = "Close"
+public var settingsTitle: String = "Settings"
 
 open class Permission<T: PermissionService> {
   
   public typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
   
-  public class func prepare(for handler: ServiceDisplay, with messages: ServiceMessages = DefaultMessages() , callback: @escaping PermissionGranted) {
+  public class func prepare(for handler: ServiceDisplay, with messages: ServiceMessages = DefaultMessages(), callback: @escaping PermissionGranted) {
     
     let service = T()
     let status = service.checkStatus()
@@ -93,7 +92,7 @@ open class Permission<T: PermissionService> {
   }
   
   private class func showDeniedAlert(from sender:ServiceDisplay, with messages: ServiceMessages) {
-    let alert = creteAlert()
+    let alert = createAlert()
     alert.title = messages.deniedTitle
     alert.message = messages.deniedMessage
     alert.addAction(UIAlertController.openSettingsAction())
@@ -101,13 +100,13 @@ open class Permission<T: PermissionService> {
   }
   
   private class func showRestrictedAlert(from sender:ServiceDisplay, with messages: ServiceMessages) {
-    let alert = creteAlert()
+    let alert = createAlert()
     alert.title = messages.restrictedTitle
     alert.message = messages.restrictedMessage
     sender.showAlert(vc: alert)
   }
   
-  private class func creteAlert() -> UIAlertController {
+  private class func createAlert() -> UIAlertController {
     let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     let closeAction = UIAlertAction(title: closeTitle, style: .cancel, handler: nil)
     alert.addAction(closeAction)
