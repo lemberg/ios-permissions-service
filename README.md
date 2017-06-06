@@ -10,15 +10,15 @@
 
 An easy way to do permissions requests & handling automatically.
 
-1. [Why do you need it?](https://github.com/lemberg/ios-permissions-service/tree/hellen#why-you-need-it)
-1. [Features](https://github.com/lemberg/ios-permissions-service/tree/hellen#features)
-1. [Supported Permission Types](https://github.com/lemberg/ios-permissions-service/tree/hellen#supported-permission-types)
-1. [Installation with CocoaPods](https://github.com/lemberg/ios-permissions-service/tree/hellen#installation-with-cocoapods)
-1. [How To Use](https://github.com/lemberg/ios-permissions-service/tree/hellen#how-to-use)
-1. [Customizing](https://github.com/lemberg/ios-permissions-service/tree/hellen#customizing) 
-1. [Requirements](https://github.com/lemberg/ios-permissions-service/tree/hellen#requirements)
-1. [Author](https://github.com/lemberg/ios-permissions-service/tree/hellen#author)
-1. [License](https://github.com/lemberg/ios-permissions-service/tree/hellen#license)
+1. [Why do you need it?](https://github.com/lemberg/ios-permissions-service#why-you-need-it)
+1. [Features](https://github.com/lemberg/ios-permissions-service#features)
+1. [Supported Permission Types](https://github.com/lemberg/ios-permissions-service#supported-permission-types)
+1. [Installation with CocoaPods](https://github.com/lemberg/ios-permissions-service#installation-with-cocoapods)
+1. [How To Use](https://github.com/lemberg/ios-permissions-service#how-to-use)
+1. [Customizing](https://github.com/lemberg/ios-permissions-service#customizing) 
+1. [Requirements](https://github.com/lemberg/ios-permissions-service#requirements)
+1. [Author](https://github.com/lemberg/ios-permissions-service#author)
+1. [License](https://github.com/lemberg/ios-permissions-service#license)
 
 ## Why do you need it?
 
