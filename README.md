@@ -88,7 +88,20 @@ struct CameraMessages: ServiceMessages {
 }
 ```
 
- To use your custom messages put them in  `prepare(_:) ` method. 
+ To use your custom messages put them in  `prepare(_:) ` method, like this:
+ 
+ ```swift
+ 
+   Permission<Gallery>.prepare(for: self, with: CameraMessages()) { (granted) in
+      if granted {
+          print("Granted")
+      } else {
+          print("Error")
+      }
+
+  }
+
+ ```
 
 ## Requirements
 
