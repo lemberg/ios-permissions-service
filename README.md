@@ -70,7 +70,7 @@ Now you need to run `pod update` command from you project folder and thats it!
 
 3. Find the *Carthage/Build* folder, which is in your project folder. Drag and drop `PermissionsService.framework` file, to the *Linked Frameworks and Libraries* section in *General* settings tab of your project. 
 
-4. Do to “Build Phases” settings tab. Click the “+” icon and choose “New Run Script Phase”. Add the followin line to your script 
+4. Do to *Build Phases* settings tab. Click the “+” icon and choose *New Run Script Phase*. Add the following line to your script 
 
 ```swift
   /usr/local/bin/carthage copy-frameworks
