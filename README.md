@@ -66,11 +66,11 @@ Now you need to run `pod update` command from you project folder and thats it!
   github "lemberg/ios-permissions-service"
 ```
 
-2. Run `carthage update` command from you project folder.
+2. Run `carthage update --platform iOS` command from you project folder.
 
 3. Find the *Carthage/Build* folder, which is in your project folder. Drag and drop `PermissionsService.framework` file, to the *Linked Frameworks and Libraries* section in *General* settings tab of your project. 
 
-4. Do to *Build Phases* settings tab. Click the “+” icon and choose *New Run Script Phase*. Add the following line to your script 
+4. Do to *Build Phases* settings tab. Click the “+” icon and choose *New Run Script Phase* if not exist. Add the following line to your script 
 
 ```swift
   /usr/local/bin/carthage copy-frameworks
