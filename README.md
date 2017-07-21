@@ -3,6 +3,7 @@
 
 [![CI Status](http://img.shields.io/travis/lemberg/ios-permissions-service.svg?style=flat)](https://travis-ci.org/lemberg/ios-permissions-service.svg?branch=master) 
 [![Version](https://img.shields.io/cocoapods/v/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Version](https://img.shields.io/badge/Swift-3.1%2B-orange.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 [![iOS Platform](https://img.shields.io/badge/iOS-%209.0%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 [![License](https://img.shields.io/cocoapods/l/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
@@ -13,7 +14,9 @@ An easy way to do permissions requests & handling automatically.
 1. [Why do you need it?](https://github.com/lemberg/ios-permissions-service#why-you-need-it)
 1. [Features](https://github.com/lemberg/ios-permissions-service#features)
 1. [Supported Permission Types](https://github.com/lemberg/ios-permissions-service#supported-permission-types)
-1. [Installation with CocoaPods](https://github.com/lemberg/ios-permissions-service#installation-with-cocoapods)
+1. [Installation](https://github.com/lemberg/ios-permissions-service#installation)
+    1. [CocoaPods](https://github.com/lemberg/ios-permissions-service#cocoapods)
+    1. [Carthage](https://github.com/lemberg/ios-permissions-service#carthage)
 1. [How To Use](https://github.com/lemberg/ios-permissions-service#how-to-use)
 1. [Customizing](https://github.com/lemberg/ios-permissions-service#customizing) 
 1. [Requirements](https://github.com/lemberg/ios-permissions-service#requirements)
@@ -43,12 +46,49 @@ Of cause, it is not a silver bullet, but a good tool for your project!
 
 ## Installation with CocoaPods
 
-ios-permissions-service is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+ios-permissions-service is available through [CocoaPods](http://cocoapods.org) and [Carthage](https://github.com/Carthage/Carthage)
+
+### CocoaPods
+
+To install it, simply add the following line to your Podfile:
 
 ```swift
-pod "PermissionsService"
+  pod "PermissionsService"
 ```
+
+Now you need to run `pod update` command from you project folder and thats it!
+
+### Carthage
+
+1. Add the following line to your Cartfile:
+
+```swift
+  github "lemberg/ios-permissions-service"
+```
+
+2. Run `carthage update` command from you project folder.
+
+3. Find the *Carthage/Build* folder, which is in your project folder. Drag and drop `PermissionsService.framework` file, to the *Linked Frameworks and Libraries* section in *General* settings tab of your project. 
+
+4. Do to “Build Phases” settings tab. Click the “+” icon and choose “New Run Script Phase”. Add the followin line to your script 
+
+```swift
+  /usr/local/bin/carthage copy-frameworks
+```
+
+5. Add the framework's paths under *Input Files*:
+
+```swift
+  $(SRCROOT)/Carthage/Build/iOS/PermissionsService.framework
+```
+
+6. Add the framework's paths to the *Output Files*:
+
+```swift
+  $(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/PermissionsService.framework
+```
+
+> More info about using and configurating Carthage you can find [here](https://github.com/Carthage/Carthage#getting-started).
 
 ## How To Use
 
@@ -69,6 +109,8 @@ pod "PermissionsService"
     })
 
 ```
+
+> Be aware that **Calendar** permission service named **CalendarEvent**. 
 
 4. Enjoy!
 
