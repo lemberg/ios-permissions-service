@@ -23,10 +23,12 @@ public final class Reminder: PermissionService {
         return status
     }
     
-    public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
+    public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
+        if !checkPermissionKey(for: .remindersUsageDescription) { return }
+        
         EKEventStore().requestAccess(to: entityType) {
             (accessGranted: Bool, error: Error?) in
-            requestGranted(accessGranted)
+            callback(accessGranted)
         }
     }
     

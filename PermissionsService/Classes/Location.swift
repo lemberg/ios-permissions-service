@@ -23,9 +23,8 @@ public final class Location: PermissionService {
     return status
   }
   
-  public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
-//    CLLocationManager().requestWhenInUseAuthorization()
-    requestGranted (CLLocationManager.authorizationStatus() == entityType)
+    public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
+        callback (CLLocationManager.authorizationStatus() == entityType)
   }
     
 }

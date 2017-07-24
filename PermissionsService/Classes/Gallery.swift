@@ -10,22 +10,24 @@ import Photos
 
 public final class Gallery: PermissionService {
     
-  public init() {}
-  
-  public func status() -> PermissionStatus {
-    let statusInt = PHPhotoLibrary.authorizationStatus().rawValue
-    guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
-      assertionFailure("Impossible status")
-      return .notDetermined
+    public init() {}
+    
+    public func status() -> PermissionStatus {
+        let statusInt = PHPhotoLibrary.authorizationStatus().rawValue
+        guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
+            assertionFailure("Impossible status")
+            return .notDetermined
+        }
+        return status
     }
-    return status
-  }
-  
-  public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
-    PHPhotoLibrary.requestAuthorization({ (newStatus) -> Void in
-      let success = newStatus == PHAuthorizationStatus.authorized
-      requestGranted(success)
-    })
-  }
-  
+    
+    public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
+        if !checkPermissionKey(for: .photoLibraryUsageDescription) { return }
+
+        PHPhotoLibrary.requestAuthorization({ (newStatus) -> Void in
+            let success = newStatus == PHAuthorizationStatus.authorized
+            callback(success)
+        })
+    }
+    
 }

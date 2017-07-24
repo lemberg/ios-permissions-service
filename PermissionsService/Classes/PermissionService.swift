@@ -15,26 +15,6 @@ public protocol PermissionService {
 
 }
 
-public protocol ServiceMessages {
-  
-  var restrictedMessage: String { get }
-  var restrictedTitle: String { get }
-  var deniedMessage: String { get }
-  var deniedTitle: String { get }
-}
-
-public protocol ServiceDisplay {
-  
-  func showAlert(vc: UIAlertController)
-}
-
-public extension ServiceDisplay where Self: UIViewController {
-  
-  public func showAlert(vc: UIAlertController) {
-    self.present(vc, animated: true, completion: nil)
-  }
-}
-
 private struct DefaultMessages: ServiceMessages {
   
   let deniedTitle = "Access denied"
@@ -83,6 +63,7 @@ open class Permission<T: PermissionService> {
 //        }
 //      })
 //      break
+    default: fatalError()
     }
   }
   

@@ -13,50 +13,54 @@ import Foundation
  
     */
   public enum PermissionType: Int, CustomStringConvertible {
-    case contacts, locationAlways, locationInUse, notifications, microphone, camera, photos, reminders, events, bluetooth, motion
+        case contacts, locationAlways, locationInUse, notifications, microphone, camera, photos, reminders, events, bluetooth, motion
     
-    public var prettyDescription: String {
-        switch self {
-        case .locationAlways, .locationInUse:
-            return "Location"
-        default:
-            return "\(self)"
+        public var prettyDescription: String {
+            switch self {
+            case .locationAlways, .locationInUse:
+                return "Location"
+            default:
+                return "\(self)"
+            }
         }
-    }
     
-    public var description: String {
-        switch self {
-        case .contacts:         return "Contacts" //
-        case .events:           return "Events" //CalendarEvent
-        case .locationAlways:   return "LocationAlways"
-        case .locationInUse:    return "LocationInUse"
-        case .notifications:    return "Notifications"
-        case .microphone:       return "Microphone" //
-        case .camera:           return "Camera" //
-        case .photos:           return "Photos" //
-        case .reminders:        return "Reminders" //
-        case .bluetooth:        return "Bluetooth"
-        case .motion:           return "Motion"
+        public var description: String {
+            switch self {
+            case .contacts:         return "Contacts" //
+            case .events:           return "Events" //CalendarEvent
+            case .locationAlways:   return "LocationAlways"
+            case .locationInUse:    return "LocationInUse"
+            case .notifications:    return "Notifications"
+            case .microphone:       return "Microphone" //
+            case .camera:           return "Camera" //
+            case .photos:           return "Photos" //
+            case .reminders:        return "Reminders" //
+            case .bluetooth:        return "Bluetooth"
+            case .motion:           return "Motion"
+            }
         }
-    }
     
-    static let allValues = [contacts, locationAlways, locationInUse, notifications, microphone, camera, photos, reminders, events, bluetooth, motion]
-}
+        static let allValues = [contacts, locationAlways, locationInUse, notifications, microphone, camera, photos, reminders, events, bluetooth, motion]
+    }
 
     /**
         Possible statuses for a permission.
  
     */
-
   public enum PermissionStatus: Int, CustomStringConvertible {
-      case authorized, denied, notDetermined, restricted
+        case unknown = -1
+        case notDetermined = 0
+        case restricted = 1
+        case denied = 2
+        case authorized = 3
     
       public var description: String {
           switch self {
-          case .authorized:    return "Authorized"
-          case .denied:        return "Denied"
+          case .unknown:       return "Unknown"
           case .notDetermined: return "NotDetermined"
           case .restricted:    return "Restricted" // System-level
+          case .denied:        return "Denied"
+          case .authorized:    return "Authorized"
           }
       }
   }
@@ -64,7 +68,6 @@ import Foundation
     /**
         Result for a permission status request.
     */
-
   public class PermissionResult: NSObject {
       public let type: PermissionType
       public let status: PermissionStatus

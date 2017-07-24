@@ -19,18 +19,19 @@ public final class Contacts: PermissionService {
      
      - returns: Permission request result and error, if it exist
      */
-    public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
+    public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         //TODO: Error handling
+        if !checkPermissionKey(for: .contactsUsageDescription) { return }
         
         if #available(iOS 8.0, *) {
             ABAddressBookRequestAccessWithCompletion(nil) { grandted, error in
-                requestGranted(grandted)
+                callback(grandted)
             }
             
         } else {
             CNContactStore().requestAccess(for: .contacts, completionHandler: {
                 grandted, error in
-                requestGranted(grandted)
+                callback(grandted)
             })
         }
         
@@ -42,27 +43,14 @@ public final class Contacts: PermissionService {
      - returns: Current permission status.
      */
     public func status() -> PermissionStatus {
-        //TODO: Switch more abstract. It is Int after all.
         
         if #available(iOS 8.0, *) {
-            
             let status = ABAddressBookGetAuthorizationStatus()
-            switch status {
-            case .authorized: return .authorized
-            case .denied: return .denied
-            case .restricted: return .restricted
-            case .notDetermined: return .notDetermined
-            }
+            return status.rawValue.permissionStatus()
             
         } else {
-            
             let status = CNContactStore.authorizationStatus(for: .contacts)
-            switch status {
-            case .authorized: return .authorized
-            case .denied: return .denied
-            case .restricted: return .restricted
-            case .notDetermined: return .notDetermined
-            }
+            return status.rawValue.permissionStatus()
             
         }
     }
