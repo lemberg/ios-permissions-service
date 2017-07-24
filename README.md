@@ -149,7 +149,7 @@ struct CameraMessages: ServiceMessages {
 ## Requirements
 
 - [![Swift Version](https://img.shields.io/badge/Swift-3.1%2B-orange.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
-- [![iOS Platform](https://img.shields.io/badge/iOS-%209.0%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
+- [![Version](https://img.shields.io/cocoapods/v/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 - [![Xcode Version](https://img.shields.io/badge/Xcode-8.1%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 
 ## Author
