@@ -1,5 +1,7 @@
 
-# PermissionsService
+<p align="center"> 
+<img src="http://i.piccy.info/i9/a78079fbf443139391c8bab158b8b6ed/1500892891/100777/1164536/800.png">
+</p>
 
 [![License](https://img.shields.io/cocoapods/l/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
 [![Version](https://img.shields.io/cocoapods/v/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
