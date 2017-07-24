@@ -7,19 +7,12 @@
 
 import UIKit
 
-public enum PermissionStatus: Int {
-  case notDetermined
-  case restricted
-  case denied
-  case authorized
-  case authorizedWhenInUse
-}
-
 public protocol PermissionService {
   
   init()
-  func checkStatus() -> PermissionStatus
-  func requestStatus(_ callback: @escaping (_ success: Bool) -> Void)
+  func status() -> PermissionStatus
+  func requestPermission(_ callback: @escaping (_ success: Bool) -> Void)
+
 }
 
 public protocol ServiceMessages {
@@ -58,13 +51,15 @@ open class Permission<T: PermissionService> {
   public typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
   
   public class func prepare(for handler: ServiceDisplay, with messages: ServiceMessages = DefaultMessages(), callback: @escaping PermissionGranted) {
-    
-    let service = T()
-    let status = service.checkStatus()
 
+    let service = T()
+    let status = service.status()
+
+    //TODO: Error handling
+    
     switch status {
     case .notDetermined:
-      service.requestStatus({ (success) in
+      service.requestPermission({ (success) in
         OperationQueue.main.addOperation {
           callback(success)
         }
@@ -81,13 +76,13 @@ open class Permission<T: PermissionService> {
       showDeniedAlert(from: handler, with: messages)
       callback(false)
       break
-    case .authorizedWhenInUse:
-      service.requestStatus({ (success) in
-        OperationQueue.main.addOperation {
-          callback(success)
-        }
-      })
-      break
+//    case .authorizedWhenInUse:
+//      service.requestStatus({ (success) in
+//        OperationQueue.main.addOperation {
+//          callback(success)
+//        }
+//      })
+//      break
     }
   }
   

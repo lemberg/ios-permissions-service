@@ -14,7 +14,7 @@ public final class CalendarEvent: PermissionService {
 
     public init() {}
     
-    public func checkStatus() -> PermissionStatus {
+    public func status() -> PermissionStatus {
       let statusInt = EKEventStore.authorizationStatus(for: entityType).rawValue
       guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
         assertionFailure("Impossible status")
@@ -23,7 +23,7 @@ public final class CalendarEvent: PermissionService {
       return status
     }
     
-    public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
+    public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
       EKEventStore().requestAccess(to: entityType) {
         (accessGranted: Bool, error: Error?) in
         requestGranted(accessGranted)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04A8DE9F14D68488F0292BA43618EA95 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6ECFCB8AE82F6A4D7D00774F406A5A /* Contacts.swift */; };
 		19C89D1DDF9BE1E8543A64BC7CAF197A /* Microphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936AE8DB1A96281C920E48CE9F2E45F /* Microphone.swift */; };
 		1CEB51FF5D0CDB1689E9E8B0A23ABDDB /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940D037141C98C45CDFF521B36981B5 /* Reminder.swift */; };
 		2B84E1C4D5F3E1CA98E2D5E21E073BB9 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E8A2B49C46F796DA99E1E6303CFE7 /* CalendarEvent.swift */; };
@@ -19,6 +18,8 @@
 		65380F7BF7167F10A544ED5E9E4CE3C3 /* PermissionsService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D641D3D3FD422ABF5B44A83EF90BF /* PermissionsService-dummy.m */; };
 		6F7FAB9DD728D040F68915B4BB7A4A11 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9BDE82371C83FA9AE91B05F77ACAA36 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C867FB8F5137339D121CB62D3EB1080 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */; };
+		9B8CAA881F25E41300876F05 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8CAA871F25E41300876F05 /* Structs.swift */; };
+		9B8CAA8B1F25EDF800876F05 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8CAA891F25EDD100876F05 /* Contacts.swift */; };
 		CCFA7EAAA9B2DC198BAA07549227E866 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B935D284C3A2CCBF23018798B546DA1 /* Camera.swift */; };
 		E310203C5003CCABA582569C5D6ADACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -35,21 +36,23 @@
 
 /* Begin PBXFileReference section */
 		01E6907CF2644EB1CF8E23F708A3DA0B /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
-		119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		119072C64A19799964E1620D83F514FB /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		149054C495E8EC590CAB4C524133016F /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1EA2F512468FEAB5A3C1205715D2CADD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E633F0B224559BF587862558DD34437 /* PermissionsService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PermissionsService.framework; path = PermissionsService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E633F0B224559BF587862558DD34437 /* PermissionsService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PermissionsService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3508BAA3D48436240F693D56B6E49AF8 /* PermissionsService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PermissionsService-prefix.pch"; sourceTree = "<group>"; };
 		379D641D3D3FD422ABF5B44A83EF90BF /* PermissionsService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PermissionsService-dummy.m"; sourceTree = "<group>"; };
 		552550F3F912264E5D073F8893691F88 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
-		5A6ECFCB8AE82F6A4D7D00774F406A5A /* Contacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		712D16A86AC3E0DFDCFF77B3E84D4AEF /* PermissionsService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PermissionsService.xcconfig; sourceTree = "<group>"; };
 		764D33E23CE6C1111110B04F5CBADADB /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7B935D284C3A2CCBF23018798B546DA1 /* Camera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
-		7CE5D555A63C89D2BA421155047CBB6D /* PermissionsService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PermissionsService.modulemap; sourceTree = "<group>"; };
-		8FD57FDDA4FCC3A528512C13C955B1BB /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7CE5D555A63C89D2BA421155047CBB6D /* PermissionsService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PermissionsService.modulemap; sourceTree = "<group>"; };
+		8FD57FDDA4FCC3A528512C13C955B1BB /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B8CAA861F25DE4A00876F05 /* LittleDump.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LittleDump.playground; sourceTree = "<group>"; };
+		9B8CAA871F25E41300876F05 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		9B8CAA891F25EDD100876F05 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B0646323A73C6893D3644E32E86B6404 /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C940D037141C98C45CDFF521B36981B5 /* Reminder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
@@ -87,16 +90,16 @@
 		0DDF9D9558E2EEEC9DB4CDB5C1D6F006 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA8BA06A8A8F16AFB81DFD1F37A0A798 /* SystemPermissionService.swift */,
 				DF2E8A2B49C46F796DA99E1E6303CFE7 /* CalendarEvent.swift */,
 				7B935D284C3A2CCBF23018798B546DA1 /* Camera.swift */,
-				5A6ECFCB8AE82F6A4D7D00774F406A5A /* Contacts.swift */,
+				9B8CAA891F25EDD100876F05 /* Contacts.swift */,
 				CD977FA2AF915260E2AE01F529EEE4BF /* Gallery.swift */,
 				B0646323A73C6893D3644E32E86B6404 /* Location.swift */,
 				D936AE8DB1A96281C920E48CE9F2E45F /* Microphone.swift */,
 				C940D037141C98C45CDFF521B36981B5 /* Reminder.swift */,
-				CA8BA06A8A8F16AFB81DFD1F37A0A798 /* SystemPermissionService.swift */,
+				9B8CAA871F25E41300876F05 /* Structs.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -151,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				9B8CAA861F25DE4A00876F05 /* LittleDump.playground */,
 				4EC515EB715E527E19F40FC3D007D495 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				41DCB2DEB31327F0006A2E6A965BEEBE /* Products */,
@@ -181,7 +185,6 @@
 			children = (
 				0DDF9D9558E2EEEC9DB4CDB5C1D6F006 /* Classes */,
 			);
-			name = PermissionsService;
 			path = PermissionsService;
 			sourceTree = "<group>";
 		};
@@ -302,8 +305,9 @@
 			files = (
 				2B84E1C4D5F3E1CA98E2D5E21E073BB9 /* CalendarEvent.swift in Sources */,
 				CCFA7EAAA9B2DC198BAA07549227E866 /* Camera.swift in Sources */,
-				04A8DE9F14D68488F0292BA43618EA95 /* Contacts.swift in Sources */,
+				9B8CAA881F25E41300876F05 /* Structs.swift in Sources */,
 				5BDA1DBAE76EA43ECA7F2A3BE93B5E6E /* Gallery.swift in Sources */,
+				9B8CAA8B1F25EDF800876F05 /* Contacts.swift in Sources */,
 				46A4BB570AE1C907BF682C535ADC4E8B /* Location.swift in Sources */,
 				19C89D1DDF9BE1E8543A64BC7CAF197A /* Microphone.swift in Sources */,
 				65380F7BF7167F10A544ED5E9E4CE3C3 /* PermissionsService-dummy.m in Sources */,

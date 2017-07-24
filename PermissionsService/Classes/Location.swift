@@ -14,7 +14,7 @@ public final class Location: PermissionService {
     
   public init() {}
   
-  public func checkStatus() -> PermissionStatus {
+  public func status() -> PermissionStatus {
     let statusInt = Int(CLLocationManager.authorizationStatus().rawValue)
     guard let status = PermissionStatus(rawValue: statusInt), (0...4) ~= statusInt else {
       assertionFailure("Impossible status")
@@ -23,7 +23,7 @@ public final class Location: PermissionService {
     return status
   }
   
-  public func requestStatus(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
+  public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
 //    CLLocationManager().requestWhenInUseAuthorization()
     requestGranted (CLLocationManager.authorizationStatus() == entityType)
   }
