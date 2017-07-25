@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UserNotifications
 
-//    UNUserNotificationCenter.current().requestAuthorization(options: [.alert])
+//TODO: Not End
 
 public final class Notifications: PermissionService {
     
@@ -19,8 +20,16 @@ public final class Notifications: PermissionService {
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         //TODO: Error handling
-        if !checkPermissionKey(for: .bluetoothPeripheralUsageDescription) { return }
         
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (result, error) in
+                
+            }
+        } else {
+            // Fallback on earlier version
+            
+        }
+    
     }
     
     /**

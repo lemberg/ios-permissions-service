@@ -9,7 +9,7 @@
 import Foundation
 import CoreBluetooth
 
-//TODO: For now not working
+//TODO: Not End
 
 public final class Bluetooth: PermissionService {
     

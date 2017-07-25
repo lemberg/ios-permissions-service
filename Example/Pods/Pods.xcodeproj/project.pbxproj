@@ -22,6 +22,8 @@
 		7C867FB8F5137339D121CB62D3EB1080 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 699118D7DDD5F335E4FB8B17DC0F12D2 /* Pods-Example-dummy.m */; };
 		87CDC298EB51430F7014FC80D77E52BA /* PermissionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45F76A8D9CBF403B0DE18CA427123C /* PermissionConfiguration.swift */; };
 		8E30D32D7A2E79D5D255D28D2AA37074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9BAF19E21F2792B9008CFB65 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF19E11F2792B9008CFB65 /* MediaPlayer.swift */; };
+		9BB0D05F1F2790CC004A823D /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0D05E1F2790CC004A823D /* SpeechRecognizer.swift */; };
 		9E8956D2AAAD8AB38D01BC0E692CA7C1 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918E3466242448A295C40DA9C801678 /* PermissionService.swift */; };
 		AFE81913645F72054B8E8300868CC17B /* PermissionsService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D641D3D3FD422ABF5B44A83EF90BF /* PermissionsService-dummy.m */; };
 		B2DE0B30B2C8183DDE7064DF59125C5F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB90E6FEF07E2F926B8F28350FF8C4 /* Notifications.swift */; };
@@ -65,6 +67,8 @@
 		832A0A0F79340B99ECCD997B71A61D42 /* Structs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		8FD57FDDA4FCC3A528512C13C955B1BB /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BAF19E11F2792B9008CFB65 /* MediaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		9BB0D05E1F2790CC004A823D /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		9BF7A82A0A7ED6B4D94B306FAFD336A9 /* Microphone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Microphone.swift; sourceTree = "<group>"; };
 		A01055A90AB34D4B050CFE723844AFEF /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A13D83CB75049DE5A8A9400D5F1B404A /* Camera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
@@ -179,17 +183,27 @@
 			isa = PBXGroup;
 			children = (
 				9BB0D05B1F277B22004A823D /* Location */,
-				3523E3D0F69D719E21E8BF515C6D539F /* Bluetooth.swift */,
+				9BB0D05D1F278FFA004A823D /* NotEnd */,
 				A13D83CB75049DE5A8A9400D5F1B404A /* Camera.swift */,
+				9BB0D05E1F2790CC004A823D /* SpeechRecognizer.swift */,
+				9BAF19E11F2792B9008CFB65 /* MediaPlayer.swift */,
 				4B351DD01B258153203569FE39435EA4 /* Contacts.swift */,
 				A966F673B1B088EE2D2CCFA07EA49DA8 /* Events.swift */,
 				3B734A2772D1D4823D0E321705B9DC13 /* Gallery.swift */,
 				9BF7A82A0A7ED6B4D94B306FAFD336A9 /* Microphone.swift */,
-				C3CB90E6FEF07E2F926B8F28350FF8C4 /* Notifications.swift */,
 				075DE42E6444AD8D487DA9DCE12A3F9D /* Reminder.swift */,
 				275BFEA154A4D997F20444978D7BE4A9 /* Siri.swift */,
 			);
 			name = Permissions;
+			sourceTree = "<group>";
+		};
+		9BB0D05D1F278FFA004A823D /* NotEnd */ = {
+			isa = PBXGroup;
+			children = (
+				C3CB90E6FEF07E2F926B8F28350FF8C4 /* Notifications.swift */,
+				3523E3D0F69D719E21E8BF515C6D539F /* Bluetooth.swift */,
+			);
+			name = NotEnd;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -335,6 +349,7 @@
 				350344B2741BE01A675420E00A635454 /* Contacts.swift in Sources */,
 				7425793C0162194705C58729EE19BCFA /* Events.swift in Sources */,
 				5AC945F2843AC2B3850F1833B9E718DA /* Extensions.swift in Sources */,
+				9BB0D05F1F2790CC004A823D /* SpeechRecognizer.swift in Sources */,
 				6D2CD207B5643BB81B3666C3EBC0B25E /* Gallery.swift in Sources */,
 				B813E8AB4F4581FB34D517AF30E55DE4 /* Location.swift in Sources */,
 				6FA5230A57ECAA4DBD75F850E64263A4 /* LocationConfiguration.swift in Sources */,
@@ -342,6 +357,7 @@
 				B2DE0B30B2C8183DDE7064DF59125C5F /* Notifications.swift in Sources */,
 				87CDC298EB51430F7014FC80D77E52BA /* PermissionConfiguration.swift in Sources */,
 				9E8956D2AAAD8AB38D01BC0E692CA7C1 /* PermissionService.swift in Sources */,
+				9BAF19E21F2792B9008CFB65 /* MediaPlayer.swift in Sources */,
 				AFE81913645F72054B8E8300868CC17B /* PermissionsService-dummy.m in Sources */,
 				7B78A726B78C0B8E197834CFCA837C7A /* Reminder.swift in Sources */,
 				2D029A54EB988D9A69452E6FB7AA71E5 /* ServiceDisplay.swift in Sources */,
