@@ -53,6 +53,13 @@ struct DefaultMessages: ServiceMessages {
 
 public final class DefaultConfiguration: PermissionConfiguration {
     //mock for unknown&default situations
+    public let messages: ServiceMessages
+    
+    public required init(with messages: ServiceMessages = DefaultMessages()) {
+        self.messages = messages
+        
+    }
+    
 }
 
 public final class Configurator: PermissionConfiguration {

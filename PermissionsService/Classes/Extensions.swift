@@ -33,6 +33,8 @@ extension Optional {
     var isNil: Bool {
         if case .none = self {
             return true
+        } else if self == nil {
+            return true
         } else {
             return false
         }
@@ -48,7 +50,7 @@ extension PermissionService {
      */
     func checkPermissionKey(for key: String) -> Bool {
         
-        let hasPermissionKey : Bool = Bundle.main.object(forInfoDictionaryKey: key).isNil
+        let hasPermissionKey : Bool = !Bundle.main.object(forInfoDictionaryKey: key).isNil
         if !hasPermissionKey {
             print("WARNING: \(key) not found in Info.plist.")
             return false
