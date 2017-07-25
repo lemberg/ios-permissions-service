@@ -13,7 +13,7 @@ import Foundation
  
     */
   public enum PermissionType: Int, CustomStringConvertible {
-        case contacts, locationAlways, locationInUse, notifications, microphone, camera, photos, reminders, events, bluetooth, motion
+        case contacts, locationAlways, locationInUse, notifications, microphone, camera, photos, reminders, events, bluetooth, motion, siri
     
         public var prettyDescription: String {
             switch self {
@@ -27,7 +27,7 @@ import Foundation
         public var description: String {
             switch self {
             case .contacts:         return "Contacts" //
-            case .events:           return "Events" //CalendarEvent
+            case .events:           return "Events" //
             case .locationAlways:   return "LocationAlways"
             case .locationInUse:    return "LocationInUse"
             case .notifications:    return "Notifications"
@@ -37,6 +37,8 @@ import Foundation
             case .reminders:        return "Reminders" //
             case .bluetooth:        return "Bluetooth"
             case .motion:           return "Motion"
+            case .siri:             return "Siri" //
+  
             }
         }
     

@@ -36,7 +36,6 @@ open class Permission<T: PermissionService> {
     let status = service.status()
 
     //TODO: Error handling
-    
     switch status {
     case .notDetermined:
       service.requestPermission({ (success) in

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		19C89D1DDF9BE1E8543A64BC7CAF197A /* Microphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D936AE8DB1A96281C920E48CE9F2E45F /* Microphone.swift */; };
 		1CEB51FF5D0CDB1689E9E8B0A23ABDDB /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940D037141C98C45CDFF521B36981B5 /* Reminder.swift */; };
-		2B84E1C4D5F3E1CA98E2D5E21E073BB9 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E8A2B49C46F796DA99E1E6303CFE7 /* CalendarEvent.swift */; };
+		2B84E1C4D5F3E1CA98E2D5E21E073BB9 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E8A2B49C46F796DA99E1E6303CFE7 /* Events.swift */; };
 		46A4BB570AE1C907BF682C535ADC4E8B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0646323A73C6893D3644E32E86B6404 /* Location.swift */; };
 		55C9CB927BE156B7167C839FB5E89348 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		562B4B7722BA17E991ECDEBF09240C12 /* PermissionsService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1A3484DDCBA846ACD19BA820F7831BF /* PermissionsService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,7 +69,7 @@
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CD977FA2AF915260E2AE01F529EEE4BF /* Gallery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		D936AE8DB1A96281C920E48CE9F2E45F /* Microphone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Microphone.swift; sourceTree = "<group>"; };
-		DF2E8A2B49C46F796DA99E1E6303CFE7 /* CalendarEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
+		DF2E8A2B49C46F796DA99E1E6303CFE7 /* Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		E512A5F985F876750237FD237C3AEEDA /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		EFFB74AAA6B2AE8DABF0E88E61E09178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A3484DDCBA846ACD19BA820F7831BF /* PermissionsService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PermissionsService-umbrella.h"; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 				9B8CAA891F25EDD100876F05 /* Contacts.swift */,
 				9B9F7F331F2613DC001E459B /* Siri.swift */,
 				9B9F7F311F2612D3001E459B /* Bluetooth.swift */,
-				DF2E8A2B49C46F796DA99E1E6303CFE7 /* CalendarEvent.swift */,
+				DF2E8A2B49C46F796DA99E1E6303CFE7 /* Events.swift */,
 				7B935D284C3A2CCBF23018798B546DA1 /* Camera.swift */,
 				CD977FA2AF915260E2AE01F529EEE4BF /* Gallery.swift */,
 				B0646323A73C6893D3644E32E86B6404 /* Location.swift */,
@@ -323,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B84E1C4D5F3E1CA98E2D5E21E073BB9 /* CalendarEvent.swift in Sources */,
+				2B84E1C4D5F3E1CA98E2D5E21E073BB9 /* Events.swift in Sources */,
 				CCFA7EAAA9B2DC198BAA07549227E866 /* Camera.swift in Sources */,
 				9B9F7F361F262493001E459B /* ServiceDisplay.swift in Sources */,
 				9B8CAA881F25E41300876F05 /* Structs.swift in Sources */,

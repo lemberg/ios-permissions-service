@@ -8,7 +8,7 @@
 import UIKit
 import EventKit
 
-public final class CalendarEvent: PermissionService {
+public final class Events: PermissionService {
     
     let entityType = EKEntityType.event
     

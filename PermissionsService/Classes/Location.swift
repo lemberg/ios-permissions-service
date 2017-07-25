@@ -8,11 +8,14 @@
 import Foundation
 import CoreLocation
 
-public final class Location: PermissionService {
+public final class Location: NSObject, PermissionService {
     
+  internal var locationManager = CLLocationManager()
+  internal let dispatchGroup = DispatchGroup()
+ 
   let entityType = CLAuthorizationStatus.authorizedWhenInUse
-    
-  public init() {}
+
+  public override init() {}
   
   public func status() -> PermissionStatus {
     let statusInt = Int(CLLocationManager.authorizationStatus().rawValue)
@@ -24,7 +27,39 @@ public final class Location: PermissionService {
   }
   
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
-        callback (CLLocationManager.authorizationStatus() == entityType)
+        
+        locationManager.delegate = self
+        dispatchGroup.enter()
+        
+        dispatchGroup.notify(queue: DispatchQueue.main) {
+            
+            var permissionGranted = false
+            let status = CLLocationManager.authorizationStatus()
+            self.locationManager.delegate = nil
+            
+            switch (status) {
+            case .authorizedAlways, .authorizedWhenInUse:
+                permissionGranted = true
+                break
+            case .denied,.restricted:
+                permissionGranted = false
+                break
+            case .notDetermined:
+                permissionGranted = false
+                break
+            }
+            
+            callback(permissionGranted)
+        }
+
   }
     
+}
+
+extension Location: CLLocationManagerDelegate {
+
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        dispatchGroup.leave()
+        
+    }
 }
