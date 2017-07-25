@@ -1,12 +1,13 @@
 
-# PermissionsService
+<p align="center"> 
+<img src="http://i.piccy.info/i9/a78079fbf443139391c8bab158b8b6ed/1500892891/100777/1164536/800.png">
+</p>
 
-[![CI Status](http://img.shields.io/travis/lemberg/ios-permissions-service.svg?style=flat)](https://travis-ci.org/lemberg/ios-permissions-service.svg?branch=master) 
+[![License](https://img.shields.io/cocoapods/l/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
 [![Version](https://img.shields.io/cocoapods/v/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Version](https://img.shields.io/badge/Swift-3.1%2B-orange.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
-[![iOS Platform](https://img.shields.io/badge/iOS-%209.0%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
-[![License](https://img.shields.io/cocoapods/l/PermissionsService.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
+[![iOS Platform](https://img.shields.io/badge/iOS-8.0%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 [![By](https://img.shields.io/badge/By-Lemberg%20Solutions%20Limited-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService)
 
 An easy way to do permissions requests & handling automatically.
@@ -148,7 +149,7 @@ struct CameraMessages: ServiceMessages {
 ## Requirements
 
 - [![Swift Version](https://img.shields.io/badge/Swift-3.1%2B-orange.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
-- [![iOS Platform](https://img.shields.io/badge/iOS-%209.0%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
+- [![iOS Platform](https://img.shields.io/badge/iOS-8.0%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 - [![Xcode Version](https://img.shields.io/badge/Xcode-8.1%2B-blue.svg?style=flat)](http://cocoapods.org/pods/PermissionsService) 
 
 ## Author
