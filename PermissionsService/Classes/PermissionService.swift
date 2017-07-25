@@ -55,13 +55,6 @@ open class Permission<T: PermissionService> {
       showDeniedAlert(from: handler, with: messages)
       callback(false)
       break
-//    case .authorizedWhenInUse:
-//      service.requestStatus({ (success) in
-//        OperationQueue.main.addOperation {
-//          callback(success)
-//        }
-//      })
-//      break
     default: fatalError()
     }
   }

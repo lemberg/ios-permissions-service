@@ -29,8 +29,10 @@ public final class Location: NSObject, PermissionService {
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         
         locationManager.delegate = self
-        dispatchGroup.enter()
         
+        dispatchGroup.enter()
+        locationManager.requestWhenInUseAuthorization()
+
         dispatchGroup.notify(queue: DispatchQueue.main) {
             
             var permissionGranted = false
@@ -59,7 +61,10 @@ public final class Location: NSObject, PermissionService {
 extension Location: CLLocationManagerDelegate {
 
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        dispatchGroup.leave()
+        
+        if status != .notDetermined {
+            dispatchGroup.leave()
+        }
         
     }
 }

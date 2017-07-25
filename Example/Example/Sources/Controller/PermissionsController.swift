@@ -66,8 +66,8 @@ class PermissionsController: UITableViewController {
       instanceName = "Gallery"
   		Permission<Gallery>.prepare(for: self, callback: block)
 		case .calendar:
-      instanceName = "CalendarEvent"
-      Permission<CalendarEvent>.prepare(for: self, callback: block)
+      instanceName = "Events"
+      Permission<Events>.prepare(for: self, callback: block)
 		case .camera:
       instanceName = "Camera"
       Permission<Camera>.prepare(for: self, with: CameraMessages(), callback: block)
