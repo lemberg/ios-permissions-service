@@ -10,10 +10,11 @@ import EventKit
 
 public final class Events: PermissionService {
     
+    public required init(with configuration: PermissionConfiguration) { }
+
+
     let entityType = EKEntityType.event
-    
-    public init() {}
-    
+        
     public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
         if !checkPermissionKey(for: .calendarsUsageDescription) { return }
         

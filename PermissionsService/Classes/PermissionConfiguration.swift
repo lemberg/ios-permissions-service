@@ -14,7 +14,7 @@ public protocol PermissionConfiguration {
 
 extension PermissionConfiguration {
     public var messages: ServiceMessages { return DefaultMessages() }
-
+    
 }
 
 internal struct DefaultMessages: ServiceMessages {
@@ -29,6 +29,7 @@ internal struct DefaultMessages: ServiceMessages {
 public final class DefaultConfiguration: PermissionConfiguration {
     //mock for unknown&default situations
 }
+
 
 public final class Configurator: PermissionConfiguration {
     

@@ -9,7 +9,7 @@ import UIKit
 
 public protocol PermissionService {
   
-  init()
+  init(with configuration: PermissionConfiguration)
   func status() -> PermissionStatus
   func requestPermission(_ callback: @escaping (_ success: Bool) -> Void)
 
@@ -24,7 +24,7 @@ open class Permission<T: PermissionService> {
     
     public class func prepare(for handler: ServiceDisplay, with configuration: PermissionConfiguration = Configurator(for: T.self).configuration, callback: @escaping PermissionGranted) {
 
-    let service = T()
+    let service = T(with: configuration)
     let status = service.status()
 
     //TODO: Error handling

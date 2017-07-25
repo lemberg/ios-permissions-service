@@ -10,6 +10,8 @@ import Photos
 
 public final class Camera: PermissionService {
     
+    public required init(with configuration: PermissionConfiguration) { }
+
     let mediaType = AVMediaTypeVideo
     
     public init() {}

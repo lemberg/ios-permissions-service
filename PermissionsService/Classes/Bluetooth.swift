@@ -11,7 +11,8 @@ import CoreBluetooth
 
 public final class Bluetooth: PermissionService {
     
-    public init() {}
+    public required init(with configuration: PermissionConfiguration) { }
+
 
     /**
      */

@@ -12,8 +12,8 @@ import AddressBook
 
 public final class Contacts: PermissionService {
     
-    public init() {}
-    
+    public required init(with configuration: PermissionConfiguration) {  }
+
     /**
      Request for accessing Contacts.
      

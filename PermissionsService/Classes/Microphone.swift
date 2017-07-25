@@ -12,7 +12,7 @@ public final class Microphone: PermissionService {
     
     let mediaType = AVMediaTypeAudio
 
-    public init() {}
+    public required init(with configuration: PermissionConfiguration) { }
 
     public func status() -> PermissionStatus {
         let statusInt = AVCaptureDevice.authorizationStatus(forMediaType: mediaType).rawValue

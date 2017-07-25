@@ -13,10 +13,34 @@ public final class Location: NSObject, PermissionService {
   internal var locationManager = CLLocationManager()
   internal let dispatchGroup = DispatchGroup()
  
-  let entityType = CLAuthorizationStatus.authorizedWhenInUse
+  let type: CLAuthorizationStatus =  CLAuthorizationStatus.authorizedWhenInUse
 
-  public override init() {}
+  public func test<T: PermissionConfiguration>(with configuration: T)
+        where T: LocationConfiguration {
+            
+        print(configuration.permissionType.rawValue)
+    }
   
+    
+  public required init(with configuration: PermissionConfiguration) {
+    
+//    guard let config = configuration as? LocationConfiguration else {
+//        print("#ERROR - 001 Not correct Configuration")
+//        return
+//    }
+//    
+//    self.type = config.permissionType.rawValue
+//    if let config = configuration as? LocationConfiguration {
+//        self.type = CLAuthorizationStatus(rawValue: Int32(config.permissionType.rawValue))
+//    } else {
+//        self.type = CLAuthorizationStatus.authorizedWhenInUse
+//    }
+    
+    super.init()
+    test(with: configuration as! LocationConfiguration)
+    
+  }
+
   public func status() -> PermissionStatus {
     let statusInt = Int(CLLocationManager.authorizationStatus().rawValue)
     guard let status = PermissionStatus(rawValue: statusInt), (0...4) ~= statusInt else {
@@ -25,36 +49,37 @@ public final class Location: NSObject, PermissionService {
     }
     return status
   }
-  
-    public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
-        
-        locationManager.delegate = self
-        
-        dispatchGroup.enter()
-        locationManager.requestWhenInUseAuthorization()
 
-        dispatchGroup.notify(queue: DispatchQueue.main) {
-            
-            var permissionGranted = false
-            let status = CLLocationManager.authorizationStatus()
-            self.locationManager.delegate = nil
-            
-            switch (status) {
-            case .authorizedAlways, .authorizedWhenInUse:
-                permissionGranted = true
-                break
-            case .denied,.restricted:
-                permissionGranted = false
-                break
-            case .notDetermined:
-                permissionGranted = false
-                break
-            }
-            
-            callback(permissionGranted)
+  public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
+    
+    locationManager.delegate = self
+    
+    dispatchGroup.enter()
+    locationManager.requestWhenInUseAuthorization()
+
+    dispatchGroup.notify(queue: DispatchQueue.main) {
+        
+        var permissionGranted = false
+        let status = CLLocationManager.authorizationStatus()
+        self.locationManager.delegate = nil
+        
+        switch (status) {
+        case .authorizedAlways, .authorizedWhenInUse:
+            permissionGranted = true
+            break
+        case .denied,.restricted:
+            permissionGranted = false
+            break
+        case .notDetermined:
+            permissionGranted = false
+            break
         }
+        
+        callback(permissionGranted)
+    }
 
   }
+    
     
 }
 

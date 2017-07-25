@@ -7,18 +7,24 @@
 //
 
 import Foundation
+import CoreLocation
+
+//let LocationPermission = true
+//        #if LocationPermission
+//        #endif
+
 
 public final class LocationConfiguration: PermissionConfiguration {
     
-    public enum LocationPermissionType {
-        case whenInUse
-        case always
+    public enum LocationPermissionType: Int {
+        case whenInUse = 3
+        case always = 4
     }
     
     public let messages: ServiceMessages
     public let permissionType: LocationPermissionType
     
-    public init(_ type: LocationPermissionType = .whenInUse, with messages: ServiceMessages = DefaultMessages()) {
+    public required init(_ type: LocationPermissionType = .whenInUse, with messages: ServiceMessages = DefaultMessages()) {
         self.messages = messages
         self.permissionType = type
     }

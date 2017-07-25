@@ -12,7 +12,7 @@ import Intents
 @available(iOS 10.0, *)
 public final class Siri: PermissionService {
     
-    public init() {}
+    public required init(with configuration: PermissionConfiguration) { }
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         if !checkPermissionKey(for: .siriUsageDescription) { return }

@@ -10,7 +10,7 @@ import Photos
 
 public final class Gallery: PermissionService {
     
-    public init() {}
+    public required init(with configuration: PermissionConfiguration) { }
     
     public func status() -> PermissionStatus {
         let statusInt = PHPhotoLibrary.authorizationStatus().rawValue

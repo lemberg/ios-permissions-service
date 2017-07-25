@@ -12,7 +12,7 @@ import Foundation
 
 public final class Notifications: PermissionService {
     
-    public init() {}
+    public required init(with configuration: PermissionConfiguration) { }
     
     /**
      */

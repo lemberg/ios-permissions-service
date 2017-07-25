@@ -12,7 +12,7 @@ public final class Reminder: PermissionService {
     
     let entityType = EKEntityType.reminder
     
-    public init() {}
+    public required init(with configuration: PermissionConfiguration) { }
     
     public func status() -> PermissionStatus {
         let statusInt = EKEventStore.authorizationStatus(for: entityType).rawValue
