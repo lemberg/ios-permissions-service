@@ -10,6 +10,7 @@ import Foundation
 
 public protocol PermissionConfiguration {
     var messages: ServiceMessages { get }
+    
 }
 
 extension PermissionConfiguration {
@@ -17,7 +18,31 @@ extension PermissionConfiguration {
     
 }
 
-internal struct DefaultMessages: ServiceMessages {
+//extension PermissionConfiguration where Self: LocationConfiguration {
+//    
+//    public func config() {
+//         print("Location!")
+//    }
+//    
+//    var permissionType: LocationPermissionType {
+//        return self.permissionType
+//    }
+//
+////    public func config<T: PermissionConfiguration>(with configuration: T)
+////        where T: DefaultConfiguration {
+////            print("Default")
+////    }
+//    
+//}
+//extension PermissionConfiguration where Self: DefaultConfiguration {
+//    
+//    public func config() {
+//        print("Default!")
+//    }
+//    
+//}
+
+struct DefaultMessages: ServiceMessages {
     
     let deniedTitle = "Access denied"
     let deniedMessage = "You can enable access in Privacy Settings"
@@ -30,7 +55,6 @@ public final class DefaultConfiguration: PermissionConfiguration {
     //mock for unknown&default situations
 }
 
-
 public final class Configurator: PermissionConfiguration {
     
     var configuration: PermissionConfiguration = DefaultConfiguration()
@@ -39,7 +63,7 @@ public final class Configurator: PermissionConfiguration {
         
         switch permission {
         case is Location.Type:
-            self.configuration = LocationConfiguration()
+            self.configuration = LocationConfiguration()            
             break
         default:
             self.configuration = DefaultConfiguration()

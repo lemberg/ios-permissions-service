@@ -166,7 +166,7 @@
 			);
 			sourceTree = "<group>";
 		};
-		9BF2F5AC1F2744EB003235E7 /* Location */ = {
+		9BB0D05B1F277B22004A823D /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				C199135EECE4D361BF56E49B07B8652A /* Location.swift */,
@@ -175,10 +175,10 @@
 			name = Location;
 			sourceTree = "<group>";
 		};
-		9BF2F5AD1F2744F7003235E7 /* Permissions */ = {
+		9BB0D05C1F277B30004A823D /* Permissions */ = {
 			isa = PBXGroup;
 			children = (
-				9BF2F5AC1F2744EB003235E7 /* Location */,
+				9BB0D05B1F277B22004A823D /* Location */,
 				3523E3D0F69D719E21E8BF515C6D539F /* Bluetooth.swift */,
 				A13D83CB75049DE5A8A9400D5F1B404A /* Camera.swift */,
 				4B351DD01B258153203569FE39435EA4 /* Contacts.swift */,
@@ -213,10 +213,10 @@
 		FCE729E334C59E4E88C77BD4C8880ECA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9BF2F5AD1F2744F7003235E7 /* Permissions */,
-				C0E56D1C3D60DEBE9C1AEAE3CDABFB8B /* ServiceDisplay.swift */,
+				9BB0D05C1F277B30004A823D /* Permissions */,
 				3F45F76A8D9CBF403B0DE18CA427123C /* PermissionConfiguration.swift */,
 				4918E3466242448A295C40DA9C801678 /* PermissionService.swift */,
+				C0E56D1C3D60DEBE9C1AEAE3CDABFB8B /* ServiceDisplay.swift */,
 				A01055A90AB34D4B050CFE723844AFEF /* Extensions.swift */,
 				832A0A0F79340B99ECCD997B71A61D42 /* Structs.swift */,
 			);

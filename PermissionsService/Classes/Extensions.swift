@@ -42,8 +42,9 @@ extension Optional {
 extension PermissionService {
     
     /**
-     Help developers to don't forget about keys
+     Help developers to don't forget about usage description keys.
      
+     - returns: False if key not added and print warning
      */
     func checkPermissionKey(for key: String) -> Bool {
         
@@ -58,30 +59,35 @@ extension PermissionService {
     
 }
 
+/**
+    This extension used for check if key for permission added to the info.plist file and giving user error about it, but not crashing app.
+ */
 extension String {
     
-    static let locationWhenInUseUsageDescription    = "NSLocationWhenInUseUsageDescription"
-    static let locationAlwaysUsageDescription       = "NSLocationAlwaysUsageDescription"
+    static let appleMusicUsageDescription           = "NSAppleMusicUsageDescription"
+
+    static let bluetoothPeripheralUsageDescription  = "NSBluetoothPeripheralUsageDescription"
     
-    static let microphoneUsageDescription           = "NSMicrophoneUsageDescription"
-    static let speechRecognitionUsageDescription    = "NSSpeechRecognitionUsageDescription"
-    
-    static let photoLibraryUsageDescription         = "NSPhotoLibraryUsageDescription"
-    static let photoLibraryAddUsageDescription      = "NSPhotoLibraryAddUsageDescription"
+    static let calendarsUsageDescription            = "NSCalendarsUsageDescription"
     static let cameraUsageDescription               = "NSCameraUsageDescription"
-    
-    static let mediaLibraryUsageDescription         = "NSAppleMusicUsageDescription"
-    static let siriUsageDescription                 = "NSSiriUsageDescription"
-    
-    static let motionUsageDescription               = "NSMotionUsageDescription"
     static let contactsUsageDescription             = "NSContactsUsageDescription"
     
-    static let remindersUsageDescription            = "NSRemindersUsageDescription"
-    static let readerUsageDescription               = "NFCReaderUsageDescription"
-    static let appleMusicUsageDescription           = "NSAppleMusicUsageDescription"
+    static let locationAlwaysUsageDescription       = "NSLocationAlwaysUsageDescription"
+    static let locationWhenInUseUsageDescription    = "NSLocationWhenInUseUsageDescription"
     
-    static let bluetoothPeripheralUsageDescription  = "NSBluetoothPeripheralUsageDescription"
-    static let calendarsUsageDescription            = "NSCalendarsUsageDescription"
+    static let mediaLibraryUsageDescription         = "NSAppleMusicUsageDescription"
+    static let microphoneUsageDescription           = "NSMicrophoneUsageDescription"
+    static let motionUsageDescription               = "NSMotionUsageDescription"
+    
+    static let photoLibraryAddUsageDescription      = "NSPhotoLibraryAddUsageDescription"
+    static let photoLibraryUsageDescription         = "NSPhotoLibraryUsageDescription"
+    
+    static let readerUsageDescription               = "NFCReaderUsageDescription"
+    static let remindersUsageDescription            = "NSRemindersUsageDescription"
+    
+    static let siriUsageDescription                 = "NSSiriUsageDescription"
+    static let speechRecognitionUsageDescription    = "NSSpeechRecognitionUsageDescription"
+    
     static let homeKitUsageDescription              = "NSHomeKitUsageDescription"
     
 }

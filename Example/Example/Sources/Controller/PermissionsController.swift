@@ -62,7 +62,7 @@ class PermissionsController: UITableViewController {
 		}
     
     
-    let conf = LocationConfiguration(.whenInUse)
+//    let conf = LocationConfiguration(.whenInUse)
     
 		switch cellIndex {
 		case .gallery:
@@ -76,7 +76,7 @@ class PermissionsController: UITableViewController {
       Permission<Camera>.prepare(for: self, callback: block)
     case .location:
       instanceName = "Location"
-      Permission<Location>.prepare(for: self, with: conf, callback: block)
+      Permission<Location>.prepare(for: self, callback: block)
     case .contacts:
       instanceName = "Contacts"
       Permission<Contacts>.prepare(for: self, callback: block)

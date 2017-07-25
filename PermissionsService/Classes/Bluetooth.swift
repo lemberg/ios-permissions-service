@@ -9,6 +9,8 @@
 import Foundation
 import CoreBluetooth
 
+//TODO: For now not working
+
 public final class Bluetooth: PermissionService {
     
     public required init(with configuration: PermissionConfiguration) { }
