@@ -60,7 +60,8 @@ class PermissionsController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
 			}
 		}
-		
+    
+    
 		switch cellIndex {
 		case .gallery:
       instanceName = "Gallery"

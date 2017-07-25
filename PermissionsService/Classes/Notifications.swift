@@ -1,18 +1,19 @@
 //
-//  Bluetooth.swift
+//  Notifications.swift
 //  Pods
 //
-//  Created by Hellen Soloviy on 7/24/17.
+//  Created by Hellen Soloviy on 7/25/17.
 //
 //
 
 import Foundation
-import CoreBluetooth
 
-public final class Bluetooth: PermissionService {
+//    UNUserNotificationCenter.current().requestAuthorization(options: [.alert])
+
+public final class Notifications: PermissionService {
     
     public init() {}
-
+    
     /**
      */
     
@@ -23,10 +24,11 @@ public final class Bluetooth: PermissionService {
     }
     
     /**
-
+     
      */
+    
     public func status() -> PermissionStatus {
         return .notDetermined
     }
-
+    
 }

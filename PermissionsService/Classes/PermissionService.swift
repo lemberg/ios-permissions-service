@@ -15,22 +15,14 @@ public protocol PermissionService {
 
 }
 
-private struct DefaultMessages: ServiceMessages {
-  
-  let deniedTitle = "Access denied"
-  let deniedMessage = "You can enable access in Privacy Settings"
-  let restrictedTitle = "Access restricted"
-  let restrictedMessage = "Access to this component is restricted"
-}
-
 public var closeTitle: String = "Close"
 public var settingsTitle: String = "Settings"
 
 open class Permission<T: PermissionService> {
   
   public typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
-  
-  public class func prepare(for handler: ServiceDisplay, with messages: ServiceMessages = DefaultMessages(), callback: @escaping PermissionGranted) {
+    
+    public class func prepare(for handler: ServiceDisplay, with configuration: PermissionConfiguration = Configurator(for: T.self).configuration, callback: @escaping PermissionGranted) {
 
     let service = T()
     let status = service.status()
@@ -48,17 +40,18 @@ open class Permission<T: PermissionService> {
       callback(true)
       break
     case .restricted:
-      showRestrictedAlert(from: handler, with: messages)
+      showRestrictedAlert(from: handler, with: configuration.messages)
       callback(false)
       break
     case .denied:
-      showDeniedAlert(from: handler, with: messages)
+      showDeniedAlert(from: handler, with: configuration.messages)
       callback(false)
       break
     default: fatalError()
     }
   }
-  
+    
+ 
   private class func showDeniedAlert(from sender:ServiceDisplay, with messages: ServiceMessages) {
     let alert = createAlert()
     alert.title = messages.deniedTitle
