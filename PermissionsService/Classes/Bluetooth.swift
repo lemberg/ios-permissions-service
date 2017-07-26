@@ -17,6 +17,8 @@ public final class Bluetooth: NSObject, PermissionService {
         options: [CBPeripheralManagerOptionShowPowerAlertKey: false]
     )
     
+//    internal var bluetoothManager = CBCentralManager(delegate: nil, queue: nil, options: [CBPeripheralManagerOptionShowPowerAlertKey: true])
+    
     public required init(with configuration: PermissionConfiguration) {
         super.init()
 
@@ -31,8 +33,8 @@ public final class Bluetooth: NSObject, PermissionService {
         if !checkPermissionKey(for: .bluetoothPeripheralUsageDescription) { return }
         guard bluetoothManager.state == .poweredOn else { return }
         
-//        bluetoothManager.startAdvertising(nil)
-//        bluetoothManager.stopAdvertising()
+        bluetoothManager.startAdvertising(nil)
+        bluetoothManager.stopAdvertising()
     }
     
     /**

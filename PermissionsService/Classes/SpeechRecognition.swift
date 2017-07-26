@@ -1,5 +1,5 @@
 //
-//  SpeechRecognition.swift.swift
+//  SpeechRecognition.swift
 //  Pods
 //
 //  Created by Hellen Soloviy on 7/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import Speech
 
 @available(iOS 10.0, *)
-public final class SpeechRecognition.swift: PermissionService {
+public final class SpeechRecognition: PermissionService {
     
     public required init(with configuration: PermissionConfiguration) { }
 

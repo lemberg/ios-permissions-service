@@ -33,7 +33,7 @@ class PermissionsController: UITableViewController {
     case microphone
     case reminder
     case siri
-    case speechRecognizing
+    case speechRecognition
     case mediaLibrary
     case bluetooth
 
@@ -97,9 +97,9 @@ class PermissionsController: UITableViewController {
     case .siri:
       instanceName = "Siri"
       Permission<Siri>.prepare(for: self, callback: block)
-    case .speechRecognizing:
+    case .speechRecognition:
       instanceName = "Speech Recognition"
-      Permission<SpeechRecognizing>.prepare(for: self, callback: block)
+      Permission<SpeechRecognition>.prepare(for: self, callback: block)
     case .mediaLibrary:
       instanceName = "Media Library"
       Permission<MediaLibrary>.prepare(for: self, callback: block)
