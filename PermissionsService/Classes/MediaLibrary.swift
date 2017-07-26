@@ -1,5 +1,5 @@
 //
-//  MediaPlayer.swift
+//  MediaLibrary.swift
 //  Pods
 //
 //  Created by Hellen Soloviy on 7/25/17.
@@ -11,7 +11,7 @@ import MediaPlayer
 
 
 @available(iOS 9.3, *)
-public final class MediaPlayer: PermissionService {
+public final class MediaLibrary: PermissionService {
     
     public required init(with configuration: PermissionConfiguration) { }
     
