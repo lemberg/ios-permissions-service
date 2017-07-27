@@ -9,7 +9,7 @@
 import Foundation
 import CoreBluetooth
 
-public final class Bluetooth: NSObject, PermissionService {
+private final class Bluetooth: NSObject, PermissionService {
     
     internal var bluetoothManager = CBPeripheralManager(
         delegate: nil,

@@ -35,10 +35,6 @@ class PermissionsController: UITableViewController {
     case siri
     case speechRecognition
     case mediaLibrary
-    case bluetooth
-
-//    case notifications
-
 	}
 	
 	override func viewDidLoad() {
@@ -83,7 +79,7 @@ class PermissionsController: UITableViewController {
       Permission<Camera>.prepare(for: self, with: config, callback: block)
     case .location:
       instanceName = "Location"
-      let config = LocationConfiguration(.always)
+      let config = LocationConfiguration(.always, with: CameraMessages())
       Permission<Location>.prepare(for: self, with: config, callback: block)
     case .contacts:
       instanceName = "Contacts"
@@ -103,11 +99,7 @@ class PermissionsController: UITableViewController {
     case .mediaLibrary:
       instanceName = "Media Library"
       Permission<MediaLibrary>.prepare(for: self, callback: block)
-    case .bluetooth:
-      instanceName = "Bluetooth"
-      Permission<Bluetooth>.prepare(for: self, callback: block) //not work for now
-		}
-    
+    }
 	}
 	
 }
