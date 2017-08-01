@@ -37,7 +37,6 @@ Of cause, it is not a silver bullet, but a good tool for your project!
 - [x] Automatic alert creating and presenting 
 - [x] Opportunity for users to easily change permissions in Settings 
 - [x] CoreLocation permission returns you completion block with user's decision 
-- [x] Usage Description Keys warning, so your app will not crash when key not added 
 - [x] Example project for easy understanding of framework 
 
 ## Supported Permission Types
@@ -102,8 +101,6 @@ Now you need to run `pod update` command from you project folder and that's it!
 ## How To Use
 
 1. Configure your project in all ways needed for chosen permission type. For example, in a case of a gallery, add a specific key to your .plist file. 
-
-> If you forget to add usage description key to your Info.plist you'll get a warning trying to request permission. 
 
 2. Implement  `ServiceDisplay ` protocol in your class. If it's not a `UIVIewController` class you should implement `showAlert(_:)` method, but if it is - there is a default implementation and you can leave it empty. 
 
