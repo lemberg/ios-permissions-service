@@ -21,7 +21,6 @@ public final class Contacts: PermissionService {
      */
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         //TODO: Error handling
-        if !checkPermissionKey(for: .contactsUsageDescription) { return }
         
         if #available(iOS 8.0, *) {
             ABAddressBookRequestAccessWithCompletion(nil) { grandted, error in

@@ -24,7 +24,6 @@ public final class Microphone: PermissionService {
     }
 
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
-        if !checkPermissionKey(for: .microphoneUsageDescription) { return }
 
         AVCaptureDevice.requestAccess(forMediaType: mediaType) { (granted) -> Void in
             callback(granted)

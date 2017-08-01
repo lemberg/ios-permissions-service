@@ -18,7 +18,6 @@ public final class MediaLibrary: PermissionService {
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         
         //TODO: Error handling
-        if !checkPermissionKey(for: .mediaLibraryUsageDescription) { return }
         
         MPMediaLibrary.requestAuthorization { status in
             

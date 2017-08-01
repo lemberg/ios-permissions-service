@@ -22,7 +22,6 @@ public final class Gallery: PermissionService {
     }
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
-        if !checkPermissionKey(for: .photoLibraryUsageDescription) { return }
 
         PHPhotoLibrary.requestAuthorization({ (newStatus) -> Void in
             let success = newStatus == PHAuthorizationStatus.authorized

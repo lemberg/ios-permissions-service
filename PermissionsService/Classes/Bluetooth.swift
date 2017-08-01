@@ -30,7 +30,6 @@ private final class Bluetooth: NSObject, PermissionService {
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         
         //TODO: Error handling
-        if !checkPermissionKey(for: .bluetoothPeripheralUsageDescription) { return }
         guard bluetoothManager.state == .poweredOn else { return }
         
         bluetoothManager.startAdvertising(nil)

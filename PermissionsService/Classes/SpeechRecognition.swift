@@ -17,8 +17,6 @@ public final class SpeechRecognition: PermissionService {
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
        
         //TODO: Error handling
-        if !checkPermissionKey(for: .speechRecognitionUsageDescription) { return }
-        if !checkPermissionKey(for: .microphoneUsageDescription) { return }
         
         SFSpeechRecognizer.requestAuthorization { status in
             

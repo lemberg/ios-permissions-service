@@ -10,8 +10,7 @@ import Foundation
 import UserNotifications
 
 //TODO: Not End
-
-public final class Notifications: PermissionService {
+private final class Notifications: PermissionService {
     
     public required init(with configuration: PermissionConfiguration) { }
     

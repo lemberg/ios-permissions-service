@@ -18,30 +18,6 @@ extension PermissionConfiguration {
     
 }
 
-//extension PermissionConfiguration where Self: LocationConfiguration {
-//    
-//    public func config() {
-//         print("Location!")
-//    }
-//    
-//    var permissionType: LocationPermissionType {
-//        return self.permissionType
-//    }
-//
-////    public func config<T: PermissionConfiguration>(with configuration: T)
-////        where T: DefaultConfiguration {
-////            print("Default")
-////    }
-//    
-//}
-//extension PermissionConfiguration where Self: DefaultConfiguration {
-//    
-//    public func config() {
-//        print("Default!")
-//    }
-//    
-//}
-
 struct DefaultMessages: ServiceMessages {
     
     let deniedTitle = "Access denied"

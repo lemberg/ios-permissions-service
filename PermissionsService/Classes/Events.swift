@@ -15,7 +15,6 @@ public final class Events: PermissionService {
     let type = EKEntityType.event
         
     public func requestPermission(_ requestGranted: @escaping (_ successRequestResult: Bool) -> Void) {
-        if !checkPermissionKey(for: .calendarsUsageDescription) { return }
         
         EKEventStore().requestAccess(to: type) {
             (accessGranted: Bool, error: Error?) in

@@ -15,7 +15,6 @@ public final class Siri: PermissionService {
     public required init(with configuration: PermissionConfiguration) { }
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
-        if !checkPermissionKey(for: .siriUsageDescription) { return }
         
         INPreferences.requestSiriAuthorization { status in
             switch status {

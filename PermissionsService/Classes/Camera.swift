@@ -26,7 +26,6 @@ public final class Camera: PermissionService {
     }
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
-        if !checkPermissionKey(for: .cameraUsageDescription) { return }
         
         AVCaptureDevice.requestAccess(forMediaType: mediaType) { (granted) -> Void in
             callback(granted)
