@@ -20,6 +20,7 @@ struct CameraMessages: ServiceMessages {
   
 }
 
+
 class PermissionsController: UITableViewController {
 	
 	enum CellsIndexes: Int
@@ -31,7 +32,9 @@ class PermissionsController: UITableViewController {
     case contacts
     case microphone
     case reminder
-
+    case siri
+    case speechRecognition
+    case mediaLibrary
 	}
 	
 	override func viewDidLoad() {
@@ -60,20 +63,24 @@ class PermissionsController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
 			}
 		}
-		
+    
+    
+    
 		switch cellIndex {
 		case .gallery:
       instanceName = "Gallery"
   		Permission<Gallery>.prepare(for: self, callback: block)
 		case .calendar:
-      instanceName = "CalendarEvent"
-      Permission<CalendarEvent>.prepare(for: self, callback: block)
+      instanceName = "Events"
+      Permission<Events>.prepare(for: self, callback: block)
 		case .camera:
       instanceName = "Camera"
-      Permission<Camera>.prepare(for: self, with: CameraMessages(), callback: block)
+      let config = DefaultConfiguration(with: CameraMessages())
+      Permission<Camera>.prepare(for: self, with: config, callback: block)
     case .location:
       instanceName = "Location"
-      Permission<Location>.prepare(for: self, callback: block)
+      let config = LocationConfiguration(.always, with: CameraMessages())
+      Permission<Location>.prepare(for: self, with: config, callback: block)
     case .contacts:
       instanceName = "Contacts"
       Permission<Contacts>.prepare(for: self, callback: block)
@@ -83,7 +90,16 @@ class PermissionsController: UITableViewController {
     case .reminder:
       instanceName = "Reminder"
       Permission<Reminder>.prepare(for: self, callback: block)
-		}
+    case .siri:
+      instanceName = "Siri"
+      Permission<Siri>.prepare(for: self, callback: block)
+    case .speechRecognition:
+      instanceName = "Speech Recognition"
+      Permission<SpeechRecognition>.prepare(for: self, callback: block)
+    case .mediaLibrary:
+      instanceName = "Media Library"
+      Permission<MediaLibrary>.prepare(for: self, callback: block)
+    }
 	}
 	
 }

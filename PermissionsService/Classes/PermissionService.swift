@@ -7,47 +7,12 @@
 
 import UIKit
 
-public enum PermissionStatus: Int {
-  case notDetermined
-  case restricted
-  case denied
-  case authorized
-  case authorizedWhenInUse
-}
-
 public protocol PermissionService {
   
-  init()
-  func checkStatus() -> PermissionStatus
-  func requestStatus(_ callback: @escaping (_ success: Bool) -> Void)
-}
+  init(with configuration: PermissionConfiguration)
+  func status() -> PermissionStatus
+  func requestPermission(_ callback: @escaping (_ success: Bool) -> Void)
 
-public protocol ServiceMessages {
-  
-  var restrictedMessage: String { get }
-  var restrictedTitle: String { get }
-  var deniedMessage: String { get }
-  var deniedTitle: String { get }
-}
-
-public protocol ServiceDisplay {
-  
-  func showAlert(vc: UIAlertController)
-}
-
-public extension ServiceDisplay where Self: UIViewController {
-  
-  public func showAlert(vc: UIAlertController) {
-    self.present(vc, animated: true, completion: nil)
-  }
-}
-
-private struct DefaultMessages: ServiceMessages {
-  
-  let deniedTitle = "Access denied"
-  let deniedMessage = "You can enable access in Privacy Settings"
-  let restrictedTitle = "Access restricted"
-  let restrictedMessage = "Access to this component is restricted"
 }
 
 public var closeTitle: String = "Close"
@@ -56,15 +21,16 @@ public var settingsTitle: String = "Settings"
 open class Permission<T: PermissionService> {
   
   public typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
-  
-  public class func prepare(for handler: ServiceDisplay, with messages: ServiceMessages = DefaultMessages(), callback: @escaping PermissionGranted) {
     
-    let service = T()
-    let status = service.checkStatus()
+    public class func prepare(for handler: ServiceDisplay, with configuration: PermissionConfiguration = Configurator(for: T.self).configuration, callback: @escaping PermissionGranted) {
 
+    let service = T(with: configuration)
+    let status = service.status()
+
+    //TODO: Error handling
     switch status {
     case .notDetermined:
-      service.requestStatus({ (success) in
+      service.requestPermission({ (success) in
         OperationQueue.main.addOperation {
           callback(success)
         }
@@ -74,23 +40,18 @@ open class Permission<T: PermissionService> {
       callback(true)
       break
     case .restricted:
-      showRestrictedAlert(from: handler, with: messages)
+      showRestrictedAlert(from: handler, with: configuration.messages)
       callback(false)
       break
     case .denied:
-      showDeniedAlert(from: handler, with: messages)
+      showDeniedAlert(from: handler, with: configuration.messages)
       callback(false)
       break
-    case .authorizedWhenInUse:
-      service.requestStatus({ (success) in
-        OperationQueue.main.addOperation {
-          callback(success)
-        }
-      })
-      break
+    default: fatalError()
     }
   }
-  
+    
+ 
   private class func showDeniedAlert(from sender:ServiceDisplay, with messages: ServiceMessages) {
     let alert = createAlert()
     alert.title = messages.deniedTitle
