@@ -41,16 +41,16 @@ Of cause, it is not a silver bullet, but a good tool for your project!
 
 ## Supported Permission Types
   
-* Camera    
-* Contacts 
-* Calendar Events
-* Gallery  
-* Location 
-* Media Library 
-* Microphone 
-* Reminder
-* Siri
-* Speech Recognition 
+* `Camera`  
+* `Contacts` 
+* `Events`
+* `Gallery`  
+* `Location`
+* `MediaLibrary` 
+* `Microphone` 
+* `Reminder`
+* `Siri`
+* `SpeechRecognition` 
 
 ## Installation with CocoaPods
 
@@ -58,11 +58,14 @@ ios-permissions-service is available through [CocoaPods](http://cocoapods.org) a
 
 ### CocoaPods
 
-To install it, simply add the following line to your Podfile:
+To install it, simply add one or several lines to your Podfile like this:
 
 ```swift
-  pod "PermissionsService"
+  pod "PermissionsService/Location"
+  pod "PermissionsService/Camera"
 ```
+
+Full list of available permissions you can found [here](https://github.com/lemberg/ios-permissions-service#supported-permission-types). 
 
 Now you need to run `pod update` command from you project folder and that's it!
 
