@@ -5,6 +5,8 @@
 //  Copyright © 2016 Lemberg Solution. All rights reserved.
 //
 
+#if PERMISSION_LOCATION
+
 import Foundation
 import CoreLocation
 
@@ -21,6 +23,7 @@ public final class Location: NSObject, PermissionService {
     
     public required init(with configuration: PermissionConfiguration) {
         //TODO: throw error
+        
         guard let config = configuration as? LocationConfiguration else {
             print("#ERROR - 001 Not correct Configuration")
             return
@@ -91,3 +94,5 @@ extension Location: CLLocationManagerDelegate {
         
     }
 }
+
+#endif

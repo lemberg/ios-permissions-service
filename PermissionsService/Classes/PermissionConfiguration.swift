@@ -38,12 +38,14 @@ public final class DefaultConfiguration: PermissionConfiguration {
     
 }
 
+
 public final class Configurator: PermissionConfiguration {
     
     var configuration: PermissionConfiguration = DefaultConfiguration()
     
     public init(for permission: PermissionService.Type) {
         
+       #if PERMISSION_LOCATION
         switch permission {
         case is Location.Type:
             self.configuration = LocationConfiguration()            
@@ -52,6 +54,12 @@ public final class Configurator: PermissionConfiguration {
             self.configuration = DefaultConfiguration()
             break
         }
+       
+        #else
+        self.configuration = DefaultConfiguration()
+        
+        #endif
+        
         
     }
     

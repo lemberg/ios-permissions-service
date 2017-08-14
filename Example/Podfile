@@ -1,4 +1,7 @@
 use_frameworks!
 target 'Example' do
+    
   pod 'PermissionsService/Location’, :path => '../'
+  pod 'PermissionsService/Camera’, :path => '../'
+  
 end

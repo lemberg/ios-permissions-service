@@ -77,12 +77,12 @@ class PermissionsController: UITableViewController {
       Permission<Events>.prepare(for: self, callback: block)
 		case .camera:
       instanceName = "Camera"
-      let config = DefaultConfiguration(with: CameraMessages())
-      Permission<Camera>.prepare(for: self, with: config, callback: block)
+//      let config = DefaultConfiguration(with: CameraMessages())
+//      Permission<Camera>.prepare(for: self, with: config, callback: block)
     case .location:
       instanceName = "Location"
-      let config = LocationConfiguration(.always, with: CameraMessages())
-      Permission<Location>.prepare(for: self, with: config, callback: block)
+//      let config = LocationConfiguration(.always, with: CameraMessages())
+//      Permission<Location>.prepare(for: self, with: config, callback: block)
     case .contacts:
       instanceName = "Contacts"
       Permission<Contacts>.prepare(for: self, callback: block)

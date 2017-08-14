@@ -5,14 +5,9 @@
 //  Copyright © 2016 LembergSolutions. All rights reserved.
 //
 
+#if PERMISSION_CAMERA
 import Foundation
 import Photos
-
-//#if PERMISSION_CAMERA
-//    
-//#endif
-
-
 
 public final class Camera: PermissionService {
     
@@ -39,3 +34,5 @@ public final class Camera: PermissionService {
     }
     
 }
+
+#endif

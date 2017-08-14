@@ -1,17 +1,18 @@
 PODS:
-  - PermissionsService (0.2.0)
+  - PermissionsService (0.3.0):
+    - PermissionsService/Core (= 0.3.0)
+  - PermissionsService/Core (0.3.0)
 
 DEPENDENCIES:
   - PermissionsService (from `../`)
 
 EXTERNAL SOURCES:
   PermissionsService:
-    :branch: feature/upgrade
     :path: ../
 
 SPEC CHECKSUMS:
-  PermissionsService: 29b077b882d861fd8d21cf1bee85c1d25293fcd1
+  PermissionsService: c1158c32a36c90f24aada44a216bac080f781075
 
-PODFILE CHECKSUM: ef188b29d3e9aef0319744d2209bf82d934ec78c
+PODFILE CHECKSUM: 98ad7411821ad1ac71d163e3c493ddf9366a58e7
 
 COCOAPODS: 1.1.1
