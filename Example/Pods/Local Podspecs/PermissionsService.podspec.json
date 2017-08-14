@@ -14,7 +14,7 @@
     "git": "https://github.com/lemberg/ios-permissions-service.git",
     "tag": "0.3.0"
   },
-  "source_files": "PermissionsService/Classes/**/*",
+  "social_media_url": "https://twitter.com/lemberg_co_uk",
   "requires_arc": true,
   "platforms": {
     "ios": "8.0"
@@ -35,6 +35,17 @@
       },
       "pod_target_xcconfig": {
         "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_LOCATION"
+      }
+    },
+    {
+      "name": "Camera",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_CAMERA"
       }
     }
   ]

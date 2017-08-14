@@ -26,16 +26,18 @@ Using this code you can get permisions for Photos, Camera and other permisisons
 
   s.default_subspec = 'Core'
   s.subspec 'Core' do |co|
-    co.source_files = "PermissionsService/Classes/**/*"
+    co.source_files = "PermissionsService/Classes/Core/*.{swift, h}"
   end
 
   s.subspec 'Location' do |lo|
     lo.dependency 'PermissionsService/Core'
+    lo.source_files = "PermissionsService/Classes/Location/*.{swift, h}"
     lo.pod_target_xcconfig = { "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "PERMISSION_LOCATION" }
   end
 
   s.subspec 'Camera' do |ca|
     ca.dependency 'PermissionsService/Core'
+    ca.source_files = "PermissionsService/Classes/Camera/*.{swift, h}"
     ca.pod_target_xcconfig = { "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "PERMISSION_CAMERA" }
   end
 
