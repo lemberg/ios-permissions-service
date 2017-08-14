@@ -64,15 +64,15 @@ Using this code you can get permisions for Photos, Camera and other permisisons
 
   s.subspec 'Gallery' do |ga|
     ga.dependency 'PermissionsService/Core'
-    ga.source_files = 'Source/Gallery’
+    ga.source_files = 'Source/Gallery'
     ga.pod_target_xcconfig = { "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "PERMISSION_GALLERY" }
 
   end
 
-  s.subspec 'Microphone' do |mic|
-    mic.dependency 'PermissionsService/Core'
-    mic.source_files = 'Source/Microphone'
-    mic.pod_target_xcconfig = { "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "PERMISSION_MICROPHONE" }
+  s.subspec 'Microphone' do |mi|
+    mi.dependency 'PermissionsService/Core'
+    mi.source_files = 'Source/Microphone'
+    mi.pod_target_xcconfig = { "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "PERMISSION_MICROPHONE" }
 
   end
 

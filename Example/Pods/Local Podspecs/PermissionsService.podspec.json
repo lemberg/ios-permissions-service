@@ -93,7 +93,7 @@
 
         ]
       },
-      "source_files": "Source/Camera",
+      "source_files": "Source/Gallery",
       "pod_target_xcconfig": {
         "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_GALLERY"
       }
