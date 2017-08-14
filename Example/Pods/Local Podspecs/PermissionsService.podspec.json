@@ -1,22 +1,41 @@
 {
   "name": "PermissionsService",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "An easy way to do permissions requests & handling automatically",
-  "description": "Using this code you can get permisions for Photos, Camera or Calendar",
   "homepage": "https://github.com/lemberg/ios-permissions-service",
   "license": {
     "type": "BSD",
     "file": "LICENSE"
   },
   "authors": {
-    "Lemberg Inc": ""
+    "Lemberg Solutions Limited": "www.lemberg.co.uk"
   },
   "source": {
     "git": "https://github.com/lemberg/ios-permissions-service.git",
-    "tag": "0.2.0"
+    "tag": "0.3.0"
   },
+  "source_files": "PermissionsService/Classes/**/*",
+  "requires_arc": true,
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "PermissionsService/Classes/**/*"
+  "description": "Using this code you can get permisions for Photos, Camera and other permisisons",
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "PermissionsService/Classes/**/*"
+    },
+    {
+      "name": "Location",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_LOCATION"
+      }
+    }
+  ]
 }

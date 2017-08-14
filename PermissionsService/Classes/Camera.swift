@@ -8,6 +8,12 @@
 import Foundation
 import Photos
 
+//#if PERMISSION_CAMERA
+//    
+//#endif
+
+
+
 public final class Camera: PermissionService {
     
     public required init(with configuration: PermissionConfiguration) { }

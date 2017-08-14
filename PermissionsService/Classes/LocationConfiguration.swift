@@ -6,6 +6,8 @@
 //
 //
 
+#if PERMISSION_LOCATION
+    
 import Foundation
 import CoreLocation
 
@@ -43,3 +45,5 @@ public final class LocationConfiguration: PermissionConfiguration {
     }
     
 }
+
+#endif
