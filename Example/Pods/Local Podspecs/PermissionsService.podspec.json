@@ -24,7 +24,7 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "PermissionsService/Classes/**/*"
+      "source_files": "Source/Core/*.{swift, h}"
     },
     {
       "name": "Location",
@@ -33,6 +33,7 @@
 
         ]
       },
+      "source_files": "Source/Location",
       "pod_target_xcconfig": {
         "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_LOCATION"
       }
@@ -44,8 +45,105 @@
 
         ]
       },
+      "source_files": "Source/Camera",
       "pod_target_xcconfig": {
         "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_CAMERA"
+      }
+    },
+    {
+      "name": "Contacts",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/Contacts",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_CONTACTS"
+      }
+    },
+    {
+      "name": "Events",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/Events",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_EVENTS"
+      }
+    },
+    {
+      "name": "MediaLibrary",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/MediaLibrary",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_MEDIA_LIBRARY"
+      }
+    },
+    {
+      "name": "Gallery",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/Camera",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_GALLERY"
+      }
+    },
+    {
+      "name": "Microphone",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/Microphone",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_MICROPHONE"
+      }
+    },
+    {
+      "name": "Reminder",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/Reminder",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_REMINDER"
+      }
+    },
+    {
+      "name": "Siri",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/Siri",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_SIRI"
+      }
+    },
+    {
+      "name": "SpeechRecognition",
+      "dependencies": {
+        "PermissionsService/Core": [
+
+        ]
+      },
+      "source_files": "Source/SpeechRecognition",
+      "pod_target_xcconfig": {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "PERMISSION_SPEECH_RECOGNITION"
       }
     }
   ]
