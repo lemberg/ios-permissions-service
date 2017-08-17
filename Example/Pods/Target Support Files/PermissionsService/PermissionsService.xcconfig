@@ -3,7 +3,7 @@
 
 #include? "PermissionConfiguration.xcconfig"
 
-#include? "../../../../../PermissionConfiguration.xcconfig"
+#include? "../../../../../../../PermissionConfiguration.xcconfig"
 
 #include? "../../PermissionConfiguration.xcconfig"
 
