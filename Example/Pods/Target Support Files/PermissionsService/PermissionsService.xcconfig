@@ -1,6 +1,5 @@
-//
-//// This line allows users of the framework to provide build flags without modifying any files within the PermissionsService repository. See README.md for more info
 
+// This line allows users of the framework to provide build flags without modifying any files within the PermissionsService repository. See README.md for more info about it.
 #include? "../../PermissionConfiguration.xcconfig"
 
 // Carthage directories are typically structured:
