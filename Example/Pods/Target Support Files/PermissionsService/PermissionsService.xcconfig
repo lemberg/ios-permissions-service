@@ -4,10 +4,9 @@
 //// Carthage directories are typically structured:
 ////    "Carthage/Build/iOS/PermissionsService"
 //#include? "../../../../../PermissionConfiguration.xcconfig"
-
-
-// This line allows users of the framework to provide build flags without modifying any files within the PermissionsService repository. See README.md for more info
-#include? "../../PermissionConfiguration.xcconfig"
-
+//
+//// This line allows users of the framework to provide build flags without modifying any files within the PermissionsService repository. See README.md for more info
+//#include? "../../PermissionConfiguration.xcconfig"
+//
 
 
