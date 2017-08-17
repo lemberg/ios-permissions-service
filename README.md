@@ -101,6 +101,31 @@ Now you need to run `pod update` command from you project folder and that's it!
 
 > More info about using and configuring Carthage you can find [here](https://github.com/Carthage/Carthage#getting-started).
 
+#### Note!
+
+There is an important note about installing, because of Apple's policy. Due to this policy regarding permission access, binaries may be rejected due to a perceived attempt to access privacy-sensitive data without a usage key, and then further rejected for not actually requesting permissions. This error will be when you'll try uploading to itunesconnect. 
+
+But there is a **solutuion**. You need to provide custom build flags *before building the dynamic framework* to only compile with permissions you request. 
+
+1. Go to your project root directory and add `xcconfig` file named `PermissionConfiguration.xcconfig`
+[Example of such file you can find in here.](https://github.com/lemberg/ios-permissions-service/blob/master/Example/Pods/PermissionConfiguration.xcconfig)
+
+2. Comment lines which you don't want to use like this:
+
+```swift
+    
+    PERMISSION_CAMERA            = PERMISSION_CAMERA
+    PERMISSION_CONTACTS          = // PERMISSION_CONTACTS
+    
+```
+
+Here you can see an example of using only `Camera` permission. `Contacts` permission will be unavailable. 
+
+3. Now you can run `carthage update --platform iOS` to compile framework. 
+
+> If you'll need to change available permissions, go to `PermissionConfiguration.xcconfig` file and modify it. Then update the framework again. 
+
+
 ## How To Use
 
 1. Configure your project in all ways needed for chosen permission type. For example, in a case of a gallery, add a specific key to your .plist file. 
