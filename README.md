@@ -107,8 +107,8 @@ There is an important note about installing, because of Apple's policy. Due to t
 
 But there is a **solutuion**. You need to provide custom build flags *before building the dynamic framework* to only compile with permissions you request. 
 
-1. Go to your project root directory and add `xcconfig` file named `PermissionConfiguration.xcconfig`
-[Example of such file you can find in here.](https://github.com/lemberg/ios-permissions-service/blob/master/Example/Pods/PermissionConfiguration.xcconfig)
+1. Go to your project root directory and add `xcconfig` file named `PermissionConfiguration.xcconfig`. 
+[Example of such file you can find here.](https://github.com/lemberg/ios-permissions-service/blob/master/Example/Pods/PermissionConfiguration.xcconfig)
 
 2. Comment lines which you don't want to use like this:
 
