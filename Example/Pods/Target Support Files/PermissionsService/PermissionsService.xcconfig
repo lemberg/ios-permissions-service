@@ -1,11 +1,10 @@
-CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR/PermissionsService
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Public"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
-PODS_BUILD_DIR = $BUILD_DIR
-PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
-PODS_ROOT = ${SRCROOT}
-PODS_TARGET_SRCROOT = ${PODS_ROOT}/../..
-PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
-SKIP_INSTALL = YES
-SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) PERMISSION_CAMERA PERMISSION_CONTACTS PERMISSION_EVENTS PERMISSION_GALLERY PERMISSION_LOCATION PERMISSION_MEDIA_LIBRARY PERMISSION_MICROPHONE PERMISSION_REMINDER PERMISSION_SIRI PERMISSION_SPEECH_RECOGNITION
+
+
+// This line allows to provide a configuration two levels further up the directory hierarchy. It exists primarily for Carthage support to allow for config files outside of auto-generated directories that may not be under version control.
+// Carthage directories are typically structured:
+//    "Carthage/Build/iOS/PermissionsService"
+#include? "../../../../../PermissionConfiguration.xcconfig"
+
+
+// This line allows users of the framework to provide build flags without modifying any files within the PermissionsService repository. See README.md for more info
+#include? "../../PermissionConfiguration.xcconfig"
