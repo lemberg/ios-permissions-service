@@ -2,21 +2,11 @@
 // This line allows users of the framework to provide build flags without modifying any files within the PermissionsService repository. See README.md for more info
 
 
-//#include? "../../../../../PermissionConfiguration.xcconfig"
-
-#include? "../../PermissionConfiguration.xcconfig"
-
-#include? "../../../PermissionConfiguration.xcconfig"
-
 #include? "../../../../PermissionConfiguration.xcconfig"
 
+// Carthage directories are typically structured:
+//    "Carthage/Build/iOS/PermissionsService"
 #include? "../../../../../PermissionConfiguration.xcconfig"
-
-#include? "../../../../../../PermissionConfiguration.xcconfig"
-
-#include? "../../../../../../../PermissionConfiguration.xcconfig"
-
-#include? "../../../../../../../../PermissionConfiguration.xcconfig"
 
 #include? "PermissionConfiguration.xcconfig"
 //root
