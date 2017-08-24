@@ -9,7 +9,7 @@
 import UIKit
 import PermissionsService
 
-extension PermissionsController: ServiceDisplay {}
+extension PermissionsController: Permissible {}
 
 struct CameraMessages: ServiceMessages {
   
