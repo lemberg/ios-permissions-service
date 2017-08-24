@@ -1,23 +1,20 @@
 //
-//  Camera.swift
+//  Gallery.swift
 //
 //  Created by Volodymyr Hyrka on 2/9/16.
 //  Copyright © 2016 LembergSolutions. All rights reserved.
 //
 
+#if PERMISSION_GALLERY
 import Foundation
 import Photos
 
-public final class Camera: PermissionService {
+public final class Gallery: PermissionService {
     
     public required init(with configuration: PermissionConfiguration) { }
-
-    let mediaType = AVMediaTypeVideo
     
-    public init() {}
-    
-    public func status() -> PermissionStatus {        
-        let statusInt = AVCaptureDevice.authorizationStatus(forMediaType: mediaType).rawValue
+    public func status() -> PermissionStatus {
+        let statusInt = PHPhotoLibrary.authorizationStatus().rawValue
         guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
             assertionFailure("Impossible status")
             return .notDetermined
@@ -26,10 +23,13 @@ public final class Camera: PermissionService {
     }
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
-        
-        AVCaptureDevice.requestAccess(forMediaType: mediaType) { (granted) -> Void in
-            callback(granted)
-        }
+
+        PHPhotoLibrary.requestAuthorization({ (newStatus) -> Void in
+            let success = newStatus == PHAuthorizationStatus.authorized
+            callback(success)
+        })
     }
     
 }
+
+#endif

@@ -22,7 +22,6 @@ public final class Location: NSObject, PermissionService {
     fileprivate var type: CLAuthorizationStatus = CLAuthorizationStatus.authorizedWhenInUse
     
     public required init(with configuration: PermissionConfiguration) {
-        //TODO: throw error
         
         guard let config = configuration as? LocationConfiguration else {
             print("#ERROR - 001 Not correct Configuration")
@@ -57,13 +56,8 @@ public final class Location: NSObject, PermissionService {
             switch (status) {
             case .authorizedAlways, .authorizedWhenInUse:
                 permissionGranted = true
-                break
-            case .denied,.restricted:
+            case .denied,.restricted,.notDetermined:
                 permissionGranted = false
-                break
-            case .notDetermined:
-                permissionGranted = false
-                break
             }
             
             callback(permissionGranted)

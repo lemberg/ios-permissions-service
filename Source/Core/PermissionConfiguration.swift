@@ -49,10 +49,8 @@ public final class Configurator: PermissionConfiguration {
         switch permission {
         case is Location.Type:
             self.configuration = LocationConfiguration()            
-            break
         default:
             self.configuration = DefaultConfiguration()
-            break
         }
        
         #else

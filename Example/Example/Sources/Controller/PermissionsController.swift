@@ -9,7 +9,7 @@
 import UIKit
 import PermissionsService
 
-extension PermissionsController: ServiceDisplay {}
+extension PermissionsController: Permissible {}
 
 struct CameraMessages: ServiceMessages {
   
@@ -39,6 +39,7 @@ class PermissionsController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+    
 	}
 	
 	// MARK: - Table view data source
@@ -63,8 +64,6 @@ class PermissionsController: UITableViewController {
         self.present(alert, animated: true, completion: nil)
 			}
 		}
-    
-    
     
 		switch cellIndex {
 		case .gallery:

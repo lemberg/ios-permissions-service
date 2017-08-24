@@ -1,17 +1,45 @@
 PODS:
-  - PermissionsService (0.2.0)
+  - PermissionsService/Camera (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/Contacts (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/Core (0.3.0)
+  - PermissionsService/Events (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/Gallery (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/Location (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/MediaLibrary (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/Microphone (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/Reminder (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/Siri (0.3.0):
+    - PermissionsService/Core
+  - PermissionsService/SpeechRecognition (0.3.0):
+    - PermissionsService/Core
 
 DEPENDENCIES:
-  - PermissionsService (from `../`)
+  - PermissionsService/Camera (from `../`)
+  - PermissionsService/Contacts (from `../`)
+  - PermissionsService/Events (from `../`)
+  - PermissionsService/Gallery (from `../`)
+  - PermissionsService/Location (from `../`)
+  - PermissionsService/MediaLibrary (from `../`)
+  - PermissionsService/Microphone (from `../`)
+  - PermissionsService/Reminder (from `../`)
+  - PermissionsService/Siri (from `../`)
+  - PermissionsService/SpeechRecognition (from `../`)
 
 EXTERNAL SOURCES:
   PermissionsService:
-    :branch: feature/upgrade
     :path: ../
 
 SPEC CHECKSUMS:
-  PermissionsService: 29b077b882d861fd8d21cf1bee85c1d25293fcd1
+  PermissionsService: 7a70bb00d4bc1f4c800e22afb120d2fc3c86abc7
 
-PODFILE CHECKSUM: ef188b29d3e9aef0319744d2209bf82d934ec78c
+PODFILE CHECKSUM: 0df1f37ca9b331f255055609c3968e39c6f23b50
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.3.1

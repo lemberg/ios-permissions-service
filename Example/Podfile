@@ -1,4 +1,15 @@
 use_frameworks!
 target 'Example' do
-  pod 'PermissionsService', :path => '../'
+    
+  pod 'PermissionsService/Location’, :path => '../'
+  pod 'PermissionsService/Camera’, :path => '../'
+  pod 'PermissionsService/Contacts’, :path => '../'
+  pod 'PermissionsService/Events’, :path => '../'
+  pod 'PermissionsService/MediaLibrary’, :path => '../'
+  pod 'PermissionsService/Gallery’, :path => '../'
+  pod 'PermissionsService/Microphone’, :path => '../'
+  pod 'PermissionsService/Reminder’, :path => '../'
+  pod 'PermissionsService/Siri’, :path => '../'
+  pod 'PermissionsService/SpeechRecognition’, :path => '../'
+
 end
