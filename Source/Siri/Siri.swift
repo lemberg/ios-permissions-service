@@ -21,10 +21,8 @@ public final class Siri: PermissionService {
             switch status {
                 case .authorized:
                     callback(true)
-                    break
                 case .denied, .restricted, .notDetermined:
                     callback(false)
-                    break
             }
         }
     }

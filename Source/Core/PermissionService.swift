@@ -22,12 +22,11 @@ open class Permission<T: PermissionService> {
   
   public typealias PermissionGranted = (_ granted:Bool) -> Swift.Void
     
-    public class func prepare(for handler: ServiceDisplay, with configuration: PermissionConfiguration = Configurator(for: T.self).configuration, callback: @escaping PermissionGranted) {
+    public class func prepare(for handler: Permissible, with configuration: PermissionConfiguration = Configurator(for: T.self).configuration, callback: @escaping PermissionGranted) {
 
     let service = T(with: configuration)
     let status = service.status()
 
-    //TODO: Error handling
     switch status {
     case .notDetermined:
       service.requestPermission({ (success) in
@@ -35,24 +34,20 @@ open class Permission<T: PermissionService> {
           callback(success)
         }
       })
-      break
     case .authorized:
       callback(true)
-      break
     case .restricted:
       showRestrictedAlert(from: handler, with: configuration.messages)
       callback(false)
-      break
     case .denied:
       showDeniedAlert(from: handler, with: configuration.messages)
       callback(false)
-      break
     default: fatalError()
     }
   }
     
  
-  private class func showDeniedAlert(from sender:ServiceDisplay, with messages: ServiceMessages) {
+  private class func showDeniedAlert(from sender:Permissible, with messages: ServiceMessages) {
     let alert = createAlert()
     alert.title = messages.deniedTitle
     alert.message = messages.deniedMessage
@@ -60,7 +55,7 @@ open class Permission<T: PermissionService> {
     sender.showAlert(vc: alert)
   }
   
-  private class func showRestrictedAlert(from sender:ServiceDisplay, with messages: ServiceMessages) {
+  private class func showRestrictedAlert(from sender:Permissible, with messages: ServiceMessages) {
     let alert = createAlert()
     alert.title = messages.restrictedTitle
     alert.message = messages.restrictedMessage

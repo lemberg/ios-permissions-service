@@ -17,7 +17,6 @@ public final class SpeechRecognition: PermissionService {
 
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
        
-        //TODO: Error handling
         SFSpeechRecognizer.requestAuthorization { status in
             
             let status = status.rawValue.permissionStatus()
@@ -26,10 +25,8 @@ public final class SpeechRecognition: PermissionService {
             switch (status) {
             case .authorized:
                 permissionGranted = true
-                break
             default:
                 permissionGranted = false
-                break
             }
             
             callback(permissionGranted)

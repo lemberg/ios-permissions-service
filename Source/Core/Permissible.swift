@@ -15,12 +15,12 @@ public protocol ServiceMessages {
     var deniedTitle: String { get }
 }
 
-public protocol ServiceDisplay {
+public protocol Permissible {
     
     func showAlert(vc: UIAlertController)
 }
 
-public extension ServiceDisplay where Self: UIViewController {
+public extension Permissible where Self: UIViewController {
     
     public func showAlert(vc: UIAlertController) {
         self.present(vc, animated: true, completion: nil)

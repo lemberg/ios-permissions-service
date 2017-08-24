@@ -18,8 +18,6 @@ public final class MediaLibrary: PermissionService {
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         
-        //TODO: Error handling
-        
         MPMediaLibrary.requestAuthorization { status in
             
             let status = status.rawValue.permissionStatus()
@@ -28,10 +26,8 @@ public final class MediaLibrary: PermissionService {
             switch (status) {
             case .authorized:
                 permissionGranted = true
-                break
             default:
                 permissionGranted = false
-                break
             }
             
             callback(permissionGranted)

@@ -26,18 +26,18 @@ import Foundation
     
         public var description: String {
             switch self {
-            case .contacts:         return "Contacts" //
-            case .events:           return "Events" //
+            case .contacts:         return "Contacts"
+            case .events:           return "Events"
             case .locationAlways:   return "LocationAlways"
             case .locationInUse:    return "LocationInUse"
             case .notifications:    return "Notifications"
-            case .microphone:       return "Microphone" //
-            case .camera:           return "Camera" //
-            case .photos:           return "Photos" //
-            case .reminders:        return "Reminders" //
+            case .microphone:       return "Microphone"
+            case .camera:           return "Camera"
+            case .photos:           return "Photos"
+            case .reminders:        return "Reminders"
             case .bluetooth:        return "Bluetooth"
             case .motion:           return "Motion"
-            case .siri:             return "Siri" //
+            case .siri:             return "Siri"
   
             }
         }
