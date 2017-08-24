@@ -130,7 +130,7 @@ Here you can see an example of using only `Camera` permission. `Contacts` permis
 
 1. Configure your project in all ways needed for chosen permission type. For example, in a case of a gallery, add a specific key to your .plist file. 
 
-2. Implement  `ServiceDisplay ` protocol in your class. If it's not a `UIVIewController` class you should implement `showAlert(_:)` method, but if it is - there is a default implementation and you can leave it empty. 
+2. Implement  `Permissible` protocol in your class. If it's not a `UIVIewController` class you should implement `showAlert(_:)` method, but if it is - there is a default implementation and you can leave it empty. 
 
 3. Add `Permission<T: PermissionService>` object with a type you needed and use  `prepare(_:) ` method for request permission and presenting alert to the user. 
 
