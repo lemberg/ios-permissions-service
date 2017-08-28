@@ -31,6 +31,7 @@
 		9B51AD711F541C03003B9ABA /* MicrophoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD701F541C03003B9ABA /* MicrophoneTests.swift */; };
 		9B51AD731F541C79003B9ABA /* SpeechRecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD721F541C79003B9ABA /* SpeechRecognitionTests.swift */; };
 		9B51AD771F541CEC003B9ABA /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD761F541CEC003B9ABA /* LocationTests.swift */; };
+		9B51AD791F541F5C003B9ABA /* LocationConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD781F541F5C003B9ABA /* LocationConfigurationTests.swift */; };
 		9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589601F54014800F3B92A /* ConfigurationTests.swift */; };
 		9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589621F54015900F3B92A /* PermissionServiceTests.swift */; };
 		9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */; };
@@ -95,6 +96,7 @@
 		9B51AD701F541C03003B9ABA /* MicrophoneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneTests.swift; sourceTree = "<group>"; };
 		9B51AD721F541C79003B9ABA /* SpeechRecognitionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionTests.swift; sourceTree = "<group>"; };
 		9B51AD761F541CEC003B9ABA /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		9B51AD781F541F5C003B9ABA /* LocationConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationConfigurationTests.swift; sourceTree = "<group>"; };
 		9B6589601F54014800F3B92A /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		9B6589621F54015900F3B92A /* PermissionServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionServiceTests.swift; sourceTree = "<group>"; };
 		9BE055BE1F53F306003D7541 /* PermissionsServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermissionsServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +291,7 @@
 				9B51AD751F541CCC003B9ABA /* MediaLibrary */,
 				9B51AD6D1F541B8F003B9ABA /* Photos */,
 				9B51AD761F541CEC003B9ABA /* LocationTests.swift */,
+				9B51AD781F541F5C003B9ABA /* LocationConfigurationTests.swift */,
 			);
 			name = PermissionsTests;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */,
 				9B51AD771F541CEC003B9ABA /* LocationTests.swift in Sources */,
 				9B51AD611F541770003B9ABA /* ReminderTests.swift in Sources */,
+				9B51AD791F541F5C003B9ABA /* LocationConfigurationTests.swift in Sources */,
 				9B51AD711F541C03003B9ABA /* MicrophoneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

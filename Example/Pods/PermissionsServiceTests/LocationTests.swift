@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import PermissionsService
 
 class LocationTests: XCTestCase {
@@ -16,7 +17,7 @@ class LocationTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        testLocationInit()
+//        testLocationInit()
     }
     
     override func tearDown() {
@@ -25,14 +26,33 @@ class LocationTests: XCTestCase {
     }
     
     //test if inits without problems
-    func testMLocationInit() {
-        object = Location(with: DefaultConfiguration())
+    func testLocationInit() {
+        object = Location(with: LocationConfiguration())
         XCTAssertNotNil(object)
     }
     
-    //this class supports not all types, so we test if type is correct
-    func testIsLocationPermissionTypeCorrect() {
-        XCTAssertEqual(object.type, AVMediaTypeAudio)
+    func testLocationInit_defaultConfiguration() {
+        object = Location(with: DefaultConfiguration())
+        XCTAssertNotNil(object)
+        
+        XCTAssertEqual(object.type, CLAuthorizationStatus.authorizedWhenInUse)
+    }
+    
+    func testLocationInit_defaultLocationConfiguration() {
+        object = Location(with: LocationConfiguration())
+        XCTAssertNotNil(object)
+    }
+    
+    func testLocationInit_alwaysLocationConfiguration() {
+        object = Location(with: LocationConfiguration(.always))
+        XCTAssertNotNil(object)
+        
+        XCTAssertEqual(object.type, CLAuthorizationStatus.authorizedAlways)
+    }
+    
+    func testLocationInit_inUseLocationConfiguration() {
+        object = Location(with: LocationConfiguration())
+        XCTAssertNotNil(object)
     }
 
     

@@ -1,5 +1,5 @@
 //
-//  SpeechRecognitionTests.swift
+//  LocationConfigurationTests.swift
 //  Pods
 //
 //  Created by Hellen Soloviy on 8/28/17.
@@ -7,16 +7,14 @@
 //
 
 import XCTest
-@testable import PermissionsService
 
-class SpeechRecognitionTests: XCTestCase {
+class LocationConfigurationTests: XCTestCase {
     
-    var object: SpeechRecognition!
+//    var object: LocationConfiguration!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        testSpeechRecognitionInit()
     }
     
     override func tearDown() {
@@ -24,12 +22,10 @@ class SpeechRecognitionTests: XCTestCase {
         super.tearDown()
     }
     
-    //test if inits without problems
-    func testSpeechRecognitionInit() {
-        object = SpeechRecognition(with: DefaultConfiguration())
-        XCTAssertNotNil(object)
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
