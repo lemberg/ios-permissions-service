@@ -21,6 +21,8 @@
 		92E47B1B1A5512FB32043A6A0149AA08 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF4F8E7005E3EF490B41CAA4E02440 /* PermissionService.swift */; };
 		956D2F91C59A4757A1F172ABBF9F3DD3 /* LocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B57B4850796AF902938DAFC44F2A0 /* LocationConfiguration.swift */; };
 		9856A4AC0332E5AE6452490A87ADC7A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589601F54014800F3B92A /* ConfigurationTests.swift */; };
+		9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589621F54015900F3B92A /* PermissionServiceTests.swift */; };
 		9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */; };
 		9BE055C31F53F306003D7541 /* PermissionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E633F0B224559BF587862558DD34437 /* PermissionsService.framework */; };
 		9F21E6E174AAF20CF9E07DBA782865C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -73,6 +75,8 @@
 		7B4F817281227079CB548FB674820A51 /* Contacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contacts.swift; path = Source/Contacts/Contacts.swift; sourceTree = "<group>"; };
 		8FD57FDDA4FCC3A528512C13C955B1BB /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B6589601F54014800F3B92A /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
+		9B6589621F54015900F3B92A /* PermissionServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionServiceTests.swift; sourceTree = "<group>"; };
 		9BE055BE1F53F306003D7541 /* PermissionsServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermissionsServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsServiceTests.swift; sourceTree = "<group>"; };
 		9BE055C21F53F306003D7541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */,
+				9B6589601F54014800F3B92A /* ConfigurationTests.swift */,
+				9B6589621F54015900F3B92A /* PermissionServiceTests.swift */,
 				9BE055C21F53F306003D7541 /* Info.plist */,
 			);
 			path = PermissionsServiceTests;
@@ -484,6 +490,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */,
+				9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */,
 				9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +553,7 @@
 		};
 		9BE055C71F53F306003D7541 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB27665C01A56DD4E86B85495227A80D /* PermissionsService.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -571,6 +580,7 @@
 		};
 		9BE055C81F53F306003D7541 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB27665C01A56DD4E86B85495227A80D /* PermissionsService.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -830,6 +840,7 @@
 				9BE055C81F53F306003D7541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A24A3111C81B5B7FA6810C31C69D6204 /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
 			isa = XCConfigurationList;

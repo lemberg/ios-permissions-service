@@ -12,4 +12,6 @@ target 'Example' do
   pod 'PermissionsService/Siri’, :path => '../'
   pod 'PermissionsService/SpeechRecognition’, :path => '../'
 
+
+
 end
