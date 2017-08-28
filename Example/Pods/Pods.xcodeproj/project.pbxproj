@@ -21,6 +21,16 @@
 		92E47B1B1A5512FB32043A6A0149AA08 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF4F8E7005E3EF490B41CAA4E02440 /* PermissionService.swift */; };
 		956D2F91C59A4757A1F172ABBF9F3DD3 /* LocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B57B4850796AF902938DAFC44F2A0 /* LocationConfiguration.swift */; };
 		9856A4AC0332E5AE6452490A87ADC7A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9B51AD5D1F5411CA003B9ABA /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD5C1F5411CA003B9ABA /* EventsTests.swift */; };
+		9B51AD5F1F5416ED003B9ABA /* SiriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD5E1F5416ED003B9ABA /* SiriTests.swift */; };
+		9B51AD611F541770003B9ABA /* ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD601F541770003B9ABA /* ReminderTests.swift */; };
+		9B51AD661F541969003B9ABA /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD651F541969003B9ABA /* CameraTests.swift */; };
+		9B51AD681F541977003B9ABA /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD671F541977003B9ABA /* ContactsTests.swift */; };
+		9B51AD6A1F541989003B9ABA /* GalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD691F541989003B9ABA /* GalleryTests.swift */; };
+		9B51AD6F1F541BA7003B9ABA /* MediaLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD6E1F541BA7003B9ABA /* MediaLibraryTests.swift */; };
+		9B51AD711F541C03003B9ABA /* MicrophoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD701F541C03003B9ABA /* MicrophoneTests.swift */; };
+		9B51AD731F541C79003B9ABA /* SpeechRecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD721F541C79003B9ABA /* SpeechRecognitionTests.swift */; };
+		9B51AD771F541CEC003B9ABA /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD761F541CEC003B9ABA /* LocationTests.swift */; };
 		9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589601F54014800F3B92A /* ConfigurationTests.swift */; };
 		9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589621F54015900F3B92A /* PermissionServiceTests.swift */; };
 		9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */; };
@@ -75,6 +85,16 @@
 		7B4F817281227079CB548FB674820A51 /* Contacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contacts.swift; path = Source/Contacts/Contacts.swift; sourceTree = "<group>"; };
 		8FD57FDDA4FCC3A528512C13C955B1BB /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B51AD5C1F5411CA003B9ABA /* EventsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
+		9B51AD5E1F5416ED003B9ABA /* SiriTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriTests.swift; sourceTree = "<group>"; };
+		9B51AD601F541770003B9ABA /* ReminderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTests.swift; sourceTree = "<group>"; };
+		9B51AD651F541969003B9ABA /* CameraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTests.swift; sourceTree = "<group>"; };
+		9B51AD671F541977003B9ABA /* ContactsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTests.swift; sourceTree = "<group>"; };
+		9B51AD691F541989003B9ABA /* GalleryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTests.swift; sourceTree = "<group>"; };
+		9B51AD6E1F541BA7003B9ABA /* MediaLibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaLibraryTests.swift; sourceTree = "<group>"; };
+		9B51AD701F541C03003B9ABA /* MicrophoneTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneTests.swift; sourceTree = "<group>"; };
+		9B51AD721F541C79003B9ABA /* SpeechRecognitionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionTests.swift; sourceTree = "<group>"; };
+		9B51AD761F541CEC003B9ABA /* LocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		9B6589601F54014800F3B92A /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		9B6589621F54015900F3B92A /* PermissionServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionServiceTests.swift; sourceTree = "<group>"; };
 		9BE055BE1F53F306003D7541 /* PermissionsServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermissionsServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,12 +269,86 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		9BE055BF1F53F306003D7541 /* PermissionsServiceTests */ = {
+		9B51AD621F541933003B9ABA /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
 				9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */,
 				9B6589601F54014800F3B92A /* ConfigurationTests.swift */,
 				9B6589621F54015900F3B92A /* PermissionServiceTests.swift */,
+			);
+			name = CoreTests;
+			sourceTree = "<group>";
+		};
+		9B51AD631F54193C003B9ABA /* PermissionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD741F541CBF003B9ABA /* Speech */,
+				9B51AD641F541951003B9ABA /* Calendar */,
+				9B51AD6B1F541991003B9ABA /* Siri */,
+				9B51AD6C1F541B05003B9ABA /* Contacts */,
+				9B51AD751F541CCC003B9ABA /* MediaLibrary */,
+				9B51AD6D1F541B8F003B9ABA /* Photos */,
+				9B51AD761F541CEC003B9ABA /* LocationTests.swift */,
+			);
+			name = PermissionsTests;
+			sourceTree = "<group>";
+		};
+		9B51AD641F541951003B9ABA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD5C1F5411CA003B9ABA /* EventsTests.swift */,
+				9B51AD601F541770003B9ABA /* ReminderTests.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		9B51AD6B1F541991003B9ABA /* Siri */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD5E1F5416ED003B9ABA /* SiriTests.swift */,
+			);
+			name = Siri;
+			sourceTree = "<group>";
+		};
+		9B51AD6C1F541B05003B9ABA /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD671F541977003B9ABA /* ContactsTests.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		9B51AD6D1F541B8F003B9ABA /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD651F541969003B9ABA /* CameraTests.swift */,
+				9B51AD691F541989003B9ABA /* GalleryTests.swift */,
+				9B51AD701F541C03003B9ABA /* MicrophoneTests.swift */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		9B51AD741F541CBF003B9ABA /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD721F541C79003B9ABA /* SpeechRecognitionTests.swift */,
+			);
+			name = Speech;
+			sourceTree = "<group>";
+		};
+		9B51AD751F541CCC003B9ABA /* MediaLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD6E1F541BA7003B9ABA /* MediaLibraryTests.swift */,
+			);
+			name = MediaLibrary;
+			sourceTree = "<group>";
+		};
+		9BE055BF1F53F306003D7541 /* PermissionsServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD621F541933003B9ABA /* CoreTests */,
+				9B51AD631F54193C003B9ABA /* PermissionsTests */,
 				9BE055C21F53F306003D7541 /* Info.plist */,
 			);
 			path = PermissionsServiceTests;
@@ -490,9 +584,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B51AD681F541977003B9ABA /* ContactsTests.swift in Sources */,
+				9B51AD661F541969003B9ABA /* CameraTests.swift in Sources */,
+				9B51AD5D1F5411CA003B9ABA /* EventsTests.swift in Sources */,
+				9B51AD731F541C79003B9ABA /* SpeechRecognitionTests.swift in Sources */,
 				9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */,
+				9B51AD5F1F5416ED003B9ABA /* SiriTests.swift in Sources */,
+				9B51AD6A1F541989003B9ABA /* GalleryTests.swift in Sources */,
+				9B51AD6F1F541BA7003B9ABA /* MediaLibraryTests.swift in Sources */,
 				9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */,
 				9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */,
+				9B51AD771F541CEC003B9ABA /* LocationTests.swift in Sources */,
+				9B51AD611F541770003B9ABA /* ReminderTests.swift in Sources */,
+				9B51AD711F541C03003B9ABA /* MicrophoneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,12 +11,12 @@ import EventKit
 
 public final class Reminder: PermissionService {
     
-    let entityType = EKEntityType.reminder
+    let type = EKEntityType.reminder
     
     public required init(with configuration: PermissionConfiguration) { }
     
     public func status() -> PermissionStatus {
-        let statusInt = EKEventStore.authorizationStatus(for: entityType).rawValue
+        let statusInt = EKEventStore.authorizationStatus(for: type).rawValue
         guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
             assertionFailure("Impossible status")
             return .notDetermined
@@ -26,7 +26,7 @@ public final class Reminder: PermissionService {
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         
-        EKEventStore().requestAccess(to: entityType) {
+        EKEventStore().requestAccess(to: type) {
             (accessGranted: Bool, error: Error?) in
             callback(accessGranted)
         }
