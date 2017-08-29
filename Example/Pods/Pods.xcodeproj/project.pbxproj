@@ -21,6 +21,7 @@
 		92E47B1B1A5512FB32043A6A0149AA08 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBF4F8E7005E3EF490B41CAA4E02440 /* PermissionService.swift */; };
 		956D2F91C59A4757A1F172ABBF9F3DD3 /* LocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28B57B4850796AF902938DAFC44F2A0 /* LocationConfiguration.swift */; };
 		9856A4AC0332E5AE6452490A87ADC7A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9B4E5CE01F55972200C1230C /* PermissionResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4E5CDF1F55972200C1230C /* PermissionResultTests.swift */; };
 		9B51AD5D1F5411CA003B9ABA /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD5C1F5411CA003B9ABA /* EventsTests.swift */; };
 		9B51AD5F1F5416ED003B9ABA /* SiriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD5E1F5416ED003B9ABA /* SiriTests.swift */; };
 		9B51AD611F541770003B9ABA /* ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD601F541770003B9ABA /* ReminderTests.swift */; };
@@ -86,6 +87,7 @@
 		7B4F817281227079CB548FB674820A51 /* Contacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contacts.swift; path = Source/Contacts/Contacts.swift; sourceTree = "<group>"; };
 		8FD57FDDA4FCC3A528512C13C955B1BB /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B4E5CDF1F55972200C1230C /* PermissionResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionResultTests.swift; sourceTree = "<group>"; };
 		9B51AD5C1F5411CA003B9ABA /* EventsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		9B51AD5E1F5416ED003B9ABA /* SiriTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiriTests.swift; sourceTree = "<group>"; };
 		9B51AD601F541770003B9ABA /* ReminderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderTests.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6589601F54014800F3B92A /* ConfigurationTests.swift */,
+				9B4E5CDF1F55972200C1230C /* PermissionResultTests.swift */,
 				9B6589621F54015900F3B92A /* PermissionServiceTests.swift */,
 				9BA204921F5565AB0096917C /* PermissionStatusTests.swift */,
 			);
@@ -603,6 +606,7 @@
 				9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */,
 				9B51AD5F1F5416ED003B9ABA /* SiriTests.swift in Sources */,
 				9B51AD6A1F541989003B9ABA /* GalleryTests.swift in Sources */,
+				9B4E5CE01F55972200C1230C /* PermissionResultTests.swift in Sources */,
 				9B51AD6F1F541BA7003B9ABA /* MediaLibraryTests.swift in Sources */,
 				9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */,
 				9B51AD771F541CEC003B9ABA /* LocationTests.swift in Sources */,

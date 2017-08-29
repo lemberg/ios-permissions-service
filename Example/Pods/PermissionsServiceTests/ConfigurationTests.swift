@@ -11,6 +11,8 @@ import XCTest
 
 class ConfigurationTests: XCTestCase {
     
+    var configuration: Configurator!
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,42 +24,42 @@ class ConfigurationTests: XCTestCase {
     }
     
     func testConfiguratorInit_events() {
-        var configuration = Configurator(for: Events.self)
+        configuration = Configurator(for: Events.self)
         XCTAssertTrue(configuration.configuration is DefaultConfiguration)
     }
     
     func testConfiguratorInit_mediaLibrary() {
-        var configuration = Configurator(for: MediaLibrary.self)
+        configuration = Configurator(for: MediaLibrary.self)
         XCTAssertTrue(configuration.configuration is DefaultConfiguration)
     }
     
     func testConfiguratorInit_camera() {
-        var configuration = Configurator(for: Camera.self)
+        configuration = Configurator(for: Camera.self)
         XCTAssertTrue(configuration.configuration is DefaultConfiguration)
     }
     
     func testConfiguratorInit_gallery() {
-        var configuration = Configurator(for: Gallery.self)
+        configuration = Configurator(for: Gallery.self)
         XCTAssertTrue(configuration.configuration is DefaultConfiguration)
     }
     
     func testConfiguratorInit_contacts() {
-        var configuration = Configurator(for: Contacts.self)
+        configuration = Configurator(for: Contacts.self)
         XCTAssertTrue(configuration.configuration is DefaultConfiguration)
     }
     
     func testConfiguratorInit_siri() {
-        var configuration = Configurator(for: Siri.self)
+        configuration = Configurator(for: Siri.self)
         XCTAssertTrue(configuration.configuration is DefaultConfiguration)
     }
     
     func testConfiguratorInit_speechRecognition() {
-        var configuration = Configurator(for: SpeechRecognition.self)
+        configuration = Configurator(for: SpeechRecognition.self)
         XCTAssertTrue(configuration.configuration is DefaultConfiguration)
     }
     
     func testConfiguratorInit_location() {
-        var configuration = Configurator(for: Location.self)
+        configuration = Configurator(for: Location.self)
         XCTAssertTrue(configuration.configuration is LocationConfiguration)
     }
 
