@@ -44,7 +44,7 @@ class PermissionStatusTests: XCTestCase {
     func testInit_deniedStatus() {
         permissionStatus = PermissionStatus.init(rawValue: 2)
         XCTAssertNotNil(permissionStatus)
-        XCTAssertEqual(permissionStatus, .unknown)
+        XCTAssertEqual(permissionStatus, .denied)
     }
     
     func testInit_authorizedStatus() {
@@ -55,8 +55,7 @@ class PermissionStatusTests: XCTestCase {
     
     func testInit_uncorrectStatus() {
         permissionStatus = PermissionStatus.init(rawValue: 5)
-        XCTAssertNotNil(permissionStatus)
-        XCTAssertEqual(permissionStatus, .unknown)
+        XCTAssertNil(permissionStatus)
     }
     
     func testPerformanceExample() {

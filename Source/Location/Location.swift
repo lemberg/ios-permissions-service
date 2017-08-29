@@ -71,12 +71,8 @@ public final class Location: NSObject, PermissionService {
     
     
     public func status() -> PermissionStatus {
-        let statusInt = Int(CLLocationManager.authorizationStatus().rawValue)
-        guard let status = PermissionStatus(rawValue: statusInt), (0...4) ~= statusInt else {
-            assertionFailure("Impossible status")
-            return .notDetermined
-        }
-        return status
+        let status = Int(CLLocationManager.authorizationStatus().rawValue)
+        return status.permissionStatus()
     }
     
 }

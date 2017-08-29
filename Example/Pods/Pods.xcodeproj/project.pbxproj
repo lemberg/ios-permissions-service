@@ -276,8 +276,8 @@
 		9B51AD621F541933003B9ABA /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B6589601F54014800F3B92A /* ConfigurationTests.swift */,
 				9B4E5CDF1F55972200C1230C /* PermissionResultTests.swift */,
+				9B6589601F54014800F3B92A /* ConfigurationTests.swift */,
 				9B6589621F54015900F3B92A /* PermissionServiceTests.swift */,
 				9BA204921F5565AB0096917C /* PermissionStatusTests.swift */,
 			);
