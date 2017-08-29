@@ -34,7 +34,7 @@
 		9B51AD791F541F5C003B9ABA /* LocationConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B51AD781F541F5C003B9ABA /* LocationConfigurationTests.swift */; };
 		9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589601F54014800F3B92A /* ConfigurationTests.swift */; };
 		9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6589621F54015900F3B92A /* PermissionServiceTests.swift */; };
-		9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */; };
+		9BA204931F5565AB0096917C /* PermissionStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA204921F5565AB0096917C /* PermissionStatusTests.swift */; };
 		9BE055C31F53F306003D7541 /* PermissionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E633F0B224559BF587862558DD34437 /* PermissionsService.framework */; };
 		9F21E6E174AAF20CF9E07DBA782865C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		AC5C149B0B3B9FCF47EC1398A6BA5083 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59516F8EB852D4E8B3DF3B0CB9432D /* SpeechRecognition.swift */; };
@@ -99,8 +99,8 @@
 		9B51AD781F541F5C003B9ABA /* LocationConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationConfigurationTests.swift; sourceTree = "<group>"; };
 		9B6589601F54014800F3B92A /* ConfigurationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		9B6589621F54015900F3B92A /* PermissionServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionServiceTests.swift; sourceTree = "<group>"; };
+		9BA204921F5565AB0096917C /* PermissionStatusTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionStatusTests.swift; sourceTree = "<group>"; };
 		9BE055BE1F53F306003D7541 /* PermissionsServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PermissionsServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsServiceTests.swift; sourceTree = "<group>"; };
 		9BE055C21F53F306003D7541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A661FECCEBFF9D01869EE3B29C4C1EFF /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B0DA590017FC244D897B85EC1A8E48B7 /* PermissionResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PermissionResult.swift; path = Source/Core/PermissionResult.swift; sourceTree = "<group>"; };
@@ -274,9 +274,9 @@
 		9B51AD621F541933003B9ABA /* CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BE055C01F53F306003D7541 /* PermissionsServiceTests.swift */,
 				9B6589601F54014800F3B92A /* ConfigurationTests.swift */,
 				9B6589621F54015900F3B92A /* PermissionServiceTests.swift */,
+				9BA204921F5565AB0096917C /* PermissionStatusTests.swift */,
 			);
 			name = CoreTests;
 			sourceTree = "<group>";
@@ -290,8 +290,7 @@
 				9B51AD6C1F541B05003B9ABA /* Contacts */,
 				9B51AD751F541CCC003B9ABA /* MediaLibrary */,
 				9B51AD6D1F541B8F003B9ABA /* Photos */,
-				9B51AD761F541CEC003B9ABA /* LocationTests.swift */,
-				9B51AD781F541F5C003B9ABA /* LocationConfigurationTests.swift */,
+				9BA204911F5564270096917C /* Location&Configuration */,
 			);
 			name = PermissionsTests;
 			sourceTree = "<group>";
@@ -345,6 +344,15 @@
 				9B51AD6E1F541BA7003B9ABA /* MediaLibraryTests.swift */,
 			);
 			name = MediaLibrary;
+			sourceTree = "<group>";
+		};
+		9BA204911F5564270096917C /* Location&Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				9B51AD761F541CEC003B9ABA /* LocationTests.swift */,
+				9B51AD781F541F5C003B9ABA /* LocationConfigurationTests.swift */,
+			);
+			name = "Location&Configuration";
 			sourceTree = "<group>";
 		};
 		9BE055BF1F53F306003D7541 /* PermissionsServiceTests */ = {
@@ -591,12 +599,12 @@
 				9B51AD661F541969003B9ABA /* CameraTests.swift in Sources */,
 				9B51AD5D1F5411CA003B9ABA /* EventsTests.swift in Sources */,
 				9B51AD731F541C79003B9ABA /* SpeechRecognitionTests.swift in Sources */,
+				9BA204931F5565AB0096917C /* PermissionStatusTests.swift in Sources */,
 				9B6589611F54014800F3B92A /* ConfigurationTests.swift in Sources */,
 				9B51AD5F1F5416ED003B9ABA /* SiriTests.swift in Sources */,
 				9B51AD6A1F541989003B9ABA /* GalleryTests.swift in Sources */,
 				9B51AD6F1F541BA7003B9ABA /* MediaLibraryTests.swift in Sources */,
 				9B6589631F54015900F3B92A /* PermissionServiceTests.swift in Sources */,
-				9BE055C11F53F306003D7541 /* PermissionsServiceTests.swift in Sources */,
 				9B51AD771F541CEC003B9ABA /* LocationTests.swift in Sources */,
 				9B51AD611F541770003B9ABA /* ReminderTests.swift in Sources */,
 				9B51AD791F541F5C003B9ABA /* LocationConfigurationTests.swift in Sources */,

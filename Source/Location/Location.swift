@@ -79,7 +79,6 @@ public final class Location: NSObject, PermissionService {
         return status
     }
     
-    
 }
 
 extension Location: CLLocationManagerDelegate {
