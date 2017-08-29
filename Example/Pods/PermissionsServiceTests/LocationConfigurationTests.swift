@@ -69,6 +69,7 @@ class LocationConfigurationTests: XCTestCase {
         
         XCTAssertEqual(object.permissionType, defaultPermissionType)
         XCTAssertTrue(object.messages.isEqual(to: customMessages))
+        XCTAssertFalse(object.messages.isEqual(to: defaultMessages))
 
     }
 
@@ -78,7 +79,8 @@ class LocationConfigurationTests: XCTestCase {
         
         XCTAssertEqual(object.permissionType, .always)
         XCTAssertTrue(object.messages.isEqual(to: customMessages))
-        
+        XCTAssertFalse(object.messages.isEqual(to: defaultMessages))
+
     }
     
     func testLocationConfigurationInit_whenInUseTypeWithCustomMessages() {
@@ -87,7 +89,8 @@ class LocationConfigurationTests: XCTestCase {
         
         XCTAssertEqual(object.permissionType, defaultPermissionType)
         XCTAssertTrue(object.messages.isEqual(to: customMessages))
-        
+        XCTAssertFalse(object.messages.isEqual(to: defaultMessages))
+
     }
     
     //MARK: LocationPermissionType Test Cases
