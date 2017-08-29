@@ -34,6 +34,7 @@ public final class LocationConfiguration: PermissionConfiguration {
                 case .whenInUse:  return "whenInUse authorization"
             }
         }
+       
     }
     
     public required init(_ type: LocationPermissionType = .whenInUse, with messages: ServiceMessages = DefaultMessages()) {

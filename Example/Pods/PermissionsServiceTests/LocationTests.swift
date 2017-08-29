@@ -13,11 +13,12 @@ import CoreLocation
 class LocationTests: XCTestCase {
     
     var object: Location!
+    let defaultAuthorizationType = CLAuthorizationStatus.authorizedWhenInUse
+    
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-//        testLocationInit()
     }
     
     override func tearDown() {
@@ -25,22 +26,25 @@ class LocationTests: XCTestCase {
         super.tearDown()
     }
     
-    //test if inits without problems
-    func testLocationInit() {
-        object = Location(with: LocationConfiguration())
-        XCTAssertNotNil(object)
-    }
-    
     func testLocationInit_defaultConfiguration() {
         object = Location(with: DefaultConfiguration())
         XCTAssertNotNil(object)
         
-        XCTAssertEqual(object.type, CLAuthorizationStatus.authorizedWhenInUse)
+        XCTAssertEqual(object.type, defaultAuthorizationType)
     }
     
     func testLocationInit_defaultLocationConfiguration() {
         object = Location(with: LocationConfiguration())
         XCTAssertNotNil(object)
+        
+        XCTAssertEqual(object.type, defaultAuthorizationType)
+    }
+    
+    func testLocationInit_whenInUseLocationConfiguration() {
+        object = Location(with: LocationConfiguration(.whenInUse))
+        XCTAssertNotNil(object)
+        
+        XCTAssertEqual(object.type, defaultAuthorizationType)
     }
     
     func testLocationInit_alwaysLocationConfiguration() {
@@ -49,13 +53,7 @@ class LocationTests: XCTestCase {
         
         XCTAssertEqual(object.type, CLAuthorizationStatus.authorizedAlways)
     }
-    
-    func testLocationInit_inUseLocationConfiguration() {
-        object = Location(with: LocationConfiguration())
-        XCTAssertNotNil(object)
-    }
 
-    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

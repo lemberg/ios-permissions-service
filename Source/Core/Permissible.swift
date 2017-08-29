@@ -27,3 +27,25 @@ public extension Permissible where Self: UIViewController {
     }
     
 }
+
+public extension ServiceMessages {
+ 
+    func isEqual(to compareble: ServiceMessages) -> Bool {
+        
+        var isEqual: Bool = false
+        
+        if (self.deniedMessage == compareble.deniedMessage &&
+            self.deniedTitle == compareble.deniedTitle &&
+            self.restrictedMessage == compareble.restrictedMessage &&
+            self.restrictedTitle == compareble.restrictedTitle) {
+            isEqual = true
+        } else {
+            isEqual = false
+        }
+        
+        return isEqual
+        
+    }
+    
+}
+
