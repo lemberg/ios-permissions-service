@@ -19,7 +19,11 @@ public final class Location: NSObject, PermissionService {
     fileprivate var locationManager = CLLocationManager()
     fileprivate let dispatchGroup = DispatchGroup()
     
-    fileprivate var type: CLAuthorizationStatus = CLAuthorizationStatus.authorizedWhenInUse
+    fileprivate var _type: CLAuthorizationStatus = CLAuthorizationStatus.authorizedWhenInUse
+    
+    var type: CLAuthorizationStatus {
+        return _type
+    }
     
     public required init(with configuration: PermissionConfiguration) {
         
@@ -29,9 +33,9 @@ public final class Location: NSObject, PermissionService {
         }
         
         if let type = CLAuthorizationStatus(rawValue: Int32(config.permissionType.rawValue)) {
-            self.type = type
+            self._type = type
         } else {
-            self.type = CLAuthorizationStatus.authorizedWhenInUse
+            self._type = CLAuthorizationStatus.authorizedWhenInUse
         }
         
     }
@@ -67,14 +71,9 @@ public final class Location: NSObject, PermissionService {
     
     
     public func status() -> PermissionStatus {
-        let statusInt = Int(CLLocationManager.authorizationStatus().rawValue)
-        guard let status = PermissionStatus(rawValue: statusInt), (0...4) ~= statusInt else {
-            assertionFailure("Impossible status")
-            return .notDetermined
-        }
-        return status
+        let status = Int(CLLocationManager.authorizationStatus().rawValue)
+        return status.permissionStatus()
     }
-    
     
 }
 

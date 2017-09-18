@@ -14,12 +14,8 @@ public final class Gallery: PermissionService {
     public required init(with configuration: PermissionConfiguration) { }
     
     public func status() -> PermissionStatus {
-        let statusInt = PHPhotoLibrary.authorizationStatus().rawValue
-        guard let status = PermissionStatus(rawValue: statusInt), (0...3) ~= statusInt else {
-            assertionFailure("Impossible status")
-            return .notDetermined
-        }
-        return status
+        let status = PHPhotoLibrary.authorizationStatus()
+        return status.rawValue.permissionStatus()
     }
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {

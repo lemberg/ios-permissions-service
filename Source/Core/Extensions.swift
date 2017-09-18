@@ -15,12 +15,13 @@ extension Int {
                 case 0: return .notDetermined
                 case 1: return .restricted
                 case 2: return .denied
-                case 3: return .authorized
+                case 3, 4: return .authorized
             default: return .unknown
             
         }
         
     }
+
     
 }
 
