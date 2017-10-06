@@ -40,6 +40,10 @@
 	<string>Permission for Example</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Permission for Example</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Permission for Example</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Permission for Example</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Permission for Example</string>
 	<key>NSMotionUsageDescription</key>
