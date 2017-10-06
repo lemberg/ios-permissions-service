@@ -13,18 +13,18 @@ public final class Camera: PermissionService {
     
     public required init(with configuration: PermissionConfiguration) { }
 
-    let type = AVMediaTypeVideo
+    let type = AVMediaType.video
     
     public init() {}
     
     public func status() -> PermissionStatus {        
-        let status = AVCaptureDevice.authorizationStatus(forMediaType: type)
+        let status = AVCaptureDevice.authorizationStatus(for: type)
         return status.rawValue.permissionStatus()
     }
     
     public func requestPermission(_ callback: @escaping (_ success: Bool) -> Void) {
         
-        AVCaptureDevice.requestAccess(forMediaType: type) { (granted) -> Void in
+        AVCaptureDevice.requestAccess(for: type) { (granted) -> Void in
             callback(granted)
         }
     }
