@@ -18,12 +18,14 @@ extension PermissionConfiguration {
     
 }
 
-struct DefaultMessages: ServiceMessages {
+public struct DefaultMessages: ServiceMessages {
     
-    let deniedTitle = "Access denied"
-    let deniedMessage = "You can enable access in Privacy Settings"
-    let restrictedTitle = "Access restricted"
-    let restrictedMessage = "Access to this component is restricted"
+    public let deniedTitle = "Access denied"
+    public let deniedMessage = "You can enable access in Privacy Settings"
+    public let restrictedTitle = "Access restricted"
+    public let restrictedMessage = "Access to this component is restricted"
+  
+  public init() {}
 }
 
 
@@ -41,7 +43,7 @@ public final class DefaultConfiguration: PermissionConfiguration {
 
 public final class Configurator: PermissionConfiguration {
     
-    var configuration: PermissionConfiguration = DefaultConfiguration()
+    public var configuration: PermissionConfiguration = DefaultConfiguration()
     
     public init(for permission: PermissionService.Type) {
         
