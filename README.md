@@ -67,6 +67,8 @@ To install it, simply add one or several lines to your Podfile like this:
 
 Full list of available permissions you can found [here](https://github.com/lemberg/ios-permissions-service#supported-permission-types). 
 
+> If you'll need, there is still a version written on **Swift 3** named `swift3`. 
+
 Now you need to run `pod update` command from you project folder and that's it!
 
 ### Carthage
