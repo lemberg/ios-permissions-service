@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PermissionsService"
-  s.version          = "0.3.0"
+  s.version          = "0.9.5"
   s.summary          = "An easy way to do permissions requests & handling automatically"
   s.homepage         = "https://github.com/lemberg/ios-permissions-service"
   s.license          = { :type => 'BSD', :file => 'LICENSE' }
