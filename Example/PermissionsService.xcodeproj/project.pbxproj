@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		115DFF34E5A239BE4C0940D4 /* Pods-PermissionsService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PermissionsService_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PermissionsService_Tests/Pods-PermissionsService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7ADD5F211D4FBE2FE6881EFF /* PermissionsService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PermissionsService.podspec; path = ../PermissionsService.podspec; sourceTree = "<group>"; };
+		7ADD5F211D4FBE2FE6881EFF /* PermissionsService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PermissionsService.podspec; path = ../PermissionsService.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B01A92F1F2884690056279D /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		BA644CC018C9CCC2FA10C489 /* Pods-PermissionsService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PermissionsService_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PermissionsService_Tests/Pods-PermissionsService_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C9F446DF0721F3104C2FFC11 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
