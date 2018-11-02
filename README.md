@@ -67,7 +67,7 @@ To install it, simply add one or several lines to your Podfile like this:
 
 Full list of available permissions you can found [here](https://github.com/lemberg/ios-permissions-service#supported-permission-types). 
 
-> If you'll need, there is still a version written on **Swift 3** named `swift3`. 
+> If you'll need, there is still a versions written on **Swift 3/4** which you can find in separate branches
 
 Now you need to run `pod update` command from you project folder and that's it!
 
@@ -77,6 +77,12 @@ Now you need to run `pod update` command from you project folder and that's it!
 
 ```swift
   github "lemberg/ios-permissions-service"
+```
+
+If you want to use a specific branch with another Swift version you can add branch name:
+
+```swift
+github "lemberg/ios-permissions-service" "swift4"
 ```
 
 2. Run `carthage update --platform iOS` command from you project folder.
@@ -224,6 +230,9 @@ And then simply put it in your  `prepare(_:) ` method as you already did with `D
   }
 
  ```
+ 
+ > If you still have some questions or issues (maybe even improvements!) fill free to open new issue or PR. 
+
 
 ## Requirements
 
