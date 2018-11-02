@@ -231,7 +231,7 @@ And then simply put it in your  `prepare(_:) ` method as you already did with `D
 
  ```
  
- > If you still have some questions or issues (maybe even improvements!) fill free to open new issue or PR. 
+ > If you still have some questions or issues (maybe even improvements!) feel free to open new issue or PR. 
 
 
 ## Requirements
