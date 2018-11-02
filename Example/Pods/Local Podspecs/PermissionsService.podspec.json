@@ -1,6 +1,6 @@
 {
   "name": "PermissionsService",
-  "version": "0.3.0",
+  "version": "0.9.5",
   "summary": "An easy way to do permissions requests & handling automatically",
   "homepage": "https://github.com/lemberg/ios-permissions-service",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/lemberg/ios-permissions-service.git",
-    "tag": "0.3.0"
+    "tag": "0.9.5"
   },
   "social_media_url": "https://twitter.com/lemberg_co_uk",
   "requires_arc": true,

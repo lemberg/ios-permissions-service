@@ -12,7 +12,6 @@ import PermissionsService
 extension PermissionsController: Permissible {}
 
 struct CameraMessages: ServiceMessages {
-  
   let deniedTitle = "Access denied"
   let deniedMessage = "You can enable access to camera in Privacy Settings"
   let restrictedTitle = "Access restricted"
