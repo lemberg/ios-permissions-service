@@ -76,7 +76,7 @@ private extension UIAlertController {
   class func openSettingsAction() -> UIAlertAction {
     
     let action = UIAlertAction(title: settingsTitle, style: .default) { (action) in
-      let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
+      let settingsUrl = URL(string: UIApplication.openSettingsURLString)
       if let url = settingsUrl, UIApplication.shared.canOpenURL(url) {
         if #available(iOS 10.0, *) {
           UIApplication.shared.open(url, completionHandler: nil)
