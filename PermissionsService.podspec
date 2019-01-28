@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'BSD', :file => 'LICENSE' }
   s.author           = { 'Lemberg Solutions Limited' => 'www.lemberg.co.uk' }
   s.source           = { :git => 'https://github.com/lemberg/ios-permissions-service.git', :tag => s.version.to_s }
-  s.social_media_url = "https://twitter.com/lemberg_co_uk"
+  s.social_media_url = "https://twitter.com/wearelemberg"
   s.requires_arc     = true
 
   s.ios.deployment_target = '8.0'
