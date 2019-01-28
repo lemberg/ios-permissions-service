@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
 
   s.ios.deployment_target = '8.0'
+  s.swift_version    = '4.2'
 
   s.description      = <<-DESC
 Using this code you can get permisions for Photos, Camera and other permisisons
