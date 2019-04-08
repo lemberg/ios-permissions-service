@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C39F3F6E558D57873C78DAA06FB828CD"
+               BlueprintIdentifier = "29965E5DF4952258C0AD8A73DEA8A130"
                BuildableName = "PermissionsService.framework"
                BlueprintName = "PermissionsService"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C39F3F6E558D57873C78DAA06FB828CD"
+            BlueprintIdentifier = "29965E5DF4952258C0AD8A73DEA8A130"
             BuildableName = "PermissionsService.framework"
             BlueprintName = "PermissionsService"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -22,7 +22,7 @@ public protocol Permissible {
 
 public extension Permissible where Self: UIViewController {
     
-    public func showAlert(vc: UIAlertController) {
+    func showAlert(vc: UIAlertController) {
         self.present(vc, animated: true, completion: nil)
     }
     

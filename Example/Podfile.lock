@@ -1,24 +1,24 @@
 PODS:
-  - PermissionsService/Camera (0.9.5):
+  - PermissionsService/Camera (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/Contacts (0.9.5):
+  - PermissionsService/Contacts (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/Core (0.9.5)
-  - PermissionsService/Events (0.9.5):
+  - PermissionsService/Core (0.9.6)
+  - PermissionsService/Events (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/Gallery (0.9.5):
+  - PermissionsService/Gallery (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/Location (0.9.5):
+  - PermissionsService/Location (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/MediaLibrary (0.9.5):
+  - PermissionsService/MediaLibrary (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/Microphone (0.9.5):
+  - PermissionsService/Microphone (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/Reminder (0.9.5):
+  - PermissionsService/Reminder (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/Siri (0.9.5):
+  - PermissionsService/Siri (0.9.6):
     - PermissionsService/Core
-  - PermissionsService/SpeechRecognition (0.9.5):
+  - PermissionsService/SpeechRecognition (0.9.6):
     - PermissionsService/Core
 
 DEPENDENCIES:
@@ -38,8 +38,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PermissionsService: 1d39fee22ac518ab24582c3d1fd23f7c2b477fee
+  PermissionsService: 43cf1fd691d8e217f69c01fcfc1f9d129e2a69ac
 
 PODFILE CHECKSUM: 92f3ab47c41087396f2c64bca1e2b996de094b06
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.1
