@@ -1,6 +1,6 @@
 {
   "name": "PermissionsService",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "summary": "An easy way to do permissions requests & handling automatically",
   "homepage": "https://github.com/lemberg/ios-permissions-service",
   "license": {
@@ -12,13 +12,14 @@
   },
   "source": {
     "git": "https://github.com/lemberg/ios-permissions-service.git",
-    "tag": "0.9.5"
+    "tag": "0.9.6"
   },
-  "social_media_url": "https://twitter.com/lemberg_co_uk",
+  "social_media_url": "https://twitter.com/wearelemberg",
   "requires_arc": true,
   "platforms": {
     "ios": "8.0"
   },
+  "swift_version": "4.2",
   "description": "Using this code you can get permisions for Photos, Camera and other permisisons",
   "default_subspecs": "Core",
   "subspecs": [
