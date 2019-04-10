@@ -1,4 +1,6 @@
 use_frameworks!
+platform :ios, '10.0'
+
 target 'Example' do
     
   pod 'PermissionsService/Location’, :path => '../'
@@ -11,7 +13,5 @@ target 'Example' do
   pod 'PermissionsService/Reminder’, :path => '../'
   pod 'PermissionsService/Siri’, :path => '../'
   pod 'PermissionsService/SpeechRecognition’, :path => '../'
-
-
 
 end
